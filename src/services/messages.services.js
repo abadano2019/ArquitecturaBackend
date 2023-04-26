@@ -1,9 +1,18 @@
-import { addMessage, getMessages } from "../persistence/persistence.js";
+import messagesRepository from "../repositories/messages.repository";
 
-export async function getMessagesService() {
-  return getMessages();
+class MessagesServices{
+  #respository
+  constructor(respository){
+    this.#drepository = respository;
+  }
+
+  getMessagesService = async() => {
+    return await this.#respository.getMessagesRepository();
+  }
+  
+  addMessageService = async(message) =>{
+    return await this.#respository.addMessageRepository(message);
+  }
 }
 
-export async function addMessageService(message) {
-  return addMessage(message);
-}
+export default new MessagesServices(messagesRepository)

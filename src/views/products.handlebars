@@ -2,6 +2,11 @@
 <button onclick="{{productsPaginate.productsPag.hasNextPage}} ? location.href='/views/products?page={{productsPaginate.productsPag.nextPage}}' : location.href='/views/products'">Pag.siguiente</button>
 <button onclick="{{productsPaginate.productsPag.hasPrevPage}} ? location.href='/views/products?page={{productsPaginate.productsPag.prevPage}}' : location.href='/views/products'">Pag.anterior</button>
 <button onclick="location.href='/users/logout'">LOGOUT</button>
+<form method="post" action="http://localhost:3000/api/carts/purchase">
+    <button class = "btnPurchase">COMPRAR</button>
+</form>
+
+<!--<button onclick="location.href=''">COMPRAR</button>-->
 
 <!--<h2>¡¡¡¡¡¡Bienvendio {{productsPaginate.user}}!!!!!!!!!!</h2>-->
 <h2>¡¡¡¡¡¡Bienvendio {{productsPaginate.user}}!!!!!!!!!!</h2>
@@ -11,7 +16,7 @@
 
 
 <div class = "container">
-    {{#each productsPaginate.productsPag.payload}}
+    {{#each productsPaginate.productsPag}}
         <div class = "card">
             <div class = "title">
                 <h3> TITLE: {{title}}</h3>
@@ -25,7 +30,10 @@
                 <p>CATEGORIA:{{category}}</p>
                 <p>DESCRIPTION: {{description}}</p>
             </div>
-            <form method="post" action="http://localhost:3000/api/carts/640a9dd878ce406fba185192/products/{{id}}"">
+            <!--<form method="post" action="http://localhost:3000/api/carts/640a9dd878ce406fba185192/products/{{id}}">
+                <button class = "btnAddCart">Add to Cart</button>
+            </form>-->
+            <form method="post" action="http://localhost:3000/api/carts/addToCart/product/{{id}}">
                 <button class = "btnAddCart">Add to Cart</button>
             </form>
         </div>

@@ -1,22 +1,31 @@
-import {
-  createUser,
-  createUserPassport,
-  getUserById,
-  loginUser,
-} from "../persistence/persistence.js";
+import usersRepository from "../repositories/users.repository.js"
 
-export async function getUserByIdService(email) {
-  return getUserById(email);
+class UsersServices {
+  #repository
+
+  constructor(repository) {
+    this.#repository = repository;
+  }
+
+  getUserByIdService = async (email) => {
+    const user = await this.#repository.getUserByIdRepository(email); 
+    return user
+  };
+
+  createUserService = async (user,cart) => {
+    const createdUser = await this.#repository.createUserRepository(user,cart); 
+    return createdUser
+  };
+
+  createUserPassportService = async (user,cart) => {
+    const createdUser = await this.#repository.createUserPassportRepository(user,cart);
+    return createdUser
+  };
+
+  loginUserService = async (user) => {
+    const loginUser = await this.#repository.loginUserRepository(user); 
+    return loginUser
+  };
 }
 
-export async function createUserService(user) {
-  return createUser(user);
-}
-
-export async function createUserPassportService(user) {
-  return createUserPassport(user);
-}
-
-export async function loginUserService(user) {
-  return loginUser(user);
-}
+export default new UsersServices(usersRepository);

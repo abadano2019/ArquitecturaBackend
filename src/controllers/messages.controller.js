@@ -1,8 +1,8 @@
-import { addMessageService, getMessagesService } from "../services/messages.services.js";
+import messagesServices from "../services/messages.services.js";
 
 export const getMessagesController = async (req, res) => {
   try {
-    const messages = await getMessagesService();
+    const messages = await messagesServices.getMessagesService();
     res.json(messages);
   } catch (error) {
     console.log(error);
@@ -27,7 +27,7 @@ export const addMessageController = async (info) => {
     menssage = createMensaje(info)
     if (menssage)
         {
-          const newMessage = await addMessageService(message)
+          const newMessage = await messagesServices.addMessageService(message)
           console.log(newMessage)
           console.log("mensaje agregado")
           return "Message Controller Add Message OK - COD2"

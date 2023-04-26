@@ -1,7 +1,5 @@
-import {
-  createUserService,
-  loginUserService,
-} from "../services/users.services.js";
+import createUserService from "../services/carts.services.js";
+import usersServices from "../services/users.services.js";
 
 export const createUserController = async (req, res) => {
   return createUserService(user);
@@ -9,12 +7,12 @@ export const createUserController = async (req, res) => {
 
 export const loginUserController = async (req, res) => {
   const { email, password } = req.body;
-  const user = await loginUserService(req.body);
+  const user = await usersServices.loginUserService(req.body);
   console.log(user);
   if (user) {
-    req.session.email = email;
-    req.session.password = password;
-    req.session.user = user.first_name;
+    req.session.email = user.email;
+    //req.session.password = password;
+    req.session.user = user.fullName;
     console.log("SessionID", req.sessionID);
     if (email === "adminCoder@mail.com") {
       req.session.isAdmin = true;

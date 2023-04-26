@@ -1,19 +1,11 @@
-import {
-  addProductService,
-  deleteProductService,
-  getProductByIdService,
-  getProductsService,
-  getProducts_Service,
-  updateProductService,
-} from "../services/products.services.js";
-
 import Product from "../js/product.js";
+import productsServices from "../services/products.services.js";
 import { socketServer } from "../app.js";
 
 export const getProductsController = async (req, res) => {
   try {
     const { limit = 10, page = 1, sort, ...query } = req.query;
-    const products = getProductsService(limit, page, query, sort);
+    const products = productsServices.getProductsService(limit, page, query, sort);
     res.json({ message: "productos encontrado:", products });
   } catch (error) {
     console.log("CODIGO GETPRODS: CONTACTAR AL ADMINISTRADOR DEL SITIO");
@@ -24,7 +16,7 @@ export const getProductsController = async (req, res) => {
 export const getProductByIdController = async (req, res) => {
   try {
     const { idProduct } = req.params;
-    const product = await getProductByIdService(idProduct);
+    const product = await productsServices.getProductByIdService(idProduct);
 
     if (product) {
       res.json({ mesage: "Producto encontrado", product });
@@ -40,7 +32,7 @@ export const getProductByIdController = async (req, res) => {
 export const getProducts_Controller = async (req, res) => {
   const { limit } = req.query;
   try {
-    const products = await getProducts_Service();
+    const products = await productsServices.getProducts_Service();
 
     if (limit) {
       const productSlice = products.slice(0, limit);
@@ -132,6 +124,8 @@ export const addProductController = async (req, res) => {
   };
 
   try {
+
+    console.log(req.body)
     const {
       title,
       description,
@@ -142,14 +136,18 @@ export const addProductController = async (req, res) => {
       status,
       category,
     } = req.body;
+
+    const priceInt = parseInt(price)
+    const stockInt = parseInt(stock)
+    const statusBool = Boolean(status)
     const validation = dataTypeValidation(
       title,
       description,
-      price,
+      priceInt,
       thumbnails,
       code,
-      stock,
-      status,
+      stockInt,
+      statusBool,
       category
     );
     if (validation === "ok") {
@@ -168,7 +166,7 @@ export const addProductController = async (req, res) => {
         res.json({ mensaje: product });
         return "Validation product: " + product;
       }
-      const cod = await addProductController(product);
+      const cod = await productsServices.addProductService(product);
       console.log("codigo", cod);
       if (cod === "ADDPROD-COD1") {
         res.json({
@@ -177,7 +175,7 @@ export const addProductController = async (req, res) => {
         });
       } else {
         if (cod === "ADDPROD-COD2") {
-          const products = await getProductsController();
+          const products = await productsServices.getProducts_Service();
           console.log(products);
           socketServer.emit("productoAgregado", { products });
           res.json({ mesage: "Producto agregado", product });
@@ -291,9 +289,9 @@ export const updateProductController = async (req, res) => {
       status,
       category
     );
-    const modifyProduct = await getProductByIdController(idProduct);
+    const modifyProduct = await productsServices.getProductByIdService(idProduct);
     if (modifyProduct) {
-      const validation = await updateProductController(idProduct, product);
+      const validation = await productsServices.updateProductService(idProduct, product);
       if (validation === "OK") {
         res.json({ mesage: "Producto modificado" });
       } else {
@@ -311,11 +309,11 @@ export const updateProductController = async (req, res) => {
 export const deleteProductController = async (req, res) => {
   try {
     const { idProduct } = req.params;
-    const product = await getProductByIdController(idProduct);
+    const product = await productsServices.getProductByIdService(idProduct);
 
     if (product) {
-      productsManager.deleteProductController(idProduct);
-      const products = await getProductsController();
+      productsServices.deleteProductService(idProduct);
+      const products = await productsServices.getProductsService();
       socketServer.emit("productoEliminado", { products });
       res.json({ mesage: "Producto eliminado", product });
     } else {
@@ -326,3 +324,12 @@ export const deleteProductController = async (req, res) => {
     console.log("LOG: " + error);
   }
 };
+
+export const updateStock = async(id,stock) =>{
+  try{
+    await productsServices.updateStock(id,stock)
+
+  }catch(error){
+    console.log(error1)
+  }
+}

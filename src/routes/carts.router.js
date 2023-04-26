@@ -1,6 +1,7 @@
 import {
   addCartController,
   addProductCartController,
+  addProductToCartController,
   deleteCartController,
   deleteProductCartController,
   deleteProductsCartController,
@@ -11,6 +12,9 @@ import {
 } from "../controllers/carts.controller.js";
 
 import { Router } from "express";
+import{
+  addTicketController
+} from "../controllers/tickets.controller.js"
 
 const router = Router();
 
@@ -22,6 +26,9 @@ router.get("/:idCart", getCartByIdController);
 
 // Alta de carrito
 router.post("/", addCartController)
+
+// Se redirecciona al endpoint /:cid/products/:pid
+router.post("/addToCart/product/:pid", addProductToCartController)
 
 // Alta de producto a un carrito, debe existir el carrito y debe existir el producto en el archivo de productos
 router.post("/:cid/products/:pid", addProductCartController)
@@ -37,5 +44,11 @@ router.put("/:cid", updateCartProductController)
 
 // modificación de la cantidad de un producto de un carrito
 router.put("/:cid/products/:pid", updateCartProductQuantityController)
+
+// compra realizada sobre el carrito del usuario
+router.post("/purchase", addTicketController)
+
+// compra realizada sobre el carrito del usuario
+//router.post("/:cid/purchase", purchaseCartController)
 
 export default router;

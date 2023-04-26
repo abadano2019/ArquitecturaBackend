@@ -1,16 +1,13 @@
-import {
-  getProductsService,
-  getProducts_Service,
-} from "../services/products.services.js";
-
-import { getCartByIdService } from "../services/carts.services.js";
+import cartsServices from "../services/carts.services.js";
+import productsServices from "../services/products.services.js";
 
 export const viewProductsController = async (req, res) => {
   console.log(req.query);
   const { page = 1 } = req.query;
   const { user } = req.session;
+  console.log("User Session", req.session)
   const { sessionID } = req.sessionID;
-  const productsPag = await getProductsService(5, page);
+  const productsPag = await productsServices.getProductsService(5, page);
   console.log(productsPag);
   //const { sessionID } = req.sessionID
   console.log("sessionID", sessionID);
@@ -24,7 +21,8 @@ export const viewProductsController = async (req, res) => {
 export const viewProductsCookiesController = async (req, res) => {
   const { page = 1 } = req.query;
   const user = req.user;
-  const productsPag = await getProductsService(5, page);
+  console.log("user cookie", user)
+  const productsPag = await productsServices.getProductsService(5, page);
   console.log(productsPag);
   const productsPaginate = {
     user: user.first_name + " " + user.last_name,
@@ -39,17 +37,25 @@ export const viewChatController = async (req, res) => {
 };
 
 export const viewProductsRealTimeController = async (req, res) => {
-  const products = await getProducts_Service();
+  const products = await productsServices.getProducts_Service();
   res.render("realTimeProducts", { products, layout: "realTime" });
 };
 
 export const viewProductsRealTime2Controller = async (req, res) => {
-  const products = await getProducts_Service();
+  const products = await productsServices.getProducts_Service();
   res.render("realTimeProducts2", { products, layout: "altaProducto" });
 };
 
+export const deleteProductsRealTime2Controller = async (req, res) => {
+  res.render("realTimeProductsDelete", { layout: "deleteProduct" });
+};
+
+export const modifyProductsRealTime2Controller = async (req, res) => {
+  res.render("realTimeProductsModify", { layout: "modifyProduct" });
+};
+
 export const viewListProductsController = async (req, res) => {
-  const products = await getProducts_Service();
+  const products = await productsServices.getProducts_Service();
   console.log(products);
   res.render("home", { products, layout: "home" });
 };
@@ -69,7 +75,7 @@ export const viewPutUpFileController = async (req, res, next) => {
 
 export const viewCartByIdController = async (req, res) => {
   const { cid } = req.params;
-  const cart = await getCartByIdService(cid);
+  const cart = await cartsServices.getCartByIdService(cid);
   console.log(cart);
   res.render("carts", { cart, layout: "carts" });
 };

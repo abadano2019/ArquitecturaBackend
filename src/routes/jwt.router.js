@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { getAuthUser } from "../middlewares/auth.js";
 import { jwtValidation } from '../middlewares/jwt.middleware.js'
 import { loginJwtController } from "../controllers/jwt.controller.js";
 import passport from 'passport'
@@ -25,17 +26,18 @@ router.get(
 // utilización de passport para la validación del token, despligue del usuario, utiizando cookies, cookieExtrartor
 router.get(
   "/current",
-  passport.authenticate("current", { session: false }),
+  passport.authenticate("current", { session: false }),getAuthUser,
   (req, res) => {
     console.log(req.user);
-    res.send("USER JWT COOKIES PASSPORT", req.user);
+    //res.send("USER JWT COOKIES PASSPORT", req.user);
+    res.status(200).send(req.user)
   }
 );
 
 // utilización de passport para la validación del token y posterior despliegue de información de productos
 router.get(
   "/loginJWTCookiesPassportProductos",
-  passport.authenticate("current", { session: false }),
+  passport.authenticate("current", { session: false }),getAuthUser,
   (req, res) => {
     res.redirect("/views/productsCookies");
   }

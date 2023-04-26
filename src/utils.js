@@ -2,7 +2,6 @@ import bcrypt from 'bcrypt'
 import {dirname} from 'path'
 import { fileURLToPath } from 'url'
 import jwt from 'jsonwebtoken'
-import multer from 'multer'
 
 export const __dirname = dirname(fileURLToPath(import.meta.url))
 

@@ -1,11 +1,12 @@
-//import './persistence/mongodb/dbConfig.js'
 import './passport/passportStrategies.js'
 
 import Cors from 'cors';
 import FileStore from 'session-file-store'
-import MessagesManager from '../src/persistence/mongodb/mongoManager/messagesManager.js'
+import MessagesManager from '../src/persistence/DAOs/messagesDAO/messagesManager/messagesMongo.js'
 import { Server } from 'socket.io'
 import { __dirname } from '../src/utils.js'
+//import {productsManager} from '../src/routes/products.router.js'
+import { addProductController } from './controllers/products.controller.js';
 import cartsRouters from './routes/carts.router.js'
 import config from './config.js'
 import cookieParser from 'cookie-parser'
@@ -14,7 +15,6 @@ import handlebars from 'express-handlebars'
 import jwtRouter from './routes/jwt.router.js'
 import mongoStore from 'connect-mongo'
 import passport from 'passport'
-//import {productsManager} from '../src/routes/products.router.js'
 import productsRouters from '../src/routes/products.router.js'
 import session from 'express-session'
 import usersRouter from './routes/users.router.js'
@@ -55,6 +55,8 @@ app.use(passport.session())
 // archivos estaticos
 app.use(express.static(__dirname + '/public'))
 
+console.log(__dirname)
+
 // handlebars
 app.engine('handlebars', handlebars.engine())
 app.set('view engine', 'handlebars')
@@ -75,35 +77,7 @@ socketServer.on('connection',(socket)=>{
     })
 
     socket.on('addProduct', async({title, description, price, code,stock,status,category})=>{
-        
-        try{
-            const thumbnails = []   
-            const validation = productsManager.dataTypeValidation(title, description, parseInt(price),thumbnails,code,parseInt(stock), Boolean(status),category )
-            if (validation === "ok"){        
-                const product = productsManager.createProduct(title,description,price,thumbnails,code,stock,status, category)
-                if(typeof(product) === 'string')
-                {
-                    return "Validation product: " + product
-                }
-                const cod = await productsManager.addProduct(product)
-                
-                if (cod === "ADDPROD-COD1"){
-                    console.log({mesage:'ATENCION: Verifique el campo Code, el mismo ya existe en otro producto'})    
-                }
-                else{
-                    
-                    const products = await productsManager.getProducts()
-                    socketServer.emit("productoAgregado",{products})
-                    console.log({mesage:'Producto agregado',product})
-                }
-            }else{
-                console.log({mesage:'Error: ', validation})
-            }
-        }
-        catch(error){
-            console.log("CODIGO ADDPROD-SERV: CONTACTAR AL ADMINISTRADOR DEL SITIO")
-            console.log("LOG: " + error)
-        }
+        console.log("Se ejecutó la carga de un producto nuevo")
     })
 
     socket.on('nuevoUsuario',usuario=>{

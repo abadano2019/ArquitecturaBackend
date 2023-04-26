@@ -1,5 +1,4 @@
 import {
-  createUserController,
   logOutUserController,
   loginUserController,
 } from "../controllers/users.controller.js";
@@ -14,14 +13,24 @@ router.get("/users", (req, res) => {
 });
 
 //registro con passport
-router.post(
+/*router.post(
   "/registro",
   passport.authenticate("registro", {
     failureRedirect: "/views/errorRegistro",
     successRedirect: "/views/products",
     passReqToCallback: true,
-  })
+  },)
+);*/
+
+router.post(
+  "/registro",
+  passport.authenticate("registro", {
+    failureRedirect: "/views/errorRegistro",
+    successRedirect: "/views/login",
+    passReqToCallback: true,
+  },)
 );
+
 
 ///////////////////////////////////////////
 ///////registro con passport gitHub////////

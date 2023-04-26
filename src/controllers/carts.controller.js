@@ -1,22 +1,12 @@
-import {
-  addCartService,
-  addProductCartService,
-  deleteCartService,
-  deleteProductCartService,
-  deleteProductsCartService,
-  getCartByIdService,
-  getCartsService,
-  updateCartProductQuantityService,
-  updateCartProductService,
-} from "../services/carts.services.js";
-
-import { getProductByIdService } from "../services/products.services.js";
+import cartsServices from "../services/carts.services.js";
+import productsServices from "../services/products.services.js";
+import usersServices from "../services/users.services.js";
 
 export const getCartsController = async (req, res) => {
   const { limit } = req.query;
   console.log(limit);
   try {
-    const carts = await getCartsService();
+    const carts = await cartsServices.getCartsService();
     console.log(carts);
     if (limit) {
       const cartSlice = carts.slice(0, limit);
@@ -32,7 +22,7 @@ export const getCartsController = async (req, res) => {
 export const getCartByIdController = async (req, res) => {
   try {
     const { idCart } = req.params;
-    const cart = await getCartByIdService(idCart);
+    const cart = await cartsServices.getCartByIdService(idCart);
 
     if (cart) {
       const cartProducts = cart.cartProducts;
@@ -50,12 +40,36 @@ export const getCartByIdController = async (req, res) => {
 };
 
 export const addCartController = async (req, res) => {
-  const createCart = () => (cart = { cartProducts: [] });
+  //const createCart = () => (cart = { cartProducts: [] });
 
   try {
-    const cart = createCart();
-    await addCartService(cart);
+    //const cart = createCart();
+    const cart = await cartsServices.addCartService();
     res.json({ mesage: "Carrito agregado", cart });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const addProductToCartController = async (req, res) => {
+  try {
+    const { pid } = req.params;
+
+    const product = await productsServices.getProductByIdService(pid);
+    if (!product) {
+      res.json({ mesage: "Por aca. Producto inexistente" });
+      return;
+    }
+    const user = await usersServices.getUserByIdService(req.session.email);
+    console.log("user cart", user.cart.id);
+    const cart = await cartsServices.getCartByIdService(user.cart.id);
+    console.log("cart encontrado:", cart);
+    if (!cart) {
+      res.json({ mesage: "Carrito no encontrado" });
+      return;
+    }
+    await cartsServices.addProductCartService(cart.id, pid);
+    res.json({ mesage: "Producto agregado" });
   } catch (error) {
     console.log(error);
   }
@@ -65,17 +79,17 @@ export const addProductCartController = async (req, res) => {
   try {
     const { cid, pid } = req.params;
 
-    const product = await getProductByIdService(pid);
+    const product = await productsServices.getProductByIdService(pid);
     if (!product) {
       res.json({ mesage: "Por aca. Producto inexistente" });
       return;
     }
-    const cart = await getCartByIdService(cid);
+    const cart = await cartsServices.getCartByIdService(cid);
     if (!cart) {
       res.json({ mesage: "Carrito no encontrado" });
       return;
     }
-    await cartsManager.addProductCartService(cid, pid);
+    await cartsServices.addProductCartService(cid, pid);
     res.json({ mesage: "Producto agregado" });
   } catch (error) {
     console.log(error);
@@ -88,15 +102,15 @@ export const deleteProductCartController = async (req, res) => {
   try {
     const { cid, pid } = req.params;
 
-    const product = await getProductByIdService(pid);
+    const product = await productsServices.getProductByIdService(pid);
     if (!product) {
       res.json({ mesage: "Producto inexistente" });
       return;
     }
-    const cart = await getCartByIdService(cid);
+    const cart = await cartsServices.getCartByIdService(cid);
 
     if (cart) {
-      await deleteProductCartService(cid, pid);
+      await cartsServices.deleteProductCartService(cid, pid);
       res.json({ mesage: "Carrito encontrado, producto borrado", cart });
     } else {
       res.json({ mesage: "Carrito no encontrado" });
@@ -109,10 +123,10 @@ export const deleteProductCartController = async (req, res) => {
 export const deleteProductsCartController = async (req, res) => {
   try {
     const { cid } = req.params;
-    const cart = await getCartByIdService(cid);
+    const cart = await cartsServices.getCartByIdService(cid);
 
     if (cart) {
-      await deleteProductsCartService(cid);
+      await cartsServices.deleteProductsCartService(cid);
       res.json({
         mesage: "Carrito encontrado, se borraron todos los productos",
         cart,
@@ -125,12 +139,12 @@ export const deleteProductsCartController = async (req, res) => {
   }
 };
 
-export const updateCartProductController = async(req,res) => {
+export const updateCartProductController = async (req, res) => {
   try {
     const { cid } = req.params;
     const { cartProducts } = req.body;
 
-    const modifyProduct = await updateCartProductService(
+    const modifyProduct = await cartsServices.updateCartProductService(
       cid,
       cartProducts
     );
@@ -144,16 +158,14 @@ export const updateCartProductController = async(req,res) => {
     console.log("CODIGO PUTCartProd: CONTACTAR AL ADMINISTRADOR DEL SITIO");
     console.log("LOG: " + error);
   }
-
 };
 
-export const updateCartProductQuantityController = async(req,res) => {
-
+export const updateCartProductQuantityController = async (req, res) => {
   try {
     const { cid, pid } = req.params;
     const { cantidad } = req.body;
 
-    const modifyProduct = await updateCartProductQuantityService(
+    const modifyProduct = await cartsServices.updateCartProductQuantityService(
       cid,
       pid,
       cantidad
@@ -170,5 +182,6 @@ export const updateCartProductQuantityController = async(req,res) => {
     );
     console.log("LOG: " + error);
   }
-  
 };
+
+

@@ -1,8 +1,8 @@
 import {generateToken} from "../utils.js";
-import { loginUserService } from "../services/users.services.js";
+import usersService from "../services/users.services.js";
 
 export const loginJwtController = async (req, res) => {
-  const user = await loginUserService(req.body);
+  const user = await usersService.loginUserService(req.body);
   if (user) {
     console.log("------");
     const token = generateToken(user);

@@ -100,7 +100,7 @@ class CartsServices {
       let product = products.find((prod) => prod.id === id);
       if (product.stock >= cart[i].quantity) {
         cartPurchase.push(cart[i]);
-        let producto = {
+        /*let producto = {
           title: "",
           description: "",
           price: "",
@@ -110,7 +110,7 @@ class CartsServices {
           status: "",
           category: "",
         };
-        console.log("Id de producto a modificar:", id);
+        console.log("Id de producto a modificar:", id);*/
 
         //const updatedProd = await productsServices.updateProductService(id,producto);
         let stock = product.stock - cart[i].quantity;

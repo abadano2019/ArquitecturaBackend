@@ -269,11 +269,11 @@ export const updateProductController = async (req, res) => {
     const dataCheck = dataTypeValidationUpdate(
       title,
       description,
-      price,
+      Number(price),
       thumbnail,
       code,
-      stock,
-      status,
+      Number(stock),
+      Boolean(status),
       category
     );
     if (dataCheck !== "OK") {
@@ -294,9 +294,7 @@ export const updateProductController = async (req, res) => {
     if (modifyProduct) {
       const validation = await productsServices.updateProductService(idProduct, product);
       if (validation === "OK") {
-        console.log("entre acá")
-        //res.json("Producto modificado");
-        console.log("no pasé")
+        res.json("Producto modificado")
       } else {
         res.json({ mesage: validation });
       }

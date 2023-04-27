@@ -2,7 +2,6 @@ import {
   addCartController,
   addProductCartController,
   addProductToCartController,
-  deleteCartController,
   deleteProductCartController,
   deleteProductsCartController,
   getCartByIdController,

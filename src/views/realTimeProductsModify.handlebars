@@ -1,4 +1,5 @@
 <form id="formulario" >
+    Id: <input type="id" name="id" id="id"><br/><br/>
     Title: <input type="text" name="nombre" id="title"><br/><br/>
     Description: <input type="text" name="descripcion" id="description"><br/><br/>
     Price: <input type="number" name="price" id="price"><br/><br/>
@@ -6,12 +7,12 @@
     Stock: <input type="number" name="stock" id="stock"><br/><br/>
     Status: <input type="boolean" name="status" id="status"><br/><br/>
     Category: <input type="text" name="category" id="category"><br/><br/>
-    <input type="submit" value="ALTA PRODUCTO">
+    <input type="submit" value="MODIFY">
 </form>
 <br/><br/>
 
-<button onclick="">DELETE PRODUCT</button>
-<button onclick="">MODIFY PRODUCT</button>
+<button onclick="location.href='/views/realTimeProductsDelete'">DELETE PRODUCT</button>
+<button onclick="location.href='/views/realTimeProducts2'">ADD PRODUCT</button>
 
 <p id="productoIngresado"></p>
 
@@ -49,6 +50,7 @@
 
     
     const formulario = document.getElementById('formulario')
+    const inputId = document.getElementById('id')
     const inputTitle = document.getElementById('title')
     const inputDescription = document.getElementById('description')
     const inputPrice = document.getElementById('price')
@@ -59,6 +61,7 @@
 
     formulario.onsubmit = (e)=>{
         e.preventDefault()
+        const id = inputId.value
         const title = inputTitle.value
         const description = inputDescription.value
         const price = inputPrice.value
@@ -67,11 +70,11 @@
         const status = inputStatus.value
         const category = inputCategory.value
                 
-        socketClient.emit('addProduct',{title, description, price, code,stock,status,category})
+        socketClient.emit('addProduct',{id, title, description, price, code,stock,status,category})
         
-        
-        fetch('http://localhost:3000/api/products', {
-            method: 'POST',
+        console.log(id)
+        fetch('http://localhost:3000/api/products/'+id, {
+            method: 'PUT',
             body: JSON.stringify({
                 title: inputTitle.value,
                 description: inputDescription.value,
@@ -91,6 +94,7 @@
             console.log(response)
             //cookie.setItem('token',response.token)
             console.log('Producto Cargado');
+            
             
         })
     }

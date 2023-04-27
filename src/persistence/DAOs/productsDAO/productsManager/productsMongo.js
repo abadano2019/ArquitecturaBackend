@@ -216,6 +216,58 @@ getProductById = async(id) =>{
   // en la dirección del atributo path de la clase, el metodo recibe un id un objeto del tipo Product y actualiza
   // el producto encontrado con los datos del producto pasado por parametro, el cual debe tener todos los campos
   // cargado. En caso de no querer modificar un datos se deberá mantener el mismo dato que ya existe en ese campo. 
+ /* updateProduct = async(id, producto) =>{
+    
+    if (!id){
+      console.log("ATENCION: Debe ingresar un id valido")
+      return "ATENCION: Debe ingresar un id valido"
+    }
+
+    if(!producto){
+      console.log("Atención: no se encuentran los datos de modificación")
+      return "Atención: no se encuentran los datos de modificación"
+    }
+    else
+    {
+    
+      try{
+        const prod = await productsModel.findById(id)
+        
+        if(!prod){
+          console.log("Producto a modificar no existe")
+          return "Producto a modificar no existe"
+        }
+
+        
+        
+        prod.title = (producto.title !== "" && producto.title !== undefined ) ? producto.title : prod.title
+        prod.description = (producto.description !== "" && producto.description !== undefined) ? producto.description : prod.description
+        prod.price = (producto.price!=="" && producto.price !== undefined) ? producto.price : prod.price
+        prod.thumbnails = (producto.thumbnails && producto.thumbnails !== undefined ) ? producto.thumbnails : prod.thumbnails
+        prod.code = (producto.code !== "" && producto.code !== undefined) ? producto.code : prod.code
+        prod.stock = (producto.stock !== "" && producto.stock !== undefined) ? producto.stock : prod.stock 
+        prod.status = (producto.status !== "" && producto.status !== undefined) ? producto.status : prod.status
+        prod.category = (producto.category !== "" && producto.category !== undefined) ? producto.category : prod.category
+        console.log(prod)
+        const prodUpd = await productsModel.findOneAndUpdate(id, {description: prod.description,
+                                                                  title: prod.title,
+                                                                  price: prod.price,
+                                                                  thumbnails: prod.thumbnails,
+                                                                  code: prod.code,
+                                                                  stock: prod.stock,
+                                                                  status: prod.status,
+                                                                  category: prod.category}, {new:true})
+        console.log("Producto Modificado:", prodUpd)
+        console.log("producto modificdo")
+        return "OK"
+      } 
+      catch(error) {
+        console.log(error)
+      }
+    }  
+  }*/
+
+  
   updateProduct = async(id, producto) =>{
     
     if (!id){
@@ -252,15 +304,16 @@ getProductById = async(id) =>{
         prod.status = (producto.status !== "" && producto.status !== undefined) ? producto.status : prod.status
         prod.category = (producto.category !== "" && producto.category !== undefined) ? producto.category : prod.category
         console.log(prod)
-        const prodUpd = await productsModel.findOneAndUpdate(id, {description: prod.description,
+        /*const prodUpd = await productsModel.findOneAndUpdate(id, {description: prod.description,
                                                                   title: prod.title,
                                                                   price: prod.price,
                                                                   thumbnails: prod.thumbnails,
                                                                   code: prod.code,
                                                                   stock: prod.stock,
                                                                   status: prod.status,
-                                                                  category: prod.category}, {new:true})
-        console.log("Producto Modificado:", prodUpd)
+                                                                  category: prod.category}, {new:true})*/
+        await prod.save()
+        //console.log("Producto Modificado:", prodUpd)
         console.log("producto modificdo")
         return "OK"
       } 

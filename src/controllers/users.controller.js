@@ -7,14 +7,15 @@ export const createUserController = async (req, res) => {
 
 export const loginUserController = async (req, res) => {
   const { email, password } = req.body;
+  console.log("veo el mail", email)
   const user = await usersServices.loginUserService(req.body);
-  console.log(user);
+  console.log("usuario encontrado:", user);
   if (user) {
     req.session.email = user.email;
     //req.session.password = password;
     req.session.user = user.fullName;
-    console.log("SessionID", req.sessionID);
-    if (email === "adminCoder@mail.com") {
+    //console.log("SessionID", req.sessionID);
+    if (email === "adminCoder@coder.com") {
       req.session.isAdmin = true;
       res.redirect("/");
     } else {

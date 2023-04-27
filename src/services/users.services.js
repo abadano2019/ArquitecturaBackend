@@ -19,6 +19,7 @@ class UsersServices {
 
   createUserPassportService = async (user,cart) => {
     const createdUser = await this.#repository.createUserPassportRepository(user,cart);
+    console.log(createdUser)
     return createdUser
   };
 

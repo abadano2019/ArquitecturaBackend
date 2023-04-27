@@ -10,6 +10,7 @@ import {
   viewProductsRealTimeController,
   viewPutUpFileController,
 } from "../controllers/views.controller.js";
+import { getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.js";
 
 import { Router } from "express";
 import passport from "passport";
@@ -22,10 +23,10 @@ const router = new Router();
 router.get("/", viewListProductsController);
 
 // Vista para ser utilizada con protocolo WebSocket, layount home, implementación de un Chat
-router.get("/chat", viewChatController);
+router.get("/chat", getAuthUserSession, viewChatController);
 
 // Vista para ser utilizada para visualizar los productos paginados
-router.get("/products", viewProductsController);
+router.get("/products", getAuthUserSession, viewProductsController);
 
 // Vista para ser utilizada para visualizar los productos paginados
 router.get(
@@ -38,11 +39,11 @@ router.get(
 router.get("/realtimeproducts", viewProductsRealTimeController);
 
 // Vista para ser utilizada con protocolo WebSocket, layount home
-router.get("/realtimeproducts2", viewProductsRealTime2Controller);
+router.get("/realtimeproducts2", getAuthAdminSession, viewProductsRealTime2Controller);
 
-router.get("/realTimeProductsDelete", deleteProductsRealTime2Controller);
+router.get("/realTimeProductsDelete", getAuthAdminSession, deleteProductsRealTime2Controller);
 
-router.get("/realTimeProductsModify", modifyProductsRealTime2Controller);
+router.get("/realTimeProductsModify", getAuthAdminSession, modifyProductsRealTime2Controller);
 
 // Vista para ser utilizada para visualizar los productos de un carrito dado
 router.get("/carts/:cid", viewCartByIdController);

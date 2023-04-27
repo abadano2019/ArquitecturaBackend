@@ -191,6 +191,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (email, done) => {
   //const user = await userModel.findById(id)
+  console.log("email pasado:", email)
   const user = await usersServices.getUserByIdService(email);
   done(null, user);
 });

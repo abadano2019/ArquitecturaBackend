@@ -254,6 +254,7 @@ export const updateProductController = async (req, res) => {
 
   try {
     const { idProduct } = req.params;
+    console.log("Ver idProducto", idProduct)
     const {
       title,
       description,
@@ -293,7 +294,9 @@ export const updateProductController = async (req, res) => {
     if (modifyProduct) {
       const validation = await productsServices.updateProductService(idProduct, product);
       if (validation === "OK") {
-        res.json({ mesage: "Producto modificado" });
+        console.log("entre acá")
+        //res.json("Producto modificado");
+        console.log("no pasé")
       } else {
         res.json({ mesage: validation });
       }
@@ -324,12 +327,3 @@ export const deleteProductController = async (req, res) => {
     console.log("LOG: " + error);
   }
 };
-
-export const updateStock = async(id,stock) =>{
-  try{
-    await productsServices.updateStock(id,stock)
-
-  }catch(error){
-    console.log(error1)
-  }
-}

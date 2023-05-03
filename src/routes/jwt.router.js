@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAuthUser } from "../middlewares/auth.js";
+import { getAuthUser } from "../middlewares/auth.middleware.js";
 import { jwtValidation } from '../middlewares/jwt.middleware.js'
 import { loginJwtController } from "../controllers/jwt.controller.js";
 import passport from 'passport'

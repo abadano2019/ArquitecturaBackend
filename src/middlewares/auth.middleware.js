@@ -5,7 +5,7 @@ export const getAuthAdmin = function (req, res, next) {
      if (token) {
       const user = usersServices.getUserByIdService(mail);
       const user_role = user.role;
-      const allow = false;
+      let allow = false;
       if (user_role == "admin") {
         allow = true;
       }

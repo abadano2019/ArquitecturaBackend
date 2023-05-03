@@ -1,102 +1,111 @@
-import './passport/passportStrategies.js'
+import "./passport/passportStrategies.js";
 
-import Cors from 'cors';
-import FileStore from 'session-file-store'
-import MessagesManager from '../src/persistence/DAOs/messagesDAO/messagesManager/messagesMongo.js'
-import { Server } from 'socket.io'
-import { __dirname } from '../src/utils.js'
-//import {productsManager} from '../src/routes/products.router.js'
-import { addProductController } from './controllers/products.controller.js';
-import cartsRouters from './routes/carts.router.js'
-import config from './config.js'
-import cookieParser from 'cookie-parser'
-import express from 'express'
-import handlebars from 'express-handlebars'
-import jwtRouter from './routes/jwt.router.js'
-import mongoStore from 'connect-mongo'
-import passport from 'passport'
-import productsRouters from '../src/routes/products.router.js'
-import session from 'express-session'
-import usersRouter from './routes/users.router.js'
-import viewsRouter from './routes/views.router.js'
+import Cors from "cors";
+import FileStore from "session-file-store";
+import MessagesManager from "../src/persistence/DAOs/messagesDAO/messagesManager/messagesMongo.js";
+import { Server } from "socket.io";
+import { __dirname } from "../src/utils.js";
+import cartsRouters from "./routes/carts.router.js";
+import compression from "express-compression";
+import config from "./config.js";
+import cookieParser from "cookie-parser";
+import errorMiddleware from "../src/middlewares/errors.middleware.js"
+import express from "express";
+import handlebars from "express-handlebars";
+import jwtRouter from "./routes/jwt.router.js";
+import mongoStore from "connect-mongo";
+import passport from "passport";
+import productsRouters from "../src/routes/products.router.js";
+import session from "express-session";
+import {typeCompression} from "../src/middlewares/compression.middleware.js"
+import usersRouter from "./routes/users.router.js";
+import viewsRouter from "./routes/views.router.js";
 
-const PORT = config.PORT
-const app = express()
-const cookieKey = "signedCookieKey"
+const PORT = config.PORT;
+const app = express();
+const cookieKey = "signedCookieKey";
 //const fileStore = FileStore(session)
 
-app.use(Cors())
+typeCompression(app);
+app.use(Cors());
 
-app.use(cookieParser(cookieKey))
+app.use(cookieParser(cookieKey));
 
-app.use(session({
-    secret:"secretCoder23",
-    resave:false,
+app.use(
+  session({
+    secret: "secretCoder23",
+    resave: false,
     saveUninitialized: false,
-    cookies:{maxAge:500000},
+    cookies: { maxAge: 500000 },
     store: new mongoStore({
-        mongoUrl: config.MONGO_URI}),
+      mongoUrl: config.MONGO_URI,
+    }),
     //cookie:{maxAge:50000}
-}))
-app.use(express.json())
-app.use(express.urlencoded({extended:true}))
-app.use('/api/products',productsRouters)
-app.use('/api/carts',cartsRouters)
-app.use('/views', viewsRouter)
-app.use('/users', usersRouter)
-app.use('/jwt',jwtRouter)
+  })
+);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api/products", productsRouters);
+app.use("/api/carts", cartsRouters);
+app.use("/views", viewsRouter);
+app.use("/users", usersRouter);
+app.use("/jwt", jwtRouter);
+
+app.use(errorMiddleware)
 
 // passport
 //inicializar passport
-app.use(passport.initialize())
+app.use(passport.initialize());
 // passport va a guardar la informacion de session
-app.use(passport.session())
+app.use(passport.session());
 
 // archivos estaticos
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + "/public"));
 
-console.log(__dirname)
+console.log(__dirname);
 
 // handlebars
-app.engine('handlebars', handlebars.engine())
-app.set('view engine', 'handlebars')
-app.set('views', __dirname+'/views')
+app.engine("handlebars", handlebars.engine());
+app.set("view engine", "handlebars");
+app.set("views", __dirname + "/views");
 
-const httpServer = app.listen(PORT,()=>{
-    console.log('******* Ejecutando servidor *******')
-    console.log(`*** Escuchando al puerto:  ${PORT} ***`)
-})
+const httpServer = app.listen(PORT, () => {
+  console.log("******* Ejecutando servidor *******");
+  console.log(`*** Escuchando al puerto:  ${PORT} ***`);
+});
 
-export const socketServer = new Server(httpServer)
-const messagesManager = new MessagesManager()
-socketServer.on('connection',(socket)=>{
-    console.log(`Usuario conectado ${socket.id}`)
+export const socketServer = new Server(httpServer);
+const messagesManager = new MessagesManager();
+socketServer.on("connection", (socket) => {
+  console.log(`Usuario conectado ${socket.id}`);
 
-    socket.on('disconnect',()=>{
-        console.log('Uusario desconectado');
-    })
+  socket.on("disconnect", () => {
+    console.log("Uusario desconectado");
+  });
 
-    socket.on('addProduct', async({title, description, price, code,stock,status,category})=>{
-        console.log("Se ejecutó la carga de un producto nuevo")
-    })
+  socket.on(
+    "addProduct",
+    async ({ title, description, price, code, stock, status, category }) => {
+      console.log("Se ejecutó la carga de un producto nuevo");
+    }
+  );
 
-    socket.on('nuevoUsuario',usuario=>{
-        socket.broadcast.emit('broadcast',usuario)
-    })
+  socket.on("nuevoUsuario", (usuario) => {
+    socket.broadcast.emit("broadcast", usuario);
+  });
 
-    socket.on('mensaje',async info=>{
-        const message = messagesManager.createMensaje(info.user, info.message)
-        messagesManager.addMessage(message)
-        const chats = await messagesManager.getMessages()
-        socketServer.emit('chat',chats)
-    })
+  socket.on("mensaje", async (info) => {
+    const message = messagesManager.createMensaje(info.user, info.message);
+    messagesManager.addMessage(message);
+    const chats = await messagesManager.getMessages();
+    socketServer.emit("chat", chats);
+  });
 
-    socket.on('nextPage',async info=>{
-        console.log("Recibo Next")
-        /*const products = productsManager.createMensaje(info.user, info.message)
+  socket.on("nextPage", async (info) => {
+    console.log("Recibo Next");
+    /*const products = productsManager.createMensaje(info.user, info.message)
         messagesManager.addMessage(message)
         const chats = await messagesManager.getMessages()
         socketServer.emit('chat',chats)*/
-    })
-
-})
+  });
+});

@@ -1,3 +1,10 @@
+import {
+  ErrorsCause,
+  ErrorsMessage,
+  ErrorsName,
+} from "../errors/erros.enum.js";
+
+import CustomError from "../";
 import cartsServices from "../services/carts.services.js";
 import productsServices from "../services/products.services.js";
 import usersServices from "../services/users.services.js";
@@ -57,7 +64,12 @@ export const addProductToCartController = async (req, res) => {
 
     const product = await productsServices.getProductByIdService(pid);
     if (!product) {
-      res.json({ mesage: "Por aca. Producto inexistente" });
+      //res.json({ mesage: "Producto inexistente" });
+      CustomError.createCustomError({
+        name: ErrorsName.PRODUCT_DATA_INCOMPLETE,
+        cause: ErrorsCause.PRODUCT_DATA_INCOMPLETE,
+        message: ErrorsMessage.PRODUCT_DATA_INCOMPLETE,
+      });
       return;
     }
     const user = await usersServices.getUserByIdService(req.session.email);
@@ -183,5 +195,3 @@ export const updateCartProductQuantityController = async (req, res) => {
     console.log("LOG: " + error);
   }
 };
-
-

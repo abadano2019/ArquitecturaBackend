@@ -1,0 +1,47 @@
+export const ErrorsName = {
+  PRODUCT_DATA_ERROR: 'Error products',
+  PRODUCT_DATA_EXIST: 'Error products exist',
+  PRODUCT_DATA_COLLECTION: 'Error products get products', 
+  PRODUCT_DATA_PRIMARY_KEY: 'Error products code exist', 
+  PRODUCT_ADD_ERROR: 'Error add product', 
+  PRODUCT_UPDATE_ERROR: 'Error update product', 
+  PRODUCT_DELETE_ERROR: 'Error delete product', 
+  USER_DATA_ERROR: 'Error user data',
+  CART_DATA_EXIST: 'Error cart exist',
+  MESSAGE_CHAT_COLLECTION: "Error message chat",
+  DATA_TYPE_STRING_ERROR: "Error in data type",
+  DATA_TYPE_NUMBER_ERROR: "Error in data type",
+  DATA_TYPE_BOOLEAN_ERROR: "Error in data type",
+}
+
+export const ErrorsMessage = {
+  PRODUCT_DATA_ERROR: 'Request failed. Valid properties required',
+  PRODUCT_DATA_EXIST: 'Request faild. Error products not exist',
+  PRODUCT_DATA_COLLECTION: 'Request faild. Products get products',
+  PRODUCT_DATA_PRIMARY_KEY: 'Request faild. Error products code exist',
+  PRODUCT_ADD_ERROR: 'Request faild. Error in add a product',
+  PRODUCT_UPDATE_ERROR: 'Request faild. Error in update a product',
+  PRODUCT_DELETE_ERROR: 'Request faild. Error in delete a product',  
+  USER_DATA_ERROR: 'Request faild. Valid properties required',
+  CART_DATA_EXIST:  'Request faild: Error cart not fount',
+  MESSAGE_CHAT_COLLECTION: "Error messages chat: get collection chat",
+  DATA_TYPE_STRING_ERROR: 'Error: Data type string is required',
+  DATA_TYPE_NUMBER_ERROR: 'Error: Data type number is required',
+  DATA_TYPE_BOOLEAN_ERROR: "Error: Data type boolean is required",
+}
+
+export const ErrorsCause = {
+  PRODUCT_DATA_ERROR: 'Properties missing',
+  PRODUCT_DATA_EXIST: 'Data product not exist', 
+  PRODUCT_DATA_COLLECTION: 'Fail in get collection products',
+  PRODUCT_DATA_PRIMARY_KEY: 'Fail primary key product code already existe',
+  PRODUCT_ADD_ERROR: 'Fail in add a product to db',
+  PRODUCT_DELETE_ERROR: 'Fail in delete a product to db',
+  PRODUCT_UPDATE_ERROR: 'Fail in update a product to db', 
+  USER_DATA_ERROR: 'Properties missing',
+  CART_DATA_EXIST: 'Data cart not exist',
+  MESSAGE_CHAT_COLLECTION: "Fail in get collection chat",
+  DATA_TYPE_STRING_ERROR: 'Data type string is expected',
+  DATA_TYPE_NUMBER_ERROR: 'Data type number is expected',
+  DATA_TYPE_BOOLEAN_ERROR: 'Data type boolean is expected',
+}

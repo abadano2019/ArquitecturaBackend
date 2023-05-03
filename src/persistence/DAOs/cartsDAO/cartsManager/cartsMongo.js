@@ -119,23 +119,16 @@ export default class CartsManager {
       }
 
       if(cart?.cartProducts.length === 0){
-        console.log("llegue")
-        //const product = this.createCartProduct(objectPid)
-        //newCartProducts.push(product)
-        //newCartProducts.push({id:objectPid, quantity:1})
         cart.cartProducts.push({id:pid,quantity:1})
         console.log("sali de llegue")
       } 
       else{
         const pidStirng = pid.toString()
-        console.log("ObjectID", objectPid)
         let cartProduct = cart.cartProducts.find((product) => product.id._id.toString() === pid) 
-        
         cart.cartProducts.forEach(element => {
           console.log("----------------------------")
           console.log(element.id._id.toString())
           console.log("----------------------------")
-          
         });
           
         
@@ -149,22 +142,12 @@ export default class CartsManager {
         }
         else{
           cartProduct.quantity = cartProduct.quantity + 1
-          console.log("es este?")
           //newCartProducts = cart.cartProducts
-          console.log("es este2?")    
         }
       }
-      
-      console.log("CArt Products",cart.cartProducts)
-      console.log(cid)
-      //const filter = {id: cid}
-      //const datos = {cartProducts: newCartProducts}
-      
+            
       await cart.save()
       console.log("carrito actualizado")
-      
-      //const newCart = await cartsModel.findByIdAndUpdate(cid, {cartProducts: cart.cartProducts}, {new:true})
-      //console.log("Nuevo cart",newCart)
       
     }catch(error){
       console.log(error)

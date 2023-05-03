@@ -10,11 +10,11 @@ import {
   viewProductsRealTimeController,
   viewPutUpFileController,
 } from "../controllers/views.controller.js";
-import { getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.js";
+import { getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
 
 import { Router } from "express";
 import passport from "passport";
-import { upload } from "../middlewares/multer.js";
+import { upload } from "../middlewares/multer.middleware.js";
 import { viewChatController } from "../controllers/views.controller.js";
 
 const router = new Router();
@@ -76,5 +76,6 @@ router.get("/perfil", (req, res) => {
 router.get("/jwtLoginFront", (req, res) => {
   res.render("jwt");
 });
+
 
 export default router;

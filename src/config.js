@@ -4,6 +4,7 @@ dotenv.config();
 
 export default {
   PORT: process.env.PORT,
+  TEST_PORT: process.env.TEST_PORT,
   MONGO_URI: process.env.MONGO_URI,
   CLIENT_ID_GITHUB: process.env.CLIENT_ID_GITHUB,
   CLIENT_SECRET_GITHUB: process.env.CLIENT_SECRET_GITHUB, 
@@ -17,4 +18,5 @@ export default {
   TWILIO_PHONE_NUMBER: process.env.TWILIO_PHONE_NUMBER,
   GMAIL_PASSWORD: process.env.GMAIL_PASSWORD,
   GMAIL_USER: process.env.GMAIL_USER,
+  COMPRESION: process.env.COMPRESION
 };

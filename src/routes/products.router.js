@@ -8,7 +8,7 @@ import {
 } from "../controllers/products.controller.js";
 
 import { Router } from "express";
-import { getAuthAdminSession } from "../middlewares/auth.js";
+import { getAuthAdminSession } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 

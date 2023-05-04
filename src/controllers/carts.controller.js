@@ -2,9 +2,9 @@ import {
   ErrorsCause,
   ErrorsMessage,
   ErrorsName,
-} from "../errors/erros.enum.js";
+} from "../error/errors.enum.js";
 
-import CustomError from "../";
+import CustomError from "../error/CustomError.js";
 import cartsServices from "../services/carts.services.js";
 import productsServices from "../services/products.services.js";
 import usersServices from "../services/users.services.js";

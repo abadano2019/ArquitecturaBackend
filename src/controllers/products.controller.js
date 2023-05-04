@@ -1,3 +1,6 @@
+import { ErrorsCause, ErrorsMessage, ErrorsName } from "../error/errors.enum.js";
+
+import CustomError from "../error/CustomError.js"
 import Product from "../js/product.js";
 import productsServices from "../services/products.services.js";
 import { socketServer } from "../app.js";
@@ -61,6 +64,7 @@ export const addProductController = async (req, res) => {
       return "Title es un campo string";
     }
     if (typeof description !== "string") {
+      throw new Error("aaaaaaaaaaaa")
       return "Description es un campo string";
     }
     if (typeof code !== "string") {
@@ -91,6 +95,7 @@ export const addProductController = async (req, res) => {
     status,
     category
   ) => {
+    try{
     // validación de los campos, se solicita que no sean vacios
     if (
       title === "" ||
@@ -121,6 +126,12 @@ export const addProductController = async (req, res) => {
       category
     );
     return producto;
+
+    }catch(error){
+      console.log(error.name)
+      console.log(error.cause)
+      console.log(error.message)
+    }
   };
 
   try {
@@ -187,7 +198,8 @@ export const addProductController = async (req, res) => {
   } catch (error) {
     console.log("CODIGO ADDPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
     console.log("LOG: " + error);
-    res.json({ mesage: error });
+    res.json({ mesage: error })
+    
   }
 };
 
@@ -307,10 +319,12 @@ export const updateProductController = async (req, res) => {
   }
 };
 
-export const deleteProductController = async (req, res) => {
+export const deleteProductController = async (req, res,next) => {
   try {
+    console.log("entre a delete controler")
     const { idProduct } = req.params;
     const product = await productsServices.getProductByIdService(idProduct);
+    console.log("encontrado:", product)
 
     if (product) {
       productsServices.deleteProductService(idProduct);
@@ -318,10 +332,17 @@ export const deleteProductController = async (req, res) => {
       socketServer.emit("productoEliminado", { products });
       res.json({ mesage: "Producto eliminado", product });
     } else {
-      res.json({ mesage: "Producto no encontrado" });
+      //res.json({ mesage: "Producto no encontrado" });
+      console.log("no existe el producto")
+      CustomError.createCustomError({
+        name: ErrorsName.PRODUCT_DATA_EXIST,
+        cause: ErrorsCause.PRODUCT_DATA_EXIST,
+        message: ErrorsMessage.PRODUCT_DATA_EXIST,
+      })
     }
   } catch (error) {
-    console.log("CODIGO DELPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG: " + error);
+    //console.log("CODIGO DELPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
+    //console.log("LOG: " + error);
+    next(error)
   }
 };

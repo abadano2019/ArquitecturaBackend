@@ -1,6 +1,9 @@
 import "./passport/passportStrategies.js";
 
+import { ErrorsCause, ErrorsMessage, ErrorsName } from "../src/error/errors.enum.js";
+
 import Cors from "cors";
+import CustomError from "../src/error/CustomError.js"
 import FileStore from "session-file-store";
 import MessagesManager from "../src/persistence/DAOs/messagesDAO/messagesManager/messagesMongo.js";
 import { Server } from "socket.io";
@@ -9,7 +12,7 @@ import cartsRouters from "./routes/carts.router.js";
 import compression from "express-compression";
 import config from "./config.js";
 import cookieParser from "cookie-parser";
-import errorMiddleware from "../src/middlewares/errors.middleware.js"
+import {errorMiddleware} from "../src/middlewares/errors.middleware.js"
 import express from "express";
 import handlebars from "express-handlebars";
 import jwtRouter from "./routes/jwt.router.js";
@@ -22,11 +25,11 @@ import usersRouter from "./routes/users.router.js";
 import viewsRouter from "./routes/views.router.js";
 
 const PORT = config.PORT;
-const app = express();
+export const app = express();
 const cookieKey = "signedCookieKey";
 //const fileStore = FileStore(session)
 
-typeCompression(app);
+//typeCompression(app);
 app.use(Cors());
 
 app.use(cookieParser(cookieKey));
@@ -51,7 +54,18 @@ app.use("/views", viewsRouter);
 app.use("/users", usersRouter);
 app.use("/jwt", jwtRouter);
 
-app.use(errorMiddleware)
+app.post('/products', (req, res) => {
+  const { name, price } = req.body
+  if (!name || !price) {
+    CustomError.createCustomError({
+      name: ErrorsName.PRODUCT_DATA_ERROR,
+      cause: ErrorsCause.PRODUCT_DATA_ERROR,
+      message: ErrorsMessage.PRODUCT_DATA_ERROR,
+    })
+  } else {
+    res.send('Product creaded')
+  }
+})
 
 // passport
 //inicializar passport
@@ -69,6 +83,7 @@ app.engine("handlebars", handlebars.engine());
 app.set("view engine", "handlebars");
 app.set("views", __dirname + "/views");
 
+app.use(errorMiddleware)
 const httpServer = app.listen(PORT, () => {
   console.log("******* Ejecutando servidor *******");
   console.log(`*** Escuchando al puerto:  ${PORT} ***`);
@@ -108,4 +123,6 @@ socketServer.on("connection", (socket) => {
         const chats = await messagesManager.getMessages()
         socketServer.emit('chat',chats)*/
   });
+
+  
 });

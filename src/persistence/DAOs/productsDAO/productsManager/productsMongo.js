@@ -1,4 +1,5 @@
 import Product from "../../../../js/product.js"
+import mongoose from "mongoose";
 import {productsModel} from "../../../mongodb/models/products.model.js";
 
 export default class ProductsManager {

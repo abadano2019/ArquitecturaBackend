@@ -1,4 +1,5 @@
 import Factory from "../persistence/factory.js";
+import mongoose from "mongoose";
 import productsDTOPersistence from '../persistence/DTOs/products.DTO/productDTOPersistence.js';
 import productsDTOResponse from '../persistence/DTOs/products.DTO/productDTOResponse.js';
 
@@ -34,7 +35,10 @@ class ProductsRepository {
   }
   
   getProductByIdRepository = async(id) => {
-    const product = await this.#dao.getProductById(id);
+    console.log("repository", id)
+    const _id = new mongoose.Types.ObjectId(id)
+    console.log(_id)
+    const product = await this.#dao.getProductById(_id);
     let productDTO = undefined
     if(product){
        productDTO = new productsDTOResponse(product)  

@@ -23,7 +23,9 @@ class ProductsServices {
   };
 
   getProductByIdService = async (id) => {
+    console.log("entre en el servicio", id)
     const product = await this.#repository.getProductByIdRepository(id);
+    console.log("producto del servicio", product)
     return product;
   };
 

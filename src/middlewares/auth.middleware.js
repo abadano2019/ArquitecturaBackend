@@ -25,7 +25,7 @@ export const getAuthUser = async function (req, res, next) {
     console.log(req.user.email)
     const user = await usersServices.getUserByIdService(req.user.email);
     console.log("usuario:", user)
-    const user_role = user.role;
+    let user_role = user.role;
     console.log(user_role)
     let allow = false;
     if (user_role === "user") {
@@ -43,7 +43,7 @@ export const getAuthUserSession = async function (req, res, next) {
     console.log(req.session.email)
     const user = await usersServices.getUserByIdService(req.session.email);
     console.log("usuario:", user)
-    const user_role = user.role;
+    let user_role = user.role;
     console.log(user_role)
     let allow = false;
     if (user_role === "user") {
@@ -61,13 +61,17 @@ export const getAuthAdminSession = async function (req, res, next) {
     console.log(req.session.email)
     const user = await usersServices.getUserByIdService(req.session.email);
     console.log("usuario:", user)
-    const user_role = user.role;
+    let user_role = user.role;
     console.log(user_role)
     let allow = false;
     if (user_role === "admin") {
       allow = true;
+      console.log("soy Admin")
     }
-    if (allow) next();
+    if(allow) {
+      console.log("next OK")
+      next();
+    }
     else {
       res.status(403).send({ error: "access denied" });
     }

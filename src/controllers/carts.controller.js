@@ -194,7 +194,7 @@ export const deleteProductCartController = async (req, res, next) => {
   }
 };
 
-export const deleteProductsCartController = async (req, res) => {
+export const deleteProductsCartController = async (req, res, next) => {
   try {
     const { cid } = req.params;
     if (cid === "") {
@@ -233,7 +233,7 @@ export const deleteProductsCartController = async (req, res) => {
   }
 };
 
-export const updateCartProductController = async (req, res) => {
+export const updateCartProductController = async (req, res, next) => {
   try {
     const { cid } = req.params;
     const { cartProducts } = req.body;
@@ -283,7 +283,7 @@ export const updateCartProductController = async (req, res) => {
   }
 };
 
-export const updateCartProductQuantityController = async (req, res) => {
+export const updateCartProductQuantityController = async (req, res, next) => {
   try {
     const { cid, pid } = req.params;
     const { cantidad } = req.body;

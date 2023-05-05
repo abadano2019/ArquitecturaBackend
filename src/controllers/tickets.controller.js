@@ -1,22 +1,43 @@
+import {
+  ErrorsCause,
+  ErrorsMessage,
+  ErrorsName,
+} from "../error/errors.enum.js";
+
+import CustomError from "../error/CustomError.js";
 import cartsServices from "../services/carts.services.js";
 import productsServices from "../services/products.services.js"
 import ticketsServices from "../services/tickets.services.js";
 import {transporter} from "../nodemailer.js"
 import usersServices from "../services/users.services.js";
 
-export const getTicketsByUserController = async (req, res) => {
+export const getTicketsByUserController = async (req, res,next) => {
   try {
     const ticket = await ticketsServices.getTicketByUserService();
     res.json(ticket);
   } catch (error) {
-    console.log(error);
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };
 
-export const addTicketController = async (req, res) => {
+export const addTicketController = async (req, res,next) => {
 
   try {
     const { cid } = req.params;
+
+    if (cid === ""){
+      CustomError(
+        ErrorsName.CART_DATA_ERROR,
+        ErrorsCause.CART_DATA_ERROR,
+        ErrorsMessage.CART_DATA_ERROR,
+        500,
+        "Input parameter missing"
+      );
+    }
     const user = await usersServices.getUserByIdService(req.session.email)
     const date = new Date();
     const datetime = date.toLocaleString();
@@ -50,7 +71,10 @@ export const addTicketController = async (req, res) => {
     res.json({ mesage: "Compra realizada" });
 
   } catch (error) {
-    console.log(error);
-    return "Message Controller Add Ticket Erro - COD3";
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };

@@ -28,7 +28,7 @@ export const getProductsController = async (req, res, next) => {
   }
 };
 
-export const getProductByIdController = async (req, res) => {
+export const getProductByIdController = async (req, res,next) => {
   try {
     const { idProduct } = req.params;
     const product = await productsServices.getProductByIdService(idProduct);
@@ -47,7 +47,7 @@ export const getProductByIdController = async (req, res) => {
   }
 };
 
-export const getProducts_Controller = async (req, res) => {
+export const getProducts_Controller = async (req, res,next) => {
   const { limit } = req.query;
   try {
     const products = await productsServices.getProducts_Service();

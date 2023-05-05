@@ -8,7 +8,7 @@ import CustomError from "../error/CustomError.js";
 import { generateToken } from "../utils.js";
 import usersService from "../services/users.services.js";
 
-export const loginJwtController = async (req, res) => {
+export const loginJwtController = async (req, res, next) => {
   try {
     if (req.body === "") {
       CustomError(

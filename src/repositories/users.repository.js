@@ -11,36 +11,44 @@ class UsersRepository {
   }
 
   getUserByIdRepository = async (email) => {
-    const user = await this.#dao.getUserById(email);
-    let userDTO = undefined
-    if(user){
-      userDTO= new usersDTOResponse(user)
-    }
-    return userDTO;
+    try {
+      const user = await this.#dao.getUserById(email);
+      let userDTO = undefined;
+      if (user) {
+        userDTO = new usersDTOResponse(user);
+      }
+      return userDTO;
+    } catch (error) {}
   };
 
-  createUserRepository = async (user,cart) => {
-    console.log("user normal", user)
-    const userDTO = new usersDTOPersistence(user,cart)
-    const createdUser = await this.#dao.createUser(userDTO);
-    return createdUser;
+  createUserRepository = async (user, cart) => {
+    try {
+      console.log("user normal", user);
+      const userDTO = new usersDTOPersistence(user, cart);
+      const createdUser = await this.#dao.createUser(userDTO);
+      return createdUser;
+    } catch (error) {}
   };
 
-  createUserPassportRepository = async (user,cart) => {
-    console.log("user passport", user)
-    const userDTO = new usersDTOPersistence(user,cart)
-    console.log("USER DTO ", userDTO)
-    const createdUser = await this.#dao.createUserPassport(userDTO);
-    return createdUser;
+  createUserPassportRepository = async (user, cart) => {
+    try {
+      console.log("user passport", user);
+      const userDTO = new usersDTOPersistence(user, cart);
+      console.log("USER DTO ", userDTO);
+      const createdUser = await this.#dao.createUserPassport(userDTO);
+      return createdUser;
+    } catch (error) {}
   };
 
   loginUserRepository = async (user) => {
-    const loginUser = await this.#dao.loginUser(user);
-    let userDTO = undefined
-    if(loginUser){
-      userDTO = new usersDTOResponse(loginUser)
-    }
+    try {
+      const loginUser = await this.#dao.loginUser(user);
+      let userDTO = undefined;
+      if (loginUser) {
+        userDTO = new usersDTOResponse(loginUser);
+      }
       return userDTO;
+    } catch (error) {}
   };
 }
 

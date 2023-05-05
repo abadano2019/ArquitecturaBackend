@@ -11,54 +11,70 @@ class CartsRepository {
   }
 
   getCartsRepository = async () => {
-    const carts = await this.#dao.getCarts();
-    const cartsResponse = [];
-    carts.forEach((cart) => {
-      const cartResponse = new cartDTOResponse(cart);
-      cartsResponse.push(cartResponse);
-    });
-    return cartsResponse;
+    try {
+      const carts = await this.#dao.getCarts();
+      const cartsResponse = [];
+      carts.forEach((cart) => {
+        const cartResponse = new cartDTOResponse(cart);
+        cartsResponse.push(cartResponse);
+      });
+      return cartsResponse;
+    } catch (error) {}
   };
 
   getCartByIdRepository = async (idCart) => {
-    console.log("Ver")
-    console.log(idCart)
-    console.log("DAO",this.#dao)
-    const cart = await this.#dao.getCartById(idCart);
-    console.log(cart)
-    const cartResponse = new cartDTOResponse(cart);
-    return cartResponse;
+    try {
+      console.log(idCart);
+      const cart = await this.#dao.getCartById(idCart);
+      console.log(cart);
+      const cartResponse = new cartDTOResponse(cart);
+      return cartResponse;
+    } catch (error) {}
   };
 
   addCartRepository = async () => {
-    const cartPersistence = new cartDTOPersistence()
-    const newCart = await this.#dao.addCart(cartPersistence);
-    console.log("NEW CART",newCart)
-    return newCart
+    try {
+      const cartPersistence = new cartDTOPersistence();
+      const newCart = await this.#dao.addCart(cartPersistence);
+      console.log("NEW CART", newCart);
+      return newCart;
+    } catch (error) {}
   };
 
   addProductCartRepository = async (cid, pid) => {
-    return await this.#dao.addProductCart(cid, pid);
+    try {
+      return await this.#dao.addProductCart(cid, pid);
+    } catch (error) {}
   };
 
   deleteCartRepository = async (idCart) => {
-    return await this.#dao.deleteCart(idCart);
+    try {
+      return await this.#dao.deleteCart(idCart);
+    } catch (error) {}
   };
 
   deleteProductCartRepository = async (cid, pid) => {
-    return await this.#dao.deleteProductCart(cid, pid);
+    try {
+      return await this.#dao.deleteProductCart(cid, pid);
+    } catch (error) {}
   };
 
   deleteProductsCartRepository = async (cid) => {
-    return await this.#dao.deleteProductsCart(cid);
+    try {
+      return await this.#dao.deleteProductsCart(cid);
+    } catch (error) {}
   };
 
   updateCartProductRepository = async (cid, products) => {
-    return await this.#dao.updateCartProduct(cid, products);
+    try {
+      return await this.#dao.updateCartProduct(cid, products);
+    } catch (error) {}
   };
 
   updateCartProductQuantityRepository = async (cid, pid, cantidad) => {
-    return await this.#dao.updateCartProductQuantity(cid, pid, cantidad);
+    try {
+      return await this.#dao.updateCartProductQuantity(cid, pid, cantidad);
+    } catch (error) {}
   };
 }
 

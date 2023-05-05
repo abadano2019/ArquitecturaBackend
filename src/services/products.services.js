@@ -8,50 +8,70 @@ class ProductsServices {
   }
 
   getProductsService = async (limit, page, query, sort) => {
-    const products = await this.#repository.getProductsRepository(
-      limit,
-      page,
-      query,
-      sort
-    );
-    return products;
+    try {
+      const products = await this.#repository.getProductsRepository(
+        limit,
+        page,
+        query,
+        sort
+      );
+      return products;
+    } catch (error) {}
   };
 
   getProducts_Service = async () => {
-    const products = await this.#repository.getProducts_Repository();
-    return products;
+    try {
+      const products = await this.#repository.getProducts_Repository();
+      return products;
+    } catch (error) {}
   };
 
   getProductByIdService = async (id) => {
-    console.log("entre en el servicio", id)
-    const product = await this.#repository.getProductByIdRepository(id);
-    console.log("producto del servicio", product)
-    return product;
+    try {
+      console.log("entre en el servicio", id);
+      const product = await this.#repository.getProductByIdRepository(id);
+      console.log("producto del servicio", product);
+      return product;
+    } catch (error) {
+      CustomError(
+        ErrorsName.PRODUCT_DATA_ERROR,
+        ErrorsCause.PRODUCT_DATA_ERROR,
+        ErrorsMessage.PRODUCT_DATA_ERROR,
+        500,
+        "Contact Administrator - Service error"
+      );
+    }
   };
 
   addProductService = async (producto) => {
-    const product = await this.#repository.addProductRepository(producto);
-    return product;
+    try {
+      const product = await this.#repository.addProductRepository(producto);
+      return product;
+    } catch (error) {}
   };
 
   updateProductService = async (id, producto) => {
-    const product = await this.#repository.updateProductRepository(
-      id,
-      producto
-    );
-    return product;
+    try {
+      const product = await this.#repository.updateProductRepository(
+        id,
+        producto
+      );
+      return product;
+    } catch (error) {}
   };
 
   deleteProductService = async (id) => {
-    const product = await this.#repository.deleteProductRepository(id);
-    return product;
+    try {
+      const product = await this.#repository.deleteProductRepository(id);
+      return product;
+    } catch (error) {}
   };
 
-  updateStock = async(id,stock) => {
-    await this.#repository.updateStock(id,stock)
-  }
-
-
+  updateStock = async (id, stock) => {
+    try {
+      await this.#repository.updateStock(id, stock);
+    } catch (error) {}
+  };
 }
 
 export default new ProductsServices(productsRepository);

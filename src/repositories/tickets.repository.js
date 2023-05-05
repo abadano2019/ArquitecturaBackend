@@ -10,18 +10,22 @@ class TicketsRepository {
   }
 
   getTicketByUserRepository = async (email) => {
-    const ticket = await this.#dao.getTicketByUser(email);
-    let ticketDTO = undefined; 
-    if(ticket){
+    try {
+      const ticket = await this.#dao.getTicketByUser(email);
+      let ticketDTO = undefined;
+      if (ticket) {
         ticketDTO = new ticketDTOResponse(ticket);
-    }
-    return ticketDTO;  
+      }
+      return ticketDTO;
+    } catch (error) {}
   };
 
   addTicketRepository = async (ticket) => {
-    const messageDTO = new ticketDTOPersistence(ticket)
-    const newTicket = await this.#dao.addPurchase(messageDTO);
-    return newTicket 
+    try {
+      const messageDTO = new ticketDTOPersistence(ticket);
+      const newTicket = await this.#dao.addPurchase(messageDTO);
+      return newTicket;
+    } catch (error) {}
   };
 }
 

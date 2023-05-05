@@ -10,16 +10,19 @@ class MessagesRepository {
   }
 
   getMessagesRepository = async () => {
-    const message = await this.#dao.getMessages();
-    const messageDTO = new messageDTOResponse(message);
-    return messageDTO;  
-    
+    try {
+      const message = await this.#dao.getMessages();
+      const messageDTO = new messageDTOResponse(message);
+      return messageDTO;
+    } catch (error) {}
   };
 
   addMessageRepository = async (message) => {
-    const messageDTO = new messageDTOPersistence(message)
-    const newMessage = await this.#dao.addMessage(messageDTO);
-    return newMessage 
+    try {
+      const messageDTO = new messageDTOPersistence(message);
+      const newMessage = await this.#dao.addMessage(messageDTO);
+      return newMessage;
+    } catch (error) {}
   };
 }
 

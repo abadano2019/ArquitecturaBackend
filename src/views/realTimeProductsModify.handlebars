@@ -90,11 +90,22 @@
         })
         .then((response) => response.json())
         .then((response) => {
-            //localStorage.setItem('token',response.token)
-            console.log(response)
-            //cookie.setItem('token',response.token)
-            console.log('Producto Modificado !!!!');
-            window.alert("Producto Modificado !!!!")
+            try{
+                if (response.number > 200){
+                    console.log("error:", response)
+                    window.alert(JSON.stringify(response))
+                }
+                else
+                {
+                    console.log(response)
+                    console.log(response.number)
+                    console.log('Producto modificado');
+                    window.alert("Producto modificado !!!!!")
+                }
+            }catch(error)
+            {
+                console.log(error)
+            }
             
             
         })

@@ -9,7 +9,6 @@ import MessagesManager from "../src/persistence/DAOs/messagesDAO/messagesManager
 import { Server } from "socket.io";
 import { __dirname } from "../src/utils.js";
 import cartsRouters from "./routes/carts.router.js";
-import compression from "express-compression";
 import config from "./config.js";
 import cookieParser from "cookie-parser";
 import {errorMiddleware} from "../src/middlewares/errors.middleware.js"
@@ -29,7 +28,7 @@ export const app = express();
 const cookieKey = "signedCookieKey";
 //const fileStore = FileStore(session)
 
-//typeCompression(app);
+typeCompression(app);
 app.use(Cors());
 
 app.use(cookieParser(cookieKey));

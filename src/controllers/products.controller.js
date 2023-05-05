@@ -1,18 +1,30 @@
-import { ErrorsCause, ErrorsMessage, ErrorsName } from "../error/errors.enum.js";
+import {
+  ErrorsCause,
+  ErrorsMessage,
+  ErrorsName,
+} from "../error/errors.enum.js";
 
-import CustomError from "../error/CustomError.js"
+import CustomError from "../error/CustomError.js";
 import Product from "../js/product.js";
 import productsServices from "../services/products.services.js";
 import { socketServer } from "../app.js";
 
-export const getProductsController = async (req, res) => {
+export const getProductsController = async (req, res, next) => {
   try {
     const { limit = 10, page = 1, sort, ...query } = req.query;
-    const products = productsServices.getProductsService(limit, page, query, sort);
+    const products = productsServices.getProductsService(
+      limit,
+      page,
+      query,
+      sort
+    );
     res.json({ message: "productos encontrado:", products });
   } catch (error) {
-    console.log("CODIGO GETPRODS: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG Detallado: " + error);
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };
 
@@ -27,8 +39,11 @@ export const getProductByIdController = async (req, res) => {
       res.json({ mesage: "Producto no encontrado" });
     }
   } catch (error) {
-    console.log("CODIGO GETPRODID: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG: " + error);
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };
 
@@ -44,78 +59,101 @@ export const getProducts_Controller = async (req, res) => {
       res.json({ message: "productos encontrado:", products });
     }
   } catch (error) {
-    console.log("CODIGO GETPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG: " + error);
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };
 
-export const addProductController = async (req, res) => {
-  const dataTypeValidation = (
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) => {
-    if (typeof title !== "string") {
-      return "Title es un campo string";
-    }
-    if (typeof description !== "string") {
-      throw new Error("aaaaaaaaaaaa")
-      return "Description es un campo string";
-    }
-    if (typeof code !== "string") {
-      return "Code es un campo string";
-    }
-    if (typeof category !== "string") {
-      return "Category es un campo string";
-    }
-    if (typeof price !== "number") {
-      return "Price es un campo numerico";
-    }
-    if (typeof stock !== "number") {
-      return "Stock es un campo numerico";
-    }
-    if (typeof status !== "boolean") {
-      return "status es un campo booleano";
-    }
-    return "ok";
-  };
+export const addProductController = async (req, res, next) => {
+  try {
+    console.log(req.body);
+    let {
+      title,
+      description,
+      price,
+      thumbnails,
+      code,
+      stock,
+      status,
+      category,
+    } = req.body;
 
-  const createProduct = (
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) => {
-    try{
-    // validación de los campos, se solicita que no sean vacios
-    if (
-      title === "" ||
-      description === "" ||
-      price === "" ||
-      code === "" ||
-      stock === "" ||
-      status === "" ||
-      category === ""
-    ) {
-      console.log(
-        "Atención 4561: Verifique los campos a ingresar (title, description, price, thumbnails, code, stock, category)"
+    const priceInt = parseInt(price);
+    const stockInt = parseInt(stock);
+    const statusBool = Boolean(status);
+    if (typeof title !== "string" || title === "") {
+      //return "Title es un campo string";
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Title string datacamp"
       );
-      return "Atención: Verifique los campos a ingresar (title, description, price, thumbnails, code, stock, category)";
     }
-    // crear producto
+    if (typeof description !== "string" || description === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Description string datacamp"
+      );
+    }
+    if (typeof code !== "string" || code === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Code string datacamp"
+      );
+    }
+    if (typeof category !== "string" || category === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Category string datacamp"
+      );
+    }
+    if (typeof priceInt !== "number" || priceInt === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Price numeric datacamp"
+      );
+    }
+    if (typeof stockInt !== "number" || stockInt === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Price numeric datacamp"
+      );
+    }
+    if (typeof statusBool !== "boolean" || statusBool === "") {
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Status boolean datacamp"
+      );
+    }
+
     if (thumbnails === undefined) {
       thumbnails = [];
     }
-    const producto = new Product(
+
+    const product = new Product(
       title,
       description,
       price,
@@ -125,174 +163,119 @@ export const addProductController = async (req, res) => {
       status,
       category
     );
-    return producto;
 
-    }catch(error){
-      console.log(error.name)
-      console.log(error.cause)
-      console.log(error.message)
+    const cod = await productsServices.addProductService(product);
+    console.log("codigo", cod);
+    if (cod === "ADDPROD-COD1") {
+      res.json({
+        mesage:
+          "ATENCION: Verifique el campo Code, el mismo ya existe en otro producto",
+      });
+    } else {
+      if (cod === "ADDPROD-COD2") {
+        const products = await productsServices.getProducts_Service();
+        console.log(products);
+        socketServer.emit("productoAgregado", { products });
+        res.json({ mesage: "Producto agregado", product });
+      }
     }
-  };
+  } catch (error) {
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
+  }
+};
 
+export const updateProductController = async (req, res, next) => {
   try {
-
-    console.log(req.body)
+    const { idProduct } = req.params;
     const {
       title,
       description,
       price,
-      thumbnails,
+      thumbnail,
       code,
       stock,
       status,
       category,
     } = req.body;
 
-    const priceInt = parseInt(price)
-    const stockInt = parseInt(stock)
-    const statusBool = Boolean(status)
-    const validation = dataTypeValidation(
-      title,
-      description,
-      priceInt,
-      thumbnails,
-      code,
-      stockInt,
-      statusBool,
-      category
-    );
-    if (validation === "ok") {
-      const product = createProduct(
-        title,
-        description,
-        price,
-        thumbnails,
-        code,
-        stock,
-        status,
-        category
-      );
-
-      if (typeof product === "string") {
-        res.json({ mensaje: product });
-        return "Validation product: " + product;
-      }
-      const cod = await productsServices.addProductService(product);
-      console.log("codigo", cod);
-      if (cod === "ADDPROD-COD1") {
-        res.json({
-          mesage:
-            "ATENCION: Verifique el campo Code, el mismo ya existe en otro producto",
-        });
-      } else {
-        if (cod === "ADDPROD-COD2") {
-          const products = await productsServices.getProducts_Service();
-          console.log(products);
-          socketServer.emit("productoAgregado", { products });
-          res.json({ mesage: "Producto agregado", product });
-        }
-      }
-    } else {
-      res.json({ mesage: "Error: ", validation });
-    }
-  } catch (error) {
-    console.log("CODIGO ADDPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG: " + error);
-    res.json({ mesage: error })
-    
-  }
-};
-
-export const updateProductController = async (req, res) => {
-  const dataTypeValidationUpdate = (
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) => {
     if (typeof title !== "string" && title !== undefined) {
-      return "Title es un campo string";
+      //return "Title es un campo string";
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Title string datacamp"
+      );
     }
     if (typeof description !== "string" && description !== undefined) {
-      return "Description es un campo string";
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Description string datacamp"
+      );
     }
     if (typeof code !== "string" && code !== undefined) {
-      return "Code es un campo string";
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Code string datacamp"
+      );
     }
     if (typeof category !== "string" && category !== undefined) {
-      return "Category es un campo string";
+      CustomError(
+        ErrorsName.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        ErrorsCause.DATA_TYPE_STRING_ERROR,
+        500,
+        "Category string datacamp"
+      );
     }
-    if (typeof price !== "number" && price !== undefined) {
-      return "Price es un campo numerico";
+    if (typeof Number(price) !== "number" && price !== undefined) {
+      CustomError(
+        ErrorsName.DATA_TYPE_NUMBER_ERROR,
+        ErrorsCause.DATA_TYPE_NUMBER_ERROR,
+        ErrorsCause.DATA_TYPE_NUMBER_ERROR,
+        500,
+        "Price number datacamp"
+      );
     }
-    if (typeof stock !== "number" && stock !== undefined) {
-      return "Stock es un campo numerico";
+    if (typeof Number(stock) !== "number" && stock !== undefined) {
+      CustomError(
+        ErrorsName.DATA_TYPE_NUMBER_ERROR,
+        ErrorsCause.DATA_TYPE_NUMBER_ERROR,
+        ErrorsCause.DATA_TYPE_NUMBER_ERROR,
+        500,
+        "Stock number datacamp"
+      );
     }
-    if (typeof status !== "boolean" && status !== undefined) {
-      return "status es un campo booleano";
+    if (typeof Boolean(status) !== "boolean" && status !== undefined) {
+      CustomError(
+        ErrorsName.DATA_TYPE_BOOLEAN_ERROR,
+        ErrorsCause.DATA_TYPE_BOOLEAN_ERROR,
+        ErrorsCause.DATA_TYPE_BOOLEAN_ERROR,
+        500,
+        "Status boolean datacamp"
+      );
     }
-    if (!Array.isArray(thumbnails) && thumbnails !== undefined) {
-      return "Thumbnails es un campo que recibe un array";
+    if (!Array.isArray(thumbnail) && thumbnail !== undefined) {
+      CustomError(
+        ErrorsName.DATA_TYPE_ERROR,
+        ErrorsCause.DATA_TYPE_ERROR,
+        ErrorsCause.DATA_TYPE_ERROR,
+        500,
+        "Thumbnails array type"
+      );
     }
-    return "OK";
-  };
-
-  const createProductPut = (
-    title,
-    description,
-    price,
-    thumbnails,
-    code,
-    stock,
-    status,
-    category
-  ) => {
-    const producto = new Product(
-      title,
-      description,
-      price,
-      thumbnails,
-      code,
-      stock,
-      status,
-      category
-    );
-    return producto;
-  };
-
-  try {
-    const { idProduct } = req.params;
-    console.log("Ver idProducto", idProduct)
-    const {
-      title,
-      description,
-      price,
-      thumbnail,
-      code,
-      stock,
-      status,
-      category,
-    } = req.body;
-
-    const dataCheck = dataTypeValidationUpdate(
-      title,
-      description,
-      Number(price),
-      thumbnail,
-      code,
-      Number(stock),
-      Boolean(status),
-      category
-    );
-    if (dataCheck !== "OK") {
-      res.json({ mesage: dataCheck });
-    }
-
-    const product = createProductPut(
+    const product = new Product(
       title,
       description,
       price,
@@ -302,29 +285,48 @@ export const updateProductController = async (req, res) => {
       status,
       category
     );
-    const modifyProduct = await productsServices.getProductByIdService(idProduct);
+
+    const modifyProduct = await productsServices.getProductByIdService(
+      idProduct
+    );
     if (modifyProduct) {
-      const validation = await productsServices.updateProductService(idProduct, product);
-      if (validation === "OK") {
-        res.json("Producto modificado")
-      } else {
-        res.json({ mesage: validation });
-      }
+      const validation = await productsServices.updateProductService(
+        idProduct,
+        product
+      );
+      res.json("Producto modificado");
     } else {
-      res.json({ mesage: "No existe el producto a modificar" });
+      CustomError(
+        ErrorsName.PRODUCT_DATA_NO_EXIST,
+        ErrorsCause.PRODUCT_DATA_NO_EXIST,
+        ErrorsCause.PRODUCT_DATA_NO_EXIST,
+        500,
+        "Product not exist"
+      );
     }
   } catch (error) {
-    console.log("CODIGO PUTPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    console.log("LOG: " + error);
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };
 
-export const deleteProductController = async (req, res,next) => {
+export const deleteProductController = async (req, res, next) => {
   try {
-    console.log("entre a delete controler")
     const { idProduct } = req.params;
+    if (idProduct.length < 24) {
+      CustomError(
+        ErrorsName.PRODUCT_DATA_NO_EXIST,
+        ErrorsCause.PRODUCT_DATA_NO_EXIST,
+        ErrorsCause.PRODUCT_DATA_NO_EXIST,
+        500,
+        "Product Id not exist"
+      );
+    }
     const product = await productsServices.getProductByIdService(idProduct);
-    console.log("encontrado:", product)
+    console.log("encontrado:", product);
 
     if (product) {
       productsServices.deleteProductService(idProduct);
@@ -332,17 +334,20 @@ export const deleteProductController = async (req, res,next) => {
       socketServer.emit("productoEliminado", { products });
       res.json({ mesage: "Producto eliminado", product });
     } else {
-      //res.json({ mesage: "Producto no encontrado" });
-      console.log("no existe el producto")
-      CustomError.createCustomError({
-        name: ErrorsName.PRODUCT_DATA_EXIST,
-        cause: ErrorsCause.PRODUCT_DATA_EXIST,
-        message: ErrorsMessage.PRODUCT_DATA_EXIST,
-      })
+      console.log("no existe el producto");
+      CustomError(
+        ErrorsName.PRODUCT_DATA_NO_EXIST,
+        ErrorsCause.PRODUCT_DATA_NO_EXIST,
+        ErrorsMessage.PRODUCT_DATA_NO_EXIST,
+        500,
+        "Product not exist"
+      );
     }
   } catch (error) {
-    //console.log("CODIGO DELPROD: CONTACTAR AL ADMINISTRADOR DEL SITIO");
-    //console.log("LOG: " + error);
-    next(error)
+    console.log(error.name);
+    console.log(error.message);
+    console.log(error.cause);
+    console.log(error.Number);
+    next(error);
   }
 };

@@ -5,11 +5,10 @@ export const viewProductsController = async (req, res) => {
   console.log(req.query);
   const { page = 1 } = req.query;
   const { user } = req.session;
-  console.log("User Session", req.session)
+  console.log("User Session", req.session);
   const { sessionID } = req.sessionID;
   const productsPag = await productsServices.getProductsService(5, page);
   console.log(productsPag);
-  //const { sessionID } = req.sessionID
   console.log("sessionID", sessionID);
   const productsPaginate = {
     user: user,
@@ -21,7 +20,7 @@ export const viewProductsController = async (req, res) => {
 export const viewProductsCookiesController = async (req, res) => {
   const { page = 1 } = req.query;
   const user = req.user;
-  console.log("user cookie", user)
+  console.log("user cookie", user);
   const productsPag = await productsServices.getProductsService(5, page);
   console.log(productsPag);
   const productsPaginate = {
@@ -29,7 +28,6 @@ export const viewProductsCookiesController = async (req, res) => {
     productsPag: productsPag,
   };
   res.render("productsJWT", { productsPaginate, layout: "products" });
-  console.log("hice el render");
 };
 
 export const viewChatController = async (req, res) => {
@@ -56,7 +54,6 @@ export const modifyProductsRealTime2Controller = async (req, res) => {
 
 export const viewListProductsController = async (req, res) => {
   const products = await productsServices.getProducts_Service();
-  console.log(products);
   res.render("home", { products, layout: "home" });
 };
 

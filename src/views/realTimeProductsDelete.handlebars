@@ -71,10 +71,7 @@
         const stock = inputStock.value
         const status = inputStatus.value
         const category = inputCategory.value
-                
         socketClient.emit('deleteProduct',{id, title, description, price, code,stock,status,category})
-        
-        
         fetch('http://localhost:3000/api/products/'+id, {
             method: 'DELETE',
             body: JSON.stringify({
@@ -86,12 +83,22 @@
         })
         .then((response) => response.json())
         .then((response) => {
-            //localStorage.setItem('token',response.token)
-            console.log(response)
-            //cookie.setItem('token',response.token)
-            console.log('Producto eliminado');
-            window.alert("Producto eliminado !!!!!")
-            
+            try{
+                if (response.number > 200){
+                    console.log("error:", response)
+                    window.alert(JSON.stringify(response))
+                }
+                else
+                {
+                    console.log(response)
+                    console.log(response.number)
+                    console.log('Producto eliminado');
+                    window.alert("Producto eliminado!!!!!")
+                }
+            }catch(error)
+            {
+                console.log(error)
+            }
         })
     }
     

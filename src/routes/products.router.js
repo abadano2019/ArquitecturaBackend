@@ -29,6 +29,6 @@ router.post("/",getAuthAdminSession, addProductController)
 router.put("/:idProduct", getAuthAdminSession, updateProductController)
 
 // eliminación de producto
-router.delete("/:idProduct", getAuthAdminSession, deleteProductController)
+router.delete("/:idProduct", getAuthAdminSession, deleteProductController, errorMiddleware)
 
 export default router;

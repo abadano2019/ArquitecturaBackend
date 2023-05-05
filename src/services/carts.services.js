@@ -8,89 +8,79 @@ class CartsServices {
   }
 
   getCartsService = async () => {
-    return await this.#repository.getCartsRepository();
+    try {
+      return await this.#repository.getCartsRepository();
+    } catch (error) {}
   };
 
   getCartByIdService = async (idCart) => {
-    return await this.#repository.getCartByIdRepository(idCart);
+    try {
+      return await this.#repository.getCartByIdRepository(idCart);
+    } catch (error) {}
   };
 
   addCartService = async () => {
-    const cart = await this.#repository.addCartRepository();
-    return cart;
+    try {
+      const cart = await this.#repository.addCartRepository();
+      return cart;
+    } catch (error) {}
   };
 
   addProductCartService = async (cid, pid) => {
-    return await this.#repository.addProductCartRepository(cid, pid);
+    try {
+      return await this.#repository.addProductCartRepository(cid, pid);
+    } catch (error) {}
   };
 
   deleteCartService = async (idCart) => {
-    return await this.#repository.deleteCartRepository(idCart);
+    try {
+      return await this.#repository.deleteCartRepository(idCart);
+    } catch (error) {}
   };
 
   deleteProductCartService = async (cid, pid) => {
-    return await this.#repository.deleteProductCartRepository(cid, pid);
+    try {
+      return await this.#repository.deleteProductCartRepository(cid, pid);
+    } catch (error) {}
   };
 
   deleteProductsCartService = async (cid) => {
-    return await this.#repository.deleteProductsCartRepository(cid);
+    try {
+      return await this.#repository.deleteProductsCartRepository(cid);
+    } catch (error) {}
   };
 
   updateCartProductService = async (cid, products) => {
-    return await this.#repository.updateCartProductRepository(cid, products);
+    try {
+      return await this.#repository.updateCartProductRepository(cid, products);
+    } catch (error) {}
   };
 
   updateCartProductQuantityService = async (cid, pid, cantidad) => {
-    return await this.#repository.updateCartProductQuantityRepository(
-      cid,
-      pid,
-      cantidad
-    );
+    try {
+      return await this.#repository.updateCartProductQuantityRepository(
+        cid,
+        pid,
+        cantidad
+      );
+    } catch (error) {}
   };
 
   sumItemsCarts = async (cart) => {
-    let total = 0;
-    const products = await productsServices.getProducts_Service();
-    await cart.forEach((cartProduct) => {
-      let id = cartProduct.id._id.toString();
-      let product = products.find((prod) => prod.id === id);
-      total = total + product.price * cartProduct.quantity;
-    });
-    return total;
+    try {
+      let total = 0;
+      const products = await productsServices.getProducts_Service();
+      await cart.forEach((cartProduct) => {
+        let id = cartProduct.id._id.toString();
+        let product = products.find((prod) => prod.id === id);
+        total = total + product.price * cartProduct.quantity;
+      });
+      return total;
+    } catch (error) {}
   };
 
-  /*checkProductsCart = async (cart) => {
-    let cartPurchase = [];
-    let newCart = [];
-    const products = await productsServices.getProducts_Service();
-
-    await cart.forEach(async (cartProduct) => {
-      let id = cartProduct.id._id.toString();
-      let product = products.find((prod) => prod.id === id);
-      if (product.stock >= cartProduct.quantity) {
-        cartPurchase.push(cartProduct);
-        let producto =
-        {
-          title:"",
-          description:"",
-          price:"",
-          thumbnails:"",
-          code:"",
-          stock:product.stock - cartProduct.quantity, 
-          status:"", 
-          category:""
-        }
-        console.log("Id de producto a modificar:", id)
-        const updatedProd = await productsServices.updateProductService(id,producto);
-
-      } else {
-        newCart.push(cartProduct);
-      }
-    });
-    return [cartPurchase, newCart];
-  };*/
-
   checkProductsCart = async (cart) => {
+    try{
     let cartPurchase = [];
     let newCart = [];
     const products = await productsServices.getProducts_Service();
@@ -100,19 +90,6 @@ class CartsServices {
       let product = products.find((prod) => prod.id === id);
       if (product.stock >= cart[i].quantity) {
         cartPurchase.push(cart[i]);
-        /*let producto = {
-          title: "",
-          description: "",
-          price: "",
-          thumbnails: "",
-          code: "",
-          stock: product.stock - cart[i].quantity,
-          status: "",
-          category: "",
-        };
-        console.log("Id de producto a modificar:", id);*/
-
-        //const updatedProd = await productsServices.updateProductService(id,producto);
         let stock = product.stock - cart[i].quantity;
         await productsServices.updateStock(id, stock);
       } else {
@@ -120,6 +97,7 @@ class CartsServices {
       }
     }
     return [cartPurchase, newCart];
+  }catch(error){}
   };
 }
 

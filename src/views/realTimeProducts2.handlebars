@@ -68,8 +68,7 @@
         const category = inputCategory.value
                 
         socketClient.emit('addProduct',{title, description, price, code,stock,status,category})
-        
-        
+                
         fetch('http://localhost:3000/api/products', {
             method: 'POST',
             body: JSON.stringify({
@@ -82,19 +81,27 @@
                 category: inputCategory.value,
             }),
             headers: {
-            'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
         })
         .then((response) => response.json())
         .then((response) => {
-            //localStorage.setItem('token',response.token)
-            console.log(response)
-            //cookie.setItem('token',response.token)
-            console.log('Producto Cargado');
-            
+                try{
+                if (response.number > 200){
+                    console.log("Error:", response)
+                    window.alert(JSON.stringify(response))
+                }
+                else
+                {
+                    console.log(response)
+                    console.log(response.number)
+                    console.log('Producto cargado');
+                    window.alert("Producto cargado!!!!!")
+                }
+            }catch(error)
+            {
+                console.log(error)
+            }            
         })
     }
-    
-    
-
 </script>

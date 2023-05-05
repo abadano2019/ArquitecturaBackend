@@ -1,18 +1,22 @@
 import ticketsRepository from "../repositories/tickets.repository.js";
 
 class TicketsServices {
-  #repository
-  constructor(repository){
+  #repository;
+  constructor(repository) {
     this.#repository = repository;
   }
 
-  getTicketByUserService = async(email) => {
-    return await this.#repository.getTicketByUserRepository(email);
-  }
-  
-  addTicketService = async(ticket) =>{
-    return await this.#repository.addTicketRepository(ticket);
-  }
+  getTicketByUserService = async (email) => {
+    try {
+      return await this.#repository.getTicketByUserRepository(email);
+    } catch (error) {}
+  };
+
+  addTicketService = async (ticket) => {
+    try {
+      return await this.#repository.addTicketRepository(ticket);
+    } catch (error) {}
+  };
 }
 
-export default new TicketsServices(ticketsRepository)
+export default new TicketsServices(ticketsRepository);

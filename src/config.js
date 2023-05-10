@@ -18,5 +18,6 @@ export default {
   TWILIO_PHONE_NUMBER: process.env.TWILIO_PHONE_NUMBER,
   GMAIL_PASSWORD: process.env.GMAIL_PASSWORD,
   GMAIL_USER: process.env.GMAIL_USER,
-  COMPRESION: process.env.COMPRESION
+  COMPRESION: process.env.COMPRESION,
+  NODE_ENV: process.env.NODE_ENV
 };

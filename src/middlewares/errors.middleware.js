@@ -1,5 +1,7 @@
+import logger from "../logger/winston.js"
+
 export const errorMiddleware = (error,req,res,next)=>{
-    console.log("entre al middleware de errores")
+    logger.info("Ejecutando middleware de errores")
     res.send({
         status:error.name,
         message: error.message,

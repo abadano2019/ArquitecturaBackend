@@ -1,0 +1,20 @@
+{
+  message: 'Prueba de logger fatal',
+  level: 'fatal',
+  timestamp: '2023-05-07T00:29:27.990Z'
+}
+{
+  message: 'Prueba de logger error',
+  level: 'error',
+  timestamp: '2023-05-07T00:29:27.993Z'
+}
+{
+  message: 'Prueba de logger fatal',
+  level: 'fatal',
+  timestamp: '2023-05-07T00:29:40.170Z'
+}
+{
+  message: 'Prueba de logger error',
+  level: 'error',
+  timestamp: '2023-05-07T00:29:40.171Z'
+}

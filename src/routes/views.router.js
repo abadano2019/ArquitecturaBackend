@@ -13,6 +13,7 @@ import {
 import { getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
 
 import { Router } from "express";
+import logger from "../logger/winston.js"
 import passport from "passport";
 import { upload } from "../middlewares/multer.middleware.js";
 import { viewChatController } from "../controllers/views.controller.js";
@@ -77,5 +78,17 @@ router.get("/jwtLoginFront", (req, res) => {
   res.render("jwt");
 });
 
+router.get("/loggerTest", (req, res) => {
+  
+  logger.fatal("Prueba de logger fatal")
+  logger.error("Prueba de logger error")
+  logger.warning("Prueba de logger warning")
+  logger.info("Prueba de logger info")
+  logger.http("Prueba de logger http")
+  logger.debug("Prueba de logger debug")
+
+  res.status(200).json("Winston test ejecutado")
+
+});
 
 export default router;

@@ -1,22 +1,22 @@
 import compression from "express-compression";
 import config from "../config.js";
+import logger from "../logger/winston.js";
 
-export const typeCompression = (app) =>{
-switch (config.COMPRESION) {
+export const typeCompression = (app) => {
+  switch (config.COMPRESION) {
     case "bt":
       app.use(compression({ brotli: { enabled: true, zlib: {} } }));
-      console.log("Using compresion brotli")
+      logger.info("Using compresion brotli");
       break;
     case "gzip":
       app.use(compression());
-      console.log("Using compresion gzip")
+      logger.info("Using compresion gzip");
       break;
-    case "none": 
-      console.log("Using no compresion")
+    case "none":
+      logger.info("Using no compresion");
       break;
     default:
-      console.log("Using no compresion")
+      logger.info("Using no compresion");
       break;
   }
-
-}
+};

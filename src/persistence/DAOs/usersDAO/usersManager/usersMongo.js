@@ -17,7 +17,7 @@ export default class UsersManager {
     const { email, password } = user;
     try {
       const existeUsuario = await userModel.find({ email });
-      let roleUser = "usuario";
+      let roleUser = "user";
       console.log("existe", existeUsuario);
       if (existeUsuario.length === 0) {
         console.log(email);

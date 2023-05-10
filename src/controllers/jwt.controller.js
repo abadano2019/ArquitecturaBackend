@@ -6,11 +6,13 @@ import {
 
 import CustomError from "../error/CustomError.js";
 import { generateToken } from "../utils.js";
+import logger from "../logger/winston.js"
 import usersService from "../services/users.services.js";
 
 export const loginJwtController = async (req, res, next) => {
   try {
     if (req.body === "") {
+      logger.error("loginJwtController: req.body input parameter is missing")
       CustomError(
         ErrorsName.USER_DATA_ERROR,
         ErrorsCause.USER_DATA_ERROR,
@@ -25,6 +27,7 @@ export const loginJwtController = async (req, res, next) => {
       const token = generateToken(user);
       return res.cookie("token", token, { httpOnly: true }).json({ token });
     }
+    logger.warning("loginJwtController: user not exist")
     CustomError(
       ErrorsName.USER_DATA_NO_EXIST,
       ErrorsCause.USER_DATA_NO_EXIST,
@@ -33,10 +36,11 @@ export const loginJwtController = async (req, res, next) => {
       "User not exist"
     );
   } catch (error) {
-    console.log(error.name);
-    console.log(error.message);
-    console.log(error.cause);
-    console.log(error.Number);
+    logger.fatal("Error in loginJwtController, Log detail:", error);
+    logger.fatal(error.name);
+    logger.fatal(error.message);
+    logger.fatal(error.cause);
+    logger.fatal(error.Number);
     next(error);
   }
 };

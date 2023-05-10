@@ -15,6 +15,7 @@ import {errorMiddleware} from "../src/middlewares/errors.middleware.js"
 import express from "express";
 import handlebars from "express-handlebars";
 import jwtRouter from "./routes/jwt.router.js";
+import logger from "../src/logger/winston.js"
 import mongoStore from "connect-mongo";
 import passport from "passport";
 import productsRouters from "../src/routes/products.router.js";
@@ -22,6 +23,7 @@ import session from "express-session";
 import {typeCompression} from "../src/middlewares/compression.middleware.js"
 import usersRouter from "./routes/users.router.js";
 import viewsRouter from "./routes/views.router.js";
+import {winstonMiddleware} from "../src/middlewares/winston.middleware.js";
 
 const PORT = config.PORT;
 export const app = express();
@@ -29,6 +31,7 @@ const cookieKey = "signedCookieKey";
 //const fileStore = FileStore(session)
 
 typeCompression(app);
+app.use(winstonMiddleware)
 app.use(Cors());
 
 app.use(cookieParser(cookieKey));
@@ -74,8 +77,7 @@ app.use(passport.session());
 
 // archivos estaticos
 app.use(express.static(__dirname + "/public"));
-
-console.log(__dirname);
+logger.info("__dirname:", __dirname)
 
 // handlebars
 app.engine("handlebars", handlebars.engine());
@@ -84,23 +86,24 @@ app.set("views", __dirname + "/views");
 
 app.use(errorMiddleware)
 const httpServer = app.listen(PORT, () => {
-  console.log("******* Ejecutando servidor *******");
-  console.log(`*** Escuchando al puerto:  ${PORT} ***`);
+  logger.info("******** Ejecutando servidor **********")
+  logger.info(`*** Escuchando al puerto:  ${PORT} ***`);
 });
 
 export const socketServer = new Server(httpServer);
 const messagesManager = new MessagesManager();
 socketServer.on("connection", (socket) => {
-  console.log(`Usuario conectado ${socket.id}`);
+  logger.info(`Usuario conectado ${socket.id}`);
+
 
   socket.on("disconnect", () => {
-    console.log("Uusario desconectado");
+    logger.info("Uusario desconectado");
   });
 
   socket.on(
     "addProduct",
     async ({ title, description, price, code, stock, status, category }) => {
-      console.log("Se ejecutó la carga de un producto nuevo");
+      logger.info("Se ejecutó la carga de un producto nuevo");
     }
   );
 

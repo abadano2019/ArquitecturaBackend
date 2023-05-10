@@ -7,6 +7,7 @@ import { Strategy as LocalStrategy } from "passport-local";
 import cartsServices from "../services/carts.services.js";
 import config from "../config.js";
 import { hashPassword } from "../utils.js";
+import logger from "../logger/winston.js"
 import passport from "passport";
 import usersServices from "../services/users.services.js";
 
@@ -21,7 +22,7 @@ passport.use(
     async (req, email, password, done) => {
       const user = await usersServices.getUserByIdService(email);
       let rolUser = "user";
-      console.log("datos usuario", user)
+      logger.info("Passport registry: finded user", user)
       if (user) {
         return done(null, false);
       }
@@ -30,7 +31,7 @@ passport.use(
       }
       const hashNewPassword = await hashPassword(password);
       const cart = await cartsServices.addCartService();
-      console.log("Cart Creado passport", cart)
+      logger.info("created cart passport", cart)
       const newUser = { ...req.body, password: hashNewPassword, role: rolUser};
       const newuserDB = await usersServices.createUserPassportService(newUser, cart);
       req.session.email = newuserDB.email;
@@ -102,7 +103,7 @@ passport.use(
         };
         const cart = cartsServices.addCartService();
         //const newuserDB = await userModel.create(newUser)
-        const newuserDB = await usersServicescreateUserService(newUser, cart);
+        const newuserDB = await usersServices.createUserService(newUser, cart);
         done(null, newuserDB);
       } else {
         done(null, user);

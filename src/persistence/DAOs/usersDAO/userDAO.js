@@ -42,4 +42,18 @@ export default class UsersDAO {
   async loginUser(user) {
     return this.#usersDAO.loginUser(user);
   }
+
+  async updateUserToken(user, token) {
+    return this.#usersDAO.updateUserToken(user, token);
+  } 
+  
+  async updateUserPassword(user, password,token) {
+    return this.#usersDAO.updateUserPassword(user, password,token);
+  }  
+
+  async updateUserRole(user) {
+    return this.#usersDAO.updateUserRole(user);
+  } 
+
 }
+

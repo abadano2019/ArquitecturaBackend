@@ -18,3 +18,1937 @@
   level: 'error',
   timestamp: '2023-05-07T00:29:40.171Z'
 }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:45:09.596Z'
+}
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:46:21.480Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: CustomError is not defined',
+  stack: 'ReferenceError: CustomError is not defined\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:84:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T04:46:21.490Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:46:21.494Z'
+}
+{
+  message: 'CustomError is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:46:21.495Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:46:21.496Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:46:21.497Z'
+}
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:48:12.497Z'
+}
+{
+  name: undefined,
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: undefined user not exist',
+  stack: 'Error: undefined user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T04:48:12.509Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:12.513Z'
+}
+{
+  message: 'undefined user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:12.515Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:12.516Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T04:48:12.517Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:48:27.454Z'
+}
+{
+  name: undefined,
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: undefined user not exist',
+  stack: 'Error: undefined user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T04:48:27.458Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:27.462Z'
+}
+{
+  message: 'undefined user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:27.465Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:48:27.467Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T04:48:27.469Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:49:23.759Z'
+}
+{
+  name: undefined,
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: undefined user not exist',
+  stack: 'Error: undefined user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T04:49:23.761Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:23.765Z'
+}
+{
+  message: 'undefined user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:23.766Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:23.768Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T04:49:23.769Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T04:49:33.056Z'
+}
+{
+  name: undefined,
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: undefined user not exist',
+  stack: 'Error: undefined user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T04:49:33.058Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:33.062Z'
+}
+{
+  message: 'undefined user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:33.064Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T04:49:33.066Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T04:49:33.067Z' }
+{
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: user.update is not a function',
+  stack: 'TypeError: user.update is not a function\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:101:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T14:09:24.261Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:09:24.270Z'
+}
+{
+  message: 'user.update is not a function',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:09:24.272Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:09:24.273Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:09:24.274Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: user.save is not a function',
+  stack: 'TypeError: user.save is not a function\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:102:16)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T14:11:59.238Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:11:59.246Z'
+}
+{
+  message: 'user.save is not a function',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:11:59.248Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:11:59.249Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:11:59.250Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: user.save is not a function',
+  stack: 'TypeError: user.save is not a function\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:102:16)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T14:15:18.210Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:15:18.214Z'
+}
+{
+  message: 'user.save is not a function',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:15:18.216Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:15:18.217Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:15:18.218Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: token is not defined',
+  stack: 'ReferenceError: token is not defined\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:101:53)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T14:31:52.593Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:31:52.598Z'
+}
+{
+  message: 'token is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T14:31:52.600Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:31:52.602Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T14:31:52.603Z'
+}
+{
+  message: 'resetPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T16:06:41.656Z'
+}
+{
+  message: 'resetPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T16:07:15.522Z'
+}
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T16:55:55.214Z'
+}
+{
+  name: 'Error user no exist',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: Request faild. Error user not exist user not exist',
+  stack: 'Error user no exist: Request faild. Error user not exist user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T16:55:55.217Z'
+}
+{
+  message: 'Error user no exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:55:55.219Z'
+}
+{
+  message: 'Request faild. Error user not exist user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:55:55.220Z'
+}
+{
+  message: 'User not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:55:55.221Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T16:55:55.222Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T16:57:35.439Z'
+}
+{
+  name: 'Error user no exist',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: Request faild. Error user not exist user not exist',
+  stack: 'Error user no exist: Request faild. Error user not exist user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T16:57:35.444Z'
+}
+{
+  message: 'Error user no exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:57:35.450Z'
+}
+{
+  message: 'Request faild. Error user not exist user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:57:35.452Z'
+}
+{
+  message: 'User not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:57:35.454Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T16:57:35.456Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T16:59:45.886Z'
+}
+{
+  name: 'Error user no exist',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: Request faild. Error user not exist user not exist',
+  stack: 'Error user no exist: Request faild. Error user not exist user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T16:59:45.889Z'
+}
+{
+  message: 'Error user no exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:59:45.895Z'
+}
+{
+  message: 'Request faild. Error user not exist user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:59:45.896Z'
+}
+{
+  message: 'User not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T16:59:45.898Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T16:59:45.899Z' }
+{
+  message: 'forgotPasswordController: user not exist',
+  level: 'error',
+  timestamp: '2023-05-13T17:00:41.145Z'
+}
+{
+  name: 'Error user no exist',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: Request faild. Error user not exist user not exist',
+  stack: 'Error user no exist: Request faild. Error user not exist user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:91:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T17:00:41.147Z'
+}
+{
+  message: 'Error user no exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T17:00:41.153Z'
+}
+{
+  message: 'Request faild. Error user not exist user not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T17:00:41.155Z'
+}
+{
+  message: 'User not exist',
+  level: 'fatal',
+  timestamp: '2023-05-13T17:00:41.158Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T17:00:41.160Z' }
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: password is not defined',
+  stack: 'ReferenceError: password is not defined\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:139:77)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T18:38:42.195Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T18:38:42.206Z'
+}
+{
+  message: 'password is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T18:38:42.208Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T18:38:42.210Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T18:38:42.211Z'
+}
+{
+  code: 'EENVELOPE',
+  command: 'API',
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: No recipients defined',
+  stack: 'Error: No recipients defined\n' +
+    '    at SMTPConnection._formatError (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:790:19)\n' +
+    '    at SMTPConnection._setEnvelope (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:1007:34)\n' +
+    '    at SMTPConnection.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:621:14)\n' +
+    '    at sendMessage (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-transport\\index.js:228:28)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-transport\\index.js:286:25\n' +
+    '    at SMTPConnection._actionAUTHComplete (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:1562:9)\n' +
+    '    at SMTPConnection.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:546:26)\n' +
+    '    at SMTPConnection._processResponse (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:953:20)\n' +
+    '    at SMTPConnection._onData (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:755:14)\n' +
+    '    at SMTPConnection._onSocketData (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\nodemailer\\lib\\smtp-connection\\index.js:193:44)',
+  timestamp: '2023-05-13T20:32:01.406Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T20:32:01.411Z'
+}
+{
+  message: 'No recipients defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T20:32:01.412Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T20:32:01.413Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T20:32:01.414Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T20:59:27.656Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:03:00.324Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:07:43.985Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:12:13.264Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:15:13.833Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:25:11.297Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:31:30.884Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:33:24.919Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:36:34.559Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:40:59.617Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in updateUserToken, Log detail: CustomError is not defined',
+  stack: 'ReferenceError: CustomError is not defined\n' +
+    '    at UsersManager.updateUserPassword (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:95:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersRepository.updateUserPasswordRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:72:27)\n' +
+    '    at async UsersServices.updateUserPasswordService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:59:27)\n' +
+    '    at async resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:142:25)',
+  timestamp: '2023-05-13T21:40:59.632Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:40:59.639Z'
+}
+{
+  message: 'CustomError is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:40:59.640Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T21:40:59.641Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T21:40:59.642Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:42:23.756Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in updateUserToken, Log detail: CustomError is not defined',
+  stack: 'ReferenceError: CustomError is not defined\n' +
+    '    at UsersManager.updateUserPassword (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:95:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersRepository.updateUserPasswordRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:72:27)\n' +
+    '    at async UsersServices.updateUserPasswordService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:59:27)\n' +
+    '    at async resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:142:25)',
+  timestamp: '2023-05-13T21:42:23.761Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:42:23.767Z'
+}
+{
+  message: 'CustomError is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:42:23.770Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T21:42:23.771Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T21:42:23.773Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T21:46:29.090Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in updateUserToken, Log detail: Request faild. Valid properties required token no valid',
+  stack: 'Error user data: Request faild. Valid properties required token no valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at UsersManager.updateUserPassword (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:101:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersRepository.updateUserPasswordRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:72:27)\n' +
+    '    at async UsersServices.updateUserPasswordService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:59:27)\n' +
+    '    at async resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:142:25)',
+  timestamp: '2023-05-13T21:46:29.099Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:46:29.110Z'
+}
+{
+  message: 'Request faild. Valid properties required token no valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:46:29.112Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T21:46:29.115Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T21:46:29.121Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-13T22:00:29.653Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:143:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T22:00:29.659Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:00:29.663Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:00:29.664Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:00:29.664Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T22:00:29.665Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-13T22:38:02.647Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:144:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T22:38:02.649Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:38:02.651Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:38:02.651Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:38:02.652Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T22:38:02.653Z' }
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: moment is not defined',
+  stack: 'ReferenceError: moment is not defined\n' +
+    '    at decodeToken (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/utils.js:28:15)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:165:5)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T22:40:45.016Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:40:45.018Z'
+}
+{
+  message: 'moment is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T22:40:45.019Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T22:40:45.020Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T22:40:45.021Z'
+}
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T23:02:20.312Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in updateUserToken, Log detail: Request faild. Valid properties required token no valid',
+  stack: 'Error user data: Request faild. Valid properties required token no valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at UsersManager.updateUserPassword (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:101:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersRepository.updateUserPasswordRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:72:27)\n' +
+    '    at async UsersServices.updateUserPasswordService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:59:27)\n' +
+    '    at async resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:168:25)',
+  timestamp: '2023-05-13T23:02:20.314Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.316Z'
+}
+{
+  message: 'Request faild. Valid properties required token no valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.317Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.318Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:02:20.318Z' }
+{
+  message: 'Level DAO - updateUserToken: invalid token',
+  level: 'error',
+  timestamp: '2023-05-13T23:02:20.733Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in updateUserToken, Log detail: Request faild. Valid properties required token no valid',
+  stack: 'Error user data: Request faild. Valid properties required token no valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at UsersManager.updateUserPassword (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:101:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersRepository.updateUserPasswordRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:72:27)\n' +
+    '    at async UsersServices.updateUserPasswordService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:59:27)\n' +
+    '    at async resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:168:25)',
+  timestamp: '2023-05-13T23:02:20.735Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.737Z'
+}
+{
+  message: 'Request faild. Valid properties required token no valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.738Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:02:20.738Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:02:20.739Z' }
+{
+  level: 'fatal',
+  message: "Error in resetPasswordController, Log detail: Cannot read properties of null (reading 'exp')",
+  stack: "TypeError: Cannot read properties of null (reading 'exp')\n" +
+    '    at expiredToken (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/utils.js:41:15)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:165:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:24:56.789Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:24:56.800Z'
+}
+{
+  message: "Cannot read properties of null (reading 'exp')",
+  level: 'fatal',
+  timestamp: '2023-05-13T23:24:56.803Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:24:56.806Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:24:56.808Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: alert is not defined',
+  stack: 'ReferenceError: alert is not defined\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:166:5)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:27:17.897Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:27:17.903Z'
+}
+{
+  message: 'alert is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:27:17.904Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:27:17.905Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:27:17.906Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: data is not defined',
+  stack: 'ReferenceError: data is not defined\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:166:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:31:06.216Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:31:06.219Z'
+}
+{
+  message: 'data is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:31:06.219Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:31:06.221Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:31:06.221Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:178:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:32:00.961Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:00.964Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:00.965Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:00.966Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:00.966Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:178:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:32:44.392Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:44.394Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:44.394Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:44.395Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:32:44.396Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:178:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:35:14.402Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:35:14.406Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:35:14.406Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:35:14.407Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:35:14.408Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:178:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:38:01.274Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:38:01.277Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:38:01.278Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:38:01.278Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:38:01.279Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:180:21)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:40:56.593Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:40:56.597Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:40:56.598Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:40:56.599Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-13T23:40:56.599Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in forgotPasswordController, Log detail: Request faild. Valid properties required missing input parameters',
+  stack: 'Error user data: Request faild. Valid properties required missing input parameters\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at forgotPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:80:7)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at Route.dispatch (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:114:3)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\index.js:284:15\n' +
+    '    at Function.process_params (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at Function.handle (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 14\\Ariel Badano - 37535624 - 14ta entregable Programación Backend\\node_modules\\express\\lib\\router\\index.js:175:3)',
+  timestamp: '2023-05-13T23:51:32.057Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:51:32.063Z'
+}
+{
+  message: 'Request faild. Valid properties required missing input parameters',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:51:32.064Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:51:32.065Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:51:32.065Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-13T23:52:01.618Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:144:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:52:01.622Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:52:01.628Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:52:01.629Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:52:01.631Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:52:01.632Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-13T23:55:49.904Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:147:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:55:49.911Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:55:49.914Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:55:49.916Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:55:49.917Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:55:49.917Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-13T23:59:54.357Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:148:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-13T23:59:54.362Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:59:54.365Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:59:54.366Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-13T23:59:54.367Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-13T23:59:54.368Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-14T00:02:00.868Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:148:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-14T00:02:00.870Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:02:00.873Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:02:00.873Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:02:00.875Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-14T00:02:00.876Z' }
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-14T00:13:08.648Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: passwordHashed is not defined',
+  stack: 'ReferenceError: passwordHashed is not defined\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:154:36)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-14T00:17:26.226Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:17:26.235Z'
+}
+{
+  message: 'passwordHashed is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:17:26.237Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-14T00:17:26.239Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-14T00:17:26.240Z'
+}
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-14T00:20:34.833Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required invalid password',
+  stack: 'Error user data: Request faild. Valid properties required invalid password\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-14T00:20:34.840Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:20:34.847Z'
+}
+{
+  message: 'Request faild. Valid properties required invalid password',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:20:34.849Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-14T00:20:34.851Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-14T00:20:34.852Z' }
+{
+  message: 'resetPasswordController: token not valid',
+  level: 'error',
+  timestamp: '2023-05-15T15:05:06.248Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required token not valid',
+  stack: 'Error user data: Request faild. Valid properties required token not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:150:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:05:06.258Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:05:06.263Z'
+}
+{
+  message: 'Request faild. Valid properties required token not valid',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:05:06.265Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:05:06.266Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-15T15:05:06.267Z' }
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: password is not defined',
+  stack: 'ReferenceError: password is not defined\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:223:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:06:21.434Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:06:21.449Z'
+}
+{
+  message: 'password is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:06:21.452Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:06:21.456Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:06:21.459Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger is not defined',
+  stack: 'ReferenceError: logger is not defined\n' +
+    '    at UsersServices.updateUserRoleService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:83:7)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:221:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:09:06.425Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:09:06.436Z'
+}
+{
+  message: 'logger is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:09:06.438Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:09:06.439Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:09:06.441Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in updateUserRoleService, Log detail: this[#repository].upda is not a function',
+  stack: 'TypeError: this[#repository].upda is not a function\n' +
+    '    at UsersServices.updateUserRoleService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:78:50)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:221:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:17:59.286Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:17:59.294Z'
+}
+{
+  message: 'this[#repository].upda is not a function',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:17:59.297Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:17:59.298Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:17:59.299Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in updateUserRoleService, Log detail: logger is not defined',
+  stack: 'ReferenceError: logger is not defined\n' +
+    '    at UsersRepository.updateUserRoleRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:101:7)\n' +
+    '    at UsersServices.updateUserRoleService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:78:50)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:221:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:18:52.453Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:18:52.465Z'
+}
+{
+  message: 'logger is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:18:52.467Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:18:52.468Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:18:52.469Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in updateUserRoleRepository, Log detail: token is not defined',
+  stack: 'ReferenceError: token is not defined\n' +
+    '    at UsersRepository.updateUserRoleRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:94:46)\n' +
+    '    at UsersServices.updateUserRoleService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:78:50)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:221:47)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-15T15:19:54.831Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:19:54.840Z'
+}
+{
+  message: 'token is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-15T15:19:54.842Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:19:54.843Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-15T15:19:54.844Z'
+}
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-16T03:20:02.543Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  stack: 'Error user data: Request faild. Valid properties required invalid new password, must be differente than the previuous one\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:163:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-16T03:20:02.546Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:02.550Z'
+}
+{
+  message: 'Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:02.552Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:02.553Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-16T03:20:02.554Z' }
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-16T03:20:22.236Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  stack: 'Error user data: Request faild. Valid properties required invalid new password, must be differente than the previuous one\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:163:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-16T03:20:22.237Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:22.239Z'
+}
+{
+  message: 'Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:22.239Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:20:22.240Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-16T03:20:22.241Z' }
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-16T03:21:49.262Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  stack: 'Error user data: Request faild. Valid properties required invalid new password, must be differente than the previuous one\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:163:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-16T03:21:49.265Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:21:49.270Z'
+}
+{
+  message: 'Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:21:49.272Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:21:49.274Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-16T03:21:49.275Z' }
+{
+  message: 'resetPasswordController: password must be different than the previous one',
+  level: 'error',
+  timestamp: '2023-05-16T03:22:32.056Z'
+}
+{
+  name: 'Error user data',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  stack: 'Error user data: Request faild. Valid properties required invalid new password, must be differente than the previuous one\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at resetPasswordController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:163:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-16T03:22:32.058Z'
+}
+{
+  message: 'Error user data',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:22:32.061Z'
+}
+{
+  message: 'Request faild. Valid properties required invalid new password, must be differente than the previuous one',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:22:32.062Z'
+}
+{
+  message: 'Properties missing',
+  level: 'fatal',
+  timestamp: '2023-05-16T03:22:32.063Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-05-16T03:22:32.064Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:379:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:23:26.597Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:23:26.615Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:23:26.617Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:23:26.618Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:23:26.620Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:369:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:27:07.068Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:27:07.074Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:27:07.076Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:27:07.077Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:27:07.078Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:369:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:28:27.638Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:28:27.645Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:28:27.647Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:28:27.649Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:28:27.651Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:371:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:31:00.149Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:31:00.152Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:31:00.154Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:31:00.154Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:31:00.156Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:371:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:33:22.477Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:33:22.484Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:33:22.485Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:33:22.486Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:33:22.488Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:371:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:34:10.469Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.476Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.477Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.479Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:34:10.480Z' }
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.629Z'
+}
+{
+  message: 'CustomError is not defined',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.631Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.635Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-05-17T02:34:10.638Z'
+}
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:371:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:35:12.975Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:35:12.981Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:35:12.983Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:35:12.985Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:35:12.986Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:373:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:36:12.644Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:36:12.648Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:36:12.650Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:36:12.650Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:36:12.651Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:373:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:37:37.487Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:37:37.491Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:37:37.493Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:37:37.494Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:37:37.495Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:373:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:39:10.933Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:39:10.939Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:39:10.942Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:39:10.943Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:39:10.944Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:373:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:40:33.987Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:40:33.992Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:40:33.994Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:40:33.995Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:40:33.996Z' }
+{
+  name: 'Product owner not valid',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in deleteProductController, Log detail: Request faild. Product owner not valid to operate Product owner not valid',
+  stack: 'Product owner not valid: Request faild. Product owner not valid to operate Product owner not valid\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at deleteProductController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2014/Ariel%20Badano%20-%2037535624%20-%2014ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/products.controller.js:373:9)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-17T02:44:24.949Z'
+}
+{
+  message: 'Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:44:24.956Z'
+}
+{
+  message: 'Request faild. Product owner not valid to operate Product owner not valid',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:44:24.957Z'
+}
+{
+  message: 'Fail to operate with product',
+  level: 'fatal',
+  timestamp: '2023-05-17T02:44:24.958Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-17T02:44:24.960Z' }

@@ -6,9 +6,10 @@ import {
 
 import CustomError from "../error/CustomError.js";
 import Product from "../js/product.js";
-import logger from "../logger/winston.js"
+import logger from "../logger/winston.js";
 import productsServices from "../services/products.services.js";
 import { socketServer } from "../app.js";
+import usersServices from "../services/users.services.js";
 
 export const getProductsController = async (req, res, next) => {
   try {
@@ -30,7 +31,7 @@ export const getProductsController = async (req, res, next) => {
   }
 };
 
-export const getProductByIdController = async (req, res,next) => {
+export const getProductByIdController = async (req, res, next) => {
   try {
     const { idProduct } = req.params;
     const product = await productsServices.getProductByIdService(idProduct);
@@ -50,7 +51,7 @@ export const getProductByIdController = async (req, res,next) => {
   }
 };
 
-export const getProducts_Controller = async (req, res,next) => {
+export const getProducts_Controller = async (req, res, next) => {
   const { limit } = req.query;
   try {
     const products = await productsServices.getProducts_Service();
@@ -85,11 +86,14 @@ export const addProductController = async (req, res, next) => {
       category,
     } = req.body;
 
+    const owner = req.session.email;
+    console.log("Owner:::::::", owner);
+
     const priceInt = parseInt(price);
     const stockInt = parseInt(stock);
     const statusBool = Boolean(status);
     if (typeof title !== "string" || title === "") {
-      logger.warning("addProductController: Title string datacamp")
+      logger.warning("addProductController: Title string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -99,7 +103,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof description !== "string" || description === "") {
-      logger.warning("addProductController: description string datacamp")
+      logger.warning("addProductController: description string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -109,7 +113,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof code !== "string" || code === "") {
-      logger.warning("addProductController: code string datacamp")
+      logger.warning("addProductController: code string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -119,7 +123,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof category !== "string" || category === "") {
-      logger.warning("addProductController: category string datacamp")
+      logger.warning("addProductController: category string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -129,7 +133,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof priceInt !== "number" || priceInt === "") {
-      logger.warning("addProductController: price numeric datacamp")
+      logger.warning("addProductController: price numeric datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -139,7 +143,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof stockInt !== "number" || stockInt === "") {
-      logger.warning("addProductController: stock numeric datacamp")
+      logger.warning("addProductController: stock numeric datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -149,7 +153,7 @@ export const addProductController = async (req, res, next) => {
       );
     }
     if (typeof statusBool !== "boolean" || statusBool === "") {
-      logger.warning("addProductController: status boolean datacamp")
+      logger.warning("addProductController: status boolean datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -171,13 +175,16 @@ export const addProductController = async (req, res, next) => {
       code,
       stock,
       status,
-      category
+      category,
+      owner
     );
 
     const cod = await productsServices.addProductService(product);
-    logger.info("addProductController: Control flag", cod)
+    logger.info("addProductController: Control flag", cod);
     if (cod === "ADDPROD-COD1") {
-      logger.warning("addProductController: primary key restriction code product already exist")
+      logger.warning(
+        "addProductController: primary key restriction code product already exist"
+      );
       res.json({
         mesage:
           "ATENCION: Verifique el campo Code, el mismo ya existe en otro producto",
@@ -186,7 +193,7 @@ export const addProductController = async (req, res, next) => {
       if (cod === "ADDPROD-COD2") {
         const products = await productsServices.getProducts_Service();
         socketServer.emit("productoAgregado", { products });
-        logger.info("addProductController: product added")
+        logger.info("addProductController: product added");
         res.json({ mesage: "Producto agregado", product });
       }
     }
@@ -215,7 +222,7 @@ export const updateProductController = async (req, res, next) => {
     } = req.body;
 
     if (typeof title !== "string" && title !== undefined) {
-      logger.warning("updateProductController: Title string datacamp")
+      logger.warning("updateProductController: Title string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -225,7 +232,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof description !== "string" && description !== undefined) {
-      logger.warning("updateProductController: description string datacamp")
+      logger.warning("updateProductController: description string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -235,7 +242,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof code !== "string" && code !== undefined) {
-      logger.warning("updateProductController: Code string datacamp")
+      logger.warning("updateProductController: Code string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -245,7 +252,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof category !== "string" && category !== undefined) {
-      logger.warning("updateProductController: category string datacamp")
+      logger.warning("updateProductController: category string datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_STRING_ERROR,
         ErrorsCause.DATA_TYPE_STRING_ERROR,
@@ -255,7 +262,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof Number(price) !== "number" && price !== undefined) {
-      logger.warning("updateProductController: price numeric datacamp")
+      logger.warning("updateProductController: price numeric datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_NUMBER_ERROR,
         ErrorsCause.DATA_TYPE_NUMBER_ERROR,
@@ -265,7 +272,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof Number(stock) !== "number" && stock !== undefined) {
-      logger.warning("updateProductController: stock numeric datacamp")
+      logger.warning("updateProductController: stock numeric datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_NUMBER_ERROR,
         ErrorsCause.DATA_TYPE_NUMBER_ERROR,
@@ -275,7 +282,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (typeof Boolean(status) !== "boolean" && status !== undefined) {
-      logger.warning("updateProductController: status boolean datacamp")
+      logger.warning("updateProductController: status boolean datacamp");
       CustomError(
         ErrorsName.DATA_TYPE_BOOLEAN_ERROR,
         ErrorsCause.DATA_TYPE_BOOLEAN_ERROR,
@@ -285,7 +292,7 @@ export const updateProductController = async (req, res, next) => {
       );
     }
     if (!Array.isArray(thumbnail) && thumbnail !== undefined) {
-      logger.warning("updateProductController: thumbnail array type")
+      logger.warning("updateProductController: thumbnail array type");
       CustomError(
         ErrorsName.DATA_TYPE_ERROR,
         ErrorsCause.DATA_TYPE_ERROR,
@@ -313,10 +320,10 @@ export const updateProductController = async (req, res, next) => {
         idProduct,
         product
       );
-      logger.info("updateProductController: product modified")
+      logger.info("updateProductController: product modified");
       res.json("Producto modificado");
     } else {
-      logger.warning("updateProductController: product not exist")
+      logger.warning("updateProductController: product not exist");
       CustomError(
         ErrorsName.PRODUCT_DATA_NO_EXIST,
         ErrorsCause.PRODUCT_DATA_NO_EXIST,
@@ -339,7 +346,7 @@ export const deleteProductController = async (req, res, next) => {
   try {
     const { idProduct } = req.params;
     if (idProduct.length < 24) {
-      logger.error("deleteProductController:  invalid idProudct")
+      logger.error("deleteProductController:  invalid idProudct");
       CustomError(
         ErrorsName.PRODUCT_DATA_NO_EXIST,
         ErrorsCause.PRODUCT_DATA_NO_EXIST,
@@ -349,13 +356,36 @@ export const deleteProductController = async (req, res, next) => {
       );
     }
     const product = await productsServices.getProductByIdService(idProduct);
-    
+    const user = await usersServices.getUserByIdService(req.session.email);
+    logger.info("deleteProductController: user session:", req.session.email);
+
     if (product) {
-      productsServices.deleteProductService(idProduct);
-      const products = await productsServices.getProductsService();
-      socketServer.emit("productoEliminado", { products });
-      logger.info("deleteProductController: deleted product", product)
-      res.json({ mesage: "Producto eliminado", product });
+      const owner = await productsServices.getProductOwner(product.id);
+      logger.info("deleteProductController: product owner:", owner);
+      if (user.role === "premium") {
+        if (owner === req.session.email) {
+          productsServices.deleteProductService(idProduct);
+          const products = await productsServices.getProductsService();
+          socketServer.emit("productoEliminado", { products });
+          logger.info("deleteProductController: deleted product - user permium", product);
+          res.json({ mesage: "Producto eliminado", product });
+        } else {
+          logger.warning("deleteProductController: product owner not valid");
+          CustomError(
+            ErrorsName.PRODUCT_OWNER_ERROR,
+            ErrorsCause.PRODUCT_OWNER_ERROR,
+            ErrorsMessage.PRODUCT_OWNER_ERROR,
+            500,
+            "Product owner not valid"
+          );
+        }
+      } else {
+        productsServices.deleteProductService(idProduct);
+        const products = await productsServices.getProductsService();
+        socketServer.emit("productoEliminado", { products });
+        logger.info("deleteProductController: deleted product - user admin", product);
+        res.json({ mesage: "Producto eliminado", product });
+      }
     } else {
       logger.warning("deleteProductController: product not exist");
       CustomError(

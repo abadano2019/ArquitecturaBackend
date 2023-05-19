@@ -1,5 +1,6 @@
 import cartsDAO from "./DAOs/cartsDAO/cartsDAO.js";
 import { initMongo } from "./mongodb/dbConfig.js";
+import logger from "../logger/winston.js"
 import messagesDAO from "./DAOs/messagesDAO/messagesDAO.js";
 import productsDAO from "./DAOs/productsDAO/productsDAO.js";
 import ticketsDAO from "./DAOs/ticketsDAO/ticketDAO.js"
@@ -24,7 +25,7 @@ export default class Factory {
         this.#messagesDAO = new messagesDAO("fs");
         this.#cartsDAO = new cartsDAO("fs");
         this.#ticketsDAO = new ticketsDAO("fs");
-        console.log(argv);
+        logger.info("class Factory  - args",argv);
         break;
       case "mongo":
         initMongo();
@@ -33,7 +34,7 @@ export default class Factory {
         this.#messagesDAO = new messagesDAO("mongo");
         this.#cartsDAO = new cartsDAO("mongo");
         this.#ticketsDAO = new ticketsDAO("mongo");
-        console.log(argv);
+        logger.info("class Factory  - args",argv);
         break;
       case "memory":
         this.#usersDAO = new usersDAO("memory");
@@ -41,7 +42,7 @@ export default class Factory {
         this.#messagesDAO = new messagesDAO("memory");
         this.#cartsDAO = new cartsDAO("memory");
         this.#ticketsDAO = new ticketsDAO("memory");
-        console.log(argv);
+        logger.info("class Factory  - args",argv);
         break;
       case "sql":
         this.#usersDAO = new usersDAO("sql");
@@ -49,7 +50,7 @@ export default class Factory {
         this.#messagesDAO = new messagesDAO("sql");
         this.#cartsDAO = new cartsDAO("sql");
         this.#ticketsDAO = new ticketsDAO("sql");
-        console.log(argv);
+        logger.info("class Factory  - args",argv);
         break;
       default:
         initMongo();
@@ -58,18 +59,18 @@ export default class Factory {
         this.#messagesDAO = new messagesDAO("mongo");
         this.#cartsDAO = new cartsDAO("mongo");
         this.#ticketsDAO = new ticketsDAO("mongo");
-        console.log("Conectado por defecto a Mongodb");
+        logger.info("class Factory  - Mongodb connected by default");
         break;
     }
   }
 
   static getInstance() {
     if (this.#instance) {
-      console.log("Instancia Factory utilizada !!!!");
+      logger.info("Factory instance in use !!!!");
       return this.#instance;
     } else {
       this.#instance = new Factory();
-      console.log("Instancia Factory creada");
+      console.log("Factory instance created");
       return this.#instance;
     }
   }

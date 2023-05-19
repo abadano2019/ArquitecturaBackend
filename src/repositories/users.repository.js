@@ -1,4 +1,5 @@
 import Factory from "../persistence/factory.js";
+import logger from "../logger/winston.js"
 import usersDTOPersistence from "../persistence/DTOs/users.DTO/userDTOPersistence.js";
 import usersDTOResponse from "../persistence/DTOs/users.DTO/userDTOResponse.js";
 
@@ -50,6 +51,59 @@ class UsersRepository {
       return userDTO;
     } catch (error) {}
   };
-}
 
+  updateUserTokenRepository = async (user, token) => {
+    try {
+      const userUpdated = await this.#dao.updateUserToken(user, token);
+      console.log("usuario token", userUpdated);
+      let userDTO = undefined;
+      if (userUpdated) {
+        console.log("Armando DTO del user");
+        userDTO = new usersDTOResponse(userUpdated);
+      }
+      return userDTO;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  updateUserPasswordRepository = async (user, password, token) => {
+    try {
+      console.log("entro en el repositorio", token);
+      const userUpdated = await this.#dao.updateUserPassword(
+        user,
+        password,
+        token
+      );
+      let userDTO = undefined;
+      if (userUpdated) {
+        userDTO = new usersDTOResponse(userUpdated);
+      }
+      return userDTO;
+    } catch (error) {
+      logger.fatal("Error in updateUserPasswordRepository, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+  updateUserRoleRepository = async (user) => {
+    try {
+      const userUpdated = await this.#dao.updateUserRole(user);
+      let userDTO = undefined;
+      if (userUpdated) {
+        userDTO = new usersDTOResponse(userUpdated);
+      }
+      return userDTO;
+    } catch (error) {
+      logger.fatal("Error in updateUserRoleRepository, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+}
 export default new UsersRepository();

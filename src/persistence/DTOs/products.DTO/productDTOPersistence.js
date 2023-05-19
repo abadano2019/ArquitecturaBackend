@@ -10,6 +10,7 @@ export default class ProductDTOPersistence{
         this.thumbnails = product.thumbnails
         this.stock = product.stock;
         this.price = product.price;
+        this.owner = product.owner;
     }
 }
 

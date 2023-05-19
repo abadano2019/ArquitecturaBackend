@@ -82,14 +82,14 @@ export const viewProductsCookiesController = async (req, res, next) => {
 };
 
 export const viewChatController = async (req, res) => {
-  logger.info("viewChatController: excecuted chat view");
+  logger.info("viewChatController: executed chat view");
   res.render("chat", { layout: "chat" });
 };
 
 export const viewProductsRealTimeController = async (req, res) => {
   const products = await productsServices.getProducts_Service();
   logger.info(
-    "viewProductsRealTimeController: excecuted products realtime view"
+    "viewProductsRealTimeController: executed products realtime view"
   );
   res.render("realTimeProducts", { products, layout: "realTime" });
 };
@@ -97,14 +97,14 @@ export const viewProductsRealTimeController = async (req, res) => {
 export const viewProductsRealTime2Controller = async (req, res) => {
   const products = await productsServices.getProducts_Service();
   logger.info(
-    "viewProductsRealTime2Controller: excecuted productos realtime2 view"
+    "viewProductsRealTime2Controller: executed productos realtime2 view"
   );
   res.render("realTimeProducts2", { products, layout: "altaProducto" });
 };
 
 export const deleteProductsRealTime2Controller = async (req, res) => {
   logger.info(
-    "deleteProductsRealTime2Controller: excecuted delete realtime view"
+    "deleteProductsRealTime2Controller: executed delete realtime view"
   );
   res.render("realTimeProductsDelete", { layout: "deleteProduct" });
 };

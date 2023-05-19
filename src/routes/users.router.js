@@ -1,9 +1,12 @@
 import {
+  changeUserRoleController,
   logOutUserController,
   loginUserController,
+  resetPasswordController,
 } from "../controllers/users.controller.js";
 
 import { Router } from "express";
+import { forgotPasswordController } from "../controllers/users.controller.js";
 import passport from "passport";
 
 const router = Router();
@@ -73,9 +76,14 @@ router.get("/registroDiscord", passport.authenticate("discord"), (req, res) => {
 });
 ////////////////////////////////////////////
 
-
 router.post("/login", loginUserController);
 
 router.get("/logout", logOutUserController);
+
+router.post("/forgotPassword", forgotPasswordController);
+
+router.post("/setNewPassword/:email/token/:token", resetPasswordController)
+
+router.get("/premium/:email", changeUserRoleController)
 
 export default router;

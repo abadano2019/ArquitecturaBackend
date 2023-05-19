@@ -10,5 +10,6 @@ export default class ProductDTOResponse{
         this.thumbnails = product.thumbnails
         this.stock = product.stock;
         this.price = product.price;
+        this.owner = product.owner;
     }
 }

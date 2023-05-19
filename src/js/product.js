@@ -12,8 +12,9 @@ export default class Product {
     stock
     status
     category
+    owner
   
-    constructor(title, description, price, thumbnail, code, stock, status = true, category){
+    constructor(title, description, price, thumbnail, code, stock, status = true, category, owner){
       this.title = title
       this.description = description
       this.price = price
@@ -22,6 +23,7 @@ export default class Product {
       this.stock = stock
       this.status = status
       this.category = category
+      this.owner = owner
     }
   
   }

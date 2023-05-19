@@ -1,4 +1,5 @@
 import logger from "../logger/winston.js";
+import productsServices from "../services/products.services.js";
 import usersServices from "../services/users.services.js";
 
 export const getAuthAdmin = function (req, res, next) {
@@ -79,6 +80,48 @@ export const getAuthAdminSession = async function (req, res, next) {
     }
   } else {
     logger.info("getAuthAdminSession: access denied - unidentified user ");
+    res.status(403).send({ error: "access denied - unidentified user" });
+  }
+};
+
+export const getAuthPremiumSession = async function (req, res, next) {
+  if (req.session.email) {
+    const user = await usersServices.getUserByIdService(req.session.email);
+    const user_role = user.role;
+    let allow = false;
+    if (user_role === "premium") {
+      allow = true;
+    }
+    if (allow) {
+      logger.info("getAuthPremiumSession: authorized access");
+      next();
+    } else {
+      logger.info("getAuthPremiumSession: access denied");
+      res.status(403).send({ error: "access denied" });
+    }
+  } else {
+    logger.info("getAuthPremiumSession: access denied - unidentified user ");
+    res.status(403).send({ error: "access denied - unidentified user" });
+  }
+};
+
+export const getAuthAdminPremiumSession = async function (req, res, next) {
+  if (req.session.email) {
+    const user = await usersServices.getUserByIdService(req.session.email);
+    const user_role = user.role;
+    let allow = false;
+    if ((user_role === "admin") || (user_role === "premium")){
+      allow = true;
+    }
+    if (allow) {
+      logger.info("getAuthAdminPremiumSession: authorized access");
+      next();
+    } else {
+      logger.info("getAuthAdminPremiumSession: access denied");
+      res.status(403).send({ error: "access denied" });
+    }
+  } else {
+    logger.info("getAuthAdminPremiumSession: access denied - unidentified user ");
     res.status(403).send({ error: "access denied - unidentified user" });
   }
 };

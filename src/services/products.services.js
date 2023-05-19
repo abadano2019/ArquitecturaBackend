@@ -1,3 +1,4 @@
+import logger from "../logger/winston.js"
 import productsRepository from "../repositories/products.repository.js";
 
 class ProductsServices {
@@ -28,9 +29,9 @@ class ProductsServices {
 
   getProductByIdService = async (id) => {
     try {
-      console.log("entre en el servicio", id);
+      logger.info("getProductOwner - service init - product id:", id);
       const product = await this.#repository.getProductByIdRepository(id);
-      console.log("producto del servicio", product);
+      logger.info("getProductOwner - product owner", product);
       return product;
     } catch (error) {
       CustomError(
@@ -71,6 +72,32 @@ class ProductsServices {
     try {
       await this.#repository.updateStock(id, stock);
     } catch (error) {}
+  };
+
+  getProductOwner = async (id) => {
+    try {
+      const product = await this.#repository.getProductByIdRepository(id);
+      if(!product){
+        logger.info("getProductOwner - product service - product not exist")
+        CustomError(
+          ErrorsName.PRODUCT_DATA_NO_EXIST,
+          ErrorsCause.PRODUCT_DATA_NO_EXIST,
+          ErrorsMessage.PRODUCT_DATA_NO_EXIST,
+          500,
+          "getProductOwner - product not exit"
+        );
+      }
+      else{
+        logger.info("getProductOwner - Product owner ********** :", product.owner)
+        return product.owner
+      }
+    } catch (error) {
+      logger.info("getProductOwner - product service - product not exist")
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
   };
 }
 

@@ -40,9 +40,9 @@ class ProductsRepository {
 
   getProductByIdRepository = async (id) => {
     try {
-      console.log("repository", id);
+      logger.info("getProductByIdRepository - product id: ", id);
       const _id = new mongoose.Types.ObjectId(id);
-      console.log(_id);
+      logger.info("getProductByIdRepository - product ObjectId: ", _id);
       const product = await this.#dao.getProductById(_id);
       let productDTO = undefined;
       if (product) {

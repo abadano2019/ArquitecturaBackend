@@ -35,6 +35,11 @@ const productsSchema = new mongoose.Schema({
     price:{
         type: Number,
         required: true,
+    },
+    owner:{
+        type: String,
+        requiered: true,
+        default:"admin"
     }
 })
 

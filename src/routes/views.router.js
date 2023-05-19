@@ -10,7 +10,7 @@ import {
   viewProductsRealTimeController,
   viewPutUpFileController,
 } from "../controllers/views.controller.js";
-import { getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
+import { getAuthAdminPremiumSession, getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
 
 import { Router } from "express";
 import logger from "../logger/winston.js"
@@ -40,9 +40,9 @@ router.get(
 router.get("/realtimeproducts", viewProductsRealTimeController);
 
 // Vista para ser utilizada con protocolo WebSocket, layount home
-router.get("/realtimeproducts2", getAuthAdminSession, viewProductsRealTime2Controller);
+router.get("/realtimeproducts2", getAuthAdminPremiumSession, viewProductsRealTime2Controller);
 
-router.get("/realTimeProductsDelete", getAuthAdminSession, deleteProductsRealTime2Controller);
+router.get("/realTimeProductsDelete", getAuthAdminPremiumSession, deleteProductsRealTime2Controller);
 
 router.get("/realTimeProductsModify", getAuthAdminSession, modifyProductsRealTime2Controller);
 
@@ -60,6 +60,19 @@ router.get("/login", async (req, res) => {
 
 router.get("/registro", (req, res) => {
   res.render("registro");
+});
+
+router.get("/resetPassword", (req, res) => {
+  res.render("resetPassword");
+});
+
+router.get("/resetPassword/:email/token/:token", (req,res) => {
+  const {email,token} = req.params
+  const data = {
+    email: email,
+    token: token,
+  }
+  res.render("setNewPassword", {data})
 });
 
 router.get("/errorRegistro", (req, res) => {

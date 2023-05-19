@@ -6,10 +6,10 @@ import {
   getProducts_Controller,
   updateProductController,
 } from "../controllers/products.controller.js";
+import { getAuthAdminPremiumSession, getAuthAdminSession } from "../middlewares/auth.middleware.js";
 
 import { Router } from "express";
 import { errorMiddleware } from "../middlewares/errors.middleware.js";
-import { getAuthAdminSession } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
@@ -23,12 +23,12 @@ router.get("/paginate", getProductsController);
 router.get("/:idProduct", getProductByIdController)
 
 // alta de producto
-router.post("/",getAuthAdminSession, addProductController)
+router.post("/",getAuthAdminPremiumSession, addProductController)
 
 // modificación de producto
 router.put("/:idProduct", getAuthAdminSession, updateProductController)
 
 // eliminación de producto
-router.delete("/:idProduct", getAuthAdminSession, deleteProductController, errorMiddleware)
+router.delete("/:idProduct", getAuthAdminPremiumSession, deleteProductController)
 
 export default router;

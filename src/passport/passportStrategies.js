@@ -9,6 +9,7 @@ import config from "../config.js";
 import { hashPassword } from "../utils.js";
 import logger from "../logger/winston.js"
 import passport from "passport";
+import { userModel } from "../persistence/mongodb/models/users.model.js";
 import usersServices from "../services/users.services.js";
 
 passport.use(
@@ -24,6 +25,7 @@ passport.use(
       let rolUser = "user";
       logger.info("Passport registry: finded user", user)
       if (user) {
+        req.session.email = user.email;
         return done(null, false);
       }
       if (email === "adminCoder@coder.com") {
@@ -70,6 +72,7 @@ passport.use(
         const newuserDB = await usersServices.createUserService(newUser, cart);
         done(null, newuserDB);
       } else {
+        
         done(null, user);
       }
     }
@@ -191,8 +194,10 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (email, done) => {
-  //const user = await userModel.findById(id)
+  const user = await userModel.findById(email)
   console.log("email pasado:", email)
-  const user = await usersServices.getUserByIdService(email);
+  //email = "abadano05@gmail.com"
+  //const user = await usersServices.getUserByIdService(email);
+  console.log("user", user)
   done(null, user);
 });

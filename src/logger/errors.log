@@ -1952,3 +1952,76 @@
   timestamp: '2023-05-17T02:44:24.958Z'
 }
 { message: 500, level: 'fatal', timestamp: '2023-05-17T02:44:24.960Z' }
+{
+  message: 'CastError',
+  level: 'error',
+  timestamp: '2023-05-24T03:44:30.756Z'
+}
+{
+  message: 'Cast to ObjectId failed for value "8" (type string) at path "_id" for model "Carts"',
+  level: 'error',
+  timestamp: '2023-05-24T03:44:30.760Z'
+}
+{
+  message: undefined,
+  level: 'error',
+  timestamp: '2023-05-24T03:44:30.760Z'
+}
+{
+  message: undefined,
+  level: 'error',
+  timestamp: '2023-05-24T03:44:30.761Z'
+}
+{
+  messageFormat: undefined,
+  stringValue: '"8"',
+  kind: 'ObjectId',
+  value: '8',
+  path: '_id',
+  reason: BSONTypeError: Argument passed in must be a string of 12 bytes or a string of 24 hex characters or an integer
+      at new BSONTypeError (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\bson\lib\error.js:41:28)
+      at new ObjectId (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\bson\lib\objectid.js:67:23)
+      at castObjectId (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\cast\objectid.js:25:12)
+      at ObjectId.cast (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\schema\objectid.js:246:12)
+      at SchemaType.applySetters (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\schematype.js:1201:12)
+      at SchemaType._castForQuery (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\schematype.js:1648:15)
+      at SchemaType.castForQuery (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\schematype.js:1636:15)
+      at SchemaType.castForQueryWrapper (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\schematype.js:1612:20)
+      at cast (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\cast.js:349:32)
+      at Query.cast (C:\Users\abada\Desktop\Clase 3\Entregas\Entrega 15\Ariel Badano - 37535624 - 15ta entregable Programación Backend\node_modules\mongoose\lib\query.js:5342:12),
+  valueType: 'string',
+  level: 'fatal',
+  message: 'Database error, DAO-CartManager-GetCartById, Log detail: Cast to ObjectId failed for value "8" (type string) at path "_id" for model "Carts"',
+  stack: 'CastError: Cast to ObjectId failed for value "8" (type string) at path "_id" for model "Carts"\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 15\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4912:21)\n' +
+    '    at Query.then (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 15\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:5011:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-24T03:44:30.763Z'
+}
+{
+  name: 'Error cart no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in getCartByIdController, Log detail: Request faild: Error cart not fount Cart not exist',
+  stack: 'Error cart no exist: Request faild: Error cart not fount Cart not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2015/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at getCartByIdController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2015/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:53:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-05-24T03:44:30.770Z'
+}
+{
+  message: 'Error cart no exist',
+  level: 'fatal',
+  timestamp: '2023-05-24T03:44:30.772Z'
+}
+{
+  message: 'Request faild: Error cart not fount Cart not exist',
+  level: 'fatal',
+  timestamp: '2023-05-24T03:44:30.773Z'
+}
+{
+  message: 'Data cart not exist',
+  level: 'fatal',
+  timestamp: '2023-05-24T03:44:30.774Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-05-24T03:44:30.775Z' }

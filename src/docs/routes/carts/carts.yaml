@@ -1,7 +1,7 @@
 paths:
   /api/carts:
     get:
-      summary: get all carts
+      summary: Get all carts
       tags:
       - Carts
       responses:
@@ -65,7 +65,7 @@ paths:
 
   /api/carts/{idCart}:
     get:
-      summary: get all carts
+      summary: Get a carts by Id
       tags:
       - Carts
       parameters:
@@ -73,7 +73,7 @@ paths:
           in: path
       responses:
         200:
-          description: Success - Get all carts in bd
+          description: Success - Get a carts by id 
           content:
             application/json:
               schema:
@@ -101,15 +101,15 @@ paths:
     delete:
       tags:
       - Carts
-      summary: Remove a cart
+      summary: Delete a cart
       parameters:
         - name: cid
           in: path
-          description: remove a cart
+          description: cart's id to be deleted
           required: true
       responses:
         200:
-          description: Removed
+          description: Deleted
         400:
           description: Bad request
         404:
@@ -119,21 +119,35 @@ paths:
     put:
       tags:
       - Carts
-      summary: modify a cart
+      summary: Modify a cart
       parameters:
         - name: cid
           in: path
-          description: modify a cart
+          description: cart's id to be modified
           required: true
       requestBody:
         required: true
         content:
           application/json:
             schema:
-            type: array
-            required:
-              - id
-              - name
+              type: array
+              items:
+                type: object 
+                properties:
+                  id:
+                    type: string
+                    example: 'adc445djdjfgskfjgslfgffds'
+                  cartProducts:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        idProduct:
+                          type: string
+                          example: 'adc445djdjfgskfjgsl445874'
+                        quantity:
+                          type: number
+                          example: 5
       responses:
         200:
           description: Removed
@@ -145,12 +159,13 @@ paths:
 
   /api/carts/addToCart/product/{pid}:
     post:
-      summary: Add to cart a product
+      summary: Add a product - redirect to endpoint /:cid/products/:pid
       tags:
         - Carts
-      parameters:
+      parameters: 
         - name: pid
           in: path
+          description: product'id to be added to the cart
       responses:
         201:
           description: Success
@@ -181,7 +196,7 @@ paths:
 
   /api/carts/{cid}/products/{pid}:
     post:
-      summary: Add to cart a product
+      summary: Add a product to a cart
       tags:
         - Carts
       parameters:
@@ -218,12 +233,12 @@ paths:
     delete:
       tags:
       - Carts
-      summary: Remove a product from the cart
+      summary: Remove a product from a cart
       parameters:
         - name: cid
         - name: pid
           in: path
-          description: remove a product
+          description: remove a product from a cart
           required: true
       responses:
         200:

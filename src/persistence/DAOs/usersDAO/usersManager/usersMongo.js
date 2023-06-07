@@ -38,8 +38,9 @@ export default class UsersManager {
           role: roleUser,
           cart: user.cart,
         };
-        await userModel.create(newUser);
-        return newUser;
+        //await userModel.create(newUser);
+        return await userModel.create(newUser);
+        //return newUser;
       } else {
         return null;
       }
@@ -50,9 +51,11 @@ export default class UsersManager {
   };
 
   loginUser = async (user) => {
+    console.log("user", user)
     const { email, password } = user;
+    console.log("uuuuuuuuuuuu",email)
     const usuario = await userModel.findOne({ email });
-
+    console.log("XXXXXX",usuario)
     if (usuario) {
       const isPassword = await comparePasswords(password, usuario.password);
       if (isPassword) {

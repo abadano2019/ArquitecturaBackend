@@ -1,0 +1,28 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: deployment
+metadata:
+  name: bazar5a-deployment
+  labels:
+   app: bazar5a
+spec:
+  selector:
+     matchLabels:
+      env: production
+      name: ba5
+  replicas: 3
+  template:
+    metadata:
+      name: ba5
+      labels:
+        env: production
+        name: ba5
+    spec:
+      containers:
+      - name: bazar5a
+        image: abadano05/bazar5a
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+          - containerPort: 80

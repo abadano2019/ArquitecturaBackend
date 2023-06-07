@@ -2025,3 +2025,138 @@
   timestamp: '2023-05-24T03:44:30.774Z'
 }
 { message: 500, level: 'fatal', timestamp: '2023-05-24T03:44:30.775Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-06T02:57:54.104Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:57:54.114Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:57:54.116Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:57:54.119Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-06T02:57:54.122Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-06T02:59:05.129Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:59:05.132Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:59:05.132Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T02:59:05.133Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-06T02:59:05.133Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-06T03:02:20.322Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:02:20.327Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:02:20.329Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:02:20.331Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-06T03:02:20.333Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-06T03:04:41.501Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:04:41.508Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:04:41.509Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:04:41.511Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-06T03:04:41.513Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2016/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:156:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-06T03:06:06.325Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:06:06.327Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:06:06.327Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-06T03:06:06.328Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-06T03:06:06.328Z' }

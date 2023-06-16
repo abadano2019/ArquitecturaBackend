@@ -2160,3 +2160,1005 @@
   timestamp: '2023-06-06T03:06:06.328Z'
 }
 { message: 500, level: 'fatal', timestamp: '2023-06-06T03:06:06.328Z' }
+{
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistryService, Log detail: type is not defined',
+  stack: 'ReferenceError: type is not defined\n' +
+    '    at UsersServices.userLogInOutRegistryService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:92:84)\n' +
+    '    at loginUserController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:75:19)',
+  timestamp: '2023-06-12T01:58:09.372Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-06-12T01:58:09.378Z'
+}
+{
+  message: 'type is not defined',
+  level: 'fatal',
+  timestamp: '2023-06-12T01:58:09.380Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T01:58:09.381Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T01:58:09.382Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:172:18)',
+  timestamp: '2023-06-12T02:17:47.311Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:17:47.355Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:17:47.356Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:17:47.361Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:17:47.362Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:172:18)',
+  timestamp: '2023-06-12T02:19:57.909Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:19:57.927Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:19:57.928Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:19:57.934Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:19:57.935Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:172:18)',
+  timestamp: '2023-06-12T02:29:30.038Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:29:30.055Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:29:30.057Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:29:30.063Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:29:30.065Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:172:18)',
+  timestamp: '2023-06-12T02:44:35.004Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:44:35.020Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:44:35.021Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:44:35.026Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:44:35.028Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:172:18)',
+  timestamp: '2023-06-12T02:47:44.641Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:47:44.652Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:47:44.653Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:47:44.657Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:47:44.659Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:173:18)',
+  timestamp: '2023-06-12T02:53:34.372Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:53:34.388Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:53:34.389Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:53:34.394Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:53:34.395Z'
+}
+{
+  stringValue: '"UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}"',
+  messageFormat: undefined,
+  kind: 'string',
+  value: UserDTOResponse {
+    _id: new ObjectId("64867a494a47cc40bf396577"),
+    fullName: 'f f',
+    email: 'f@f.com.uy',
+    role: 'user',
+    cart: {
+      _id: new ObjectId("64867a494a47cc40bf396575"),
+      cartProducts: [],
+      __v: 0
+    },
+    tokenResetPassword: '',
+    password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'
+  },
+  path: 'email',
+  reason: null,
+  valueType: 'UserDTOResponse',
+  model: Model { Users },
+  level: 'fatal',
+  message: 'Error in userLogInOutRegistry, Log detail: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  stack: 'CastError: Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"\n' +
+    '    at SchemaString.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:604:11)\n' +
+    '    at SchemaType.applySetters (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schematype.js:1204:12)\n' +
+    '    at SchemaString.castForQuery (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\schema\\string.js:688:15)\n' +
+    '    at cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\cast.js:348:32)\n' +
+    '    at Query.cast (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4874:12)\n' +
+    '    at Query._castConditions (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2210:10)\n' +
+    '    at model.Query._findOne (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:2497:8)\n' +
+    '    at model.Query.exec (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\mongoose\\lib\\query.js:4404:28)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersManager.userLogInOutRegistry (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/persistence/DAOs/usersDAO/usersManager/usersMongo.js:173:18)',
+  timestamp: '2023-06-12T02:58:31.137Z'
+}
+{
+  message: 'CastError',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:58:31.148Z'
+}
+{
+  message: 'Cast to string failed for value "UserDTOResponse {\n' +
+    '  _id: new ObjectId("64867a494a47cc40bf396577"),\n' +
+    "  fullName: 'f f',\n" +
+    "  email: 'f@f.com.uy',\n" +
+    "  role: 'user',\n" +
+    '  cart: {\n' +
+    '    _id: new ObjectId("64867a494a47cc40bf396575"),\n' +
+    '    cartProducts: [],\n' +
+    '    __v: 0\n' +
+    '  },\n' +
+    "  tokenResetPassword: '',\n" +
+    "  password: '$2b$10$zvek0TBCzwuyrsDfxr3P/uqyVK5i0vpDm8GVGtdCdAe6S7sos5vBi'\n" +
+    '}" (type UserDTOResponse) at path "email" for model "Users"',
+  level: 'fatal',
+  timestamp: '2023-06-12T02:58:31.149Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:58:31.153Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-12T02:58:31.154Z'
+}
+{
+  level: 'fatal',
+  message: "Error in setDocumentsService, Log detail: Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'setDocumentsRepository')\n" +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:110:42)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:161:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T03:30:45.706Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T03:30:45.711Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  level: 'fatal',
+  timestamp: '2023-06-15T03:30:45.712Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:30:45.713Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:30:45.714Z'
+}
+{
+  level: 'fatal',
+  message: "Error in setDocumentsService, Log detail: Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'setDocumentsRepository')\n" +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:110:42)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T03:38:32.071Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T03:38:32.075Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  level: 'fatal',
+  timestamp: '2023-06-15T03:38:32.075Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:38:32.076Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:38:32.077Z'
+}
+{
+  level: 'fatal',
+  message: "Error in setDocumentsService, Log detail: Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'setDocumentsRepository')\n" +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:112:42)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T03:46:08.897Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T03:46:08.902Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  level: 'fatal',
+  timestamp: '2023-06-15T03:46:08.902Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:46:08.903Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:46:08.904Z'
+}
+{
+  level: 'fatal',
+  message: "Error in setDocumentsService, Log detail: Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'setDocumentsRepository')\n" +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:112:42)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T03:48:58.521Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T03:48:58.528Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  level: 'fatal',
+  timestamp: '2023-06-15T03:48:58.528Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:48:58.530Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:48:58.530Z'
+}
+{
+  level: 'fatal',
+  message: "Error in setDocumentsService, Log detail: Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'setDocumentsRepository')\n" +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:112:42)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T03:58:21.940Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T03:58:21.943Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'setDocumentsRepository')",
+  level: 'fatal',
+  timestamp: '2023-06-15T03:58:21.944Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:58:21.945Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T03:58:21.946Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in setDocumentsService, Log detail: this[#repository].setDocumentsService is not a function',
+  stack: 'TypeError: this[#repository].setDocumentsService is not a function\n' +
+    '    at UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:112:43)\n' +
+    '    at viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:36)\n' +
+    '    at Layer.handle [as handle_request] (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\router\\route.js:144:13)\n' +
+    '    at done (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:45:7)\n' +
+    '    at indicateDone (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:49:68)\n' +
+    '    at C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\lib\\make-middleware.js:155:11\n' +
+    '    at WriteStream.<anonymous> (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\multer\\storage\\disk.js:43:9)\n' +
+    '    at WriteStream.emit (node:events:525:35)\n' +
+    '    at finish (node:internal/streams/writable:748:10)',
+  timestamp: '2023-06-15T04:04:17.621Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-15T04:04:17.625Z'
+}
+{
+  message: 'this[#repository].setDocumentsService is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-15T04:04:17.626Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T04:04:17.627Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T04:04:17.627Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in setDocumentsRepository, Log detail: userUpdated is not defined',
+  stack: 'ReferenceError: userUpdated is not defined\n' +
+    '    at UsersRepository.setDocumentsRepository (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/repositories/users.repository.js:140:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UsersServices.setDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:112:20)\n' +
+    '    at async viewPutUpFileDocumentsController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/views.controller.js:169:16)',
+  timestamp: '2023-06-15T04:06:37.732Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-06-15T04:06:37.735Z'
+}
+{
+  message: 'userUpdated is not defined',
+  level: 'fatal',
+  timestamp: '2023-06-15T04:06:37.736Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T04:06:37.737Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-15T04:06:37.738Z'
+}

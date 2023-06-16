@@ -1,21 +1,30 @@
 import {
   deleteProductsRealTime2Controller,
   modifyProductsRealTime2Controller,
+  putUpFileProductsController,
+  putUpFileProfilesController,
   viewCartByIdController,
   viewGetUpFileController,
+  viewGetUpFileDocumentsController,
+  viewGetUpFileProductsController,
+  viewGetUpFileProfilesController,
   viewListProductsController,
   viewProductsController,
   viewProductsCookiesController,
   viewProductsRealTime2Controller,
   viewProductsRealTimeController,
   viewPutUpFileController,
+  viewPutUpFileDocumentsController,
 } from "../controllers/views.controller.js";
 import { getAuthAdminPremiumSession, getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
 
 import { Router } from "express";
 import logger from "../logger/winston.js"
 import passport from "passport";
-import { upload } from "../middlewares/multer.middleware.js";
+import { upload_file } from "../middlewares/multer.middleware.js";
+import { upload_file_documents } from "../middlewares/multer_documents.middleware.js";
+import {upload_file_products} from "../middlewares/multer_products.middleware.js"
+import {upload_file_profiles} from "../middlewares/multer_profiles.middleware.js"
 import { viewChatController } from "../controllers/views.controller.js";
 
 const router = new Router();
@@ -52,7 +61,19 @@ router.get("/carts/:cid", viewCartByIdController);
 // Vista para ser utilizada con protocolo WebSocket, layount home
 router.get("/upfile", viewGetUpFileController);
 
-router.post("/upfile", upload.array("foto", 2), viewPutUpFileController);
+router.post("/upfile", upload_file.array("foto", 2), viewPutUpFileController);
+
+router.get("/upfile_documents", viewGetUpFileDocumentsController);
+
+router.post("/upfile_documents", upload_file_documents.array("foto", 3), viewPutUpFileDocumentsController);
+
+router.get("/upfile_products", viewGetUpFileProductsController);
+
+router.post("/upfile_products", upload_file_products.array("foto", 10), putUpFileProductsController);
+
+router.get("/upfile_profiles", viewGetUpFileProfilesController);
+
+router.post("/upfile_profiles", upload_file_profiles.array("foto", 1), putUpFileProfilesController);
 
 router.get("/login", async (req, res) => {
   res.render("login");

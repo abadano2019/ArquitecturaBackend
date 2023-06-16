@@ -55,5 +55,14 @@ export default class UsersDAO {
     return this.#usersDAO.updateUserRole(user);
   } 
 
+  userLogInOutRegistry = async (email, type, datetime) => {
+    return this.#usersDAO.userLogInOutRegistry(email,type,datetime);  
+  }
+
+  setDocuments = async (uid, docs) => {
+    return this.#usersDAO.setDocuments(uid,docs);  
+  }
+    
+
 }
 

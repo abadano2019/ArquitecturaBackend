@@ -1,4 +1,4 @@
-import logger from "../logger/winston.js"
+import logger from "../logger/winston.js";
 import usersRepository from "../repositories/users.repository.js";
 
 class UsersServices {
@@ -62,7 +62,7 @@ class UsersServices {
         password,
         token
       );
-      
+
       return userUpdated;
     } catch (error) {
       logger.fatal("Error in updateUserPasswordService, Log detail:", error);
@@ -75,10 +75,8 @@ class UsersServices {
 
   updateUserRoleService = async (user) => {
     try {
-      const userUpdated = await this.#repository.updateUserRoleRepository(
-        user
-      );
-      
+      const userUpdated = await this.#repository.updateUserRoleRepository(user);
+
       return userUpdated;
     } catch (error) {
       logger.fatal("Error in updateUserRoleService, Log detail:", error);
@@ -89,6 +87,39 @@ class UsersServices {
     }
   };
 
+  userLogInOutRegistryService = async (uid, type, datetime) => {
+    try {
+      const userUpdated = await this.#repository.userLogInOutRegistryRepository(
+        uid,
+        type,
+        datetime
+      );
+
+      return userUpdated;
+    } catch (error) {
+      logger.fatal("Error in userLogInOutRegistryService, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+  setDocumentsService = async (uid, docs) => {
+    try {
+      console.log("service", uid)
+      console.log("service docs", docs)
+      const user = await this.#repository.setDocumentsRepository(uid,docs)
+      return user
+      
+    } catch (error) {
+      logger.fatal("Error in setDocumentsService, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
 }
 
 export default new UsersServices(usersRepository);

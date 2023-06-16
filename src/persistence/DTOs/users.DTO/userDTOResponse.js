@@ -8,5 +8,6 @@ export default class UserDTOResponse {
       this.cart = user.cart
       this.tokenResetPassword = user.tokenResetPassword
       this.password = user.password
+      this.docs = user.documents
     }
   }

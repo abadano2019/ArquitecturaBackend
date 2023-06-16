@@ -1,6 +1,7 @@
 import cartsServices from "../services/carts.services.js";
 import logger from "../logger/winston.js";
 import productsServices from "../services/products.services.js";
+import usersServices from "../services/users.services.js";
 
 export const viewProductsController = async (req, res, next) => {
   try {
@@ -122,18 +123,89 @@ export const viewListProductsController = async (req, res) => {
   res.render("home", { products, layout: "home" });
 };
 
+export const viewGetUpFileDocumentsController = async (req, res, next) => {
+  logger.info("viewGetUpFileController: executed view getup file view");
+  res.render("upfile_documents", { layout: "upfile" });
+};
+
+export const viewGetUpFileProductsController = async (req, res,next) => {
+  logger.info("viewGetUpFileProductsController: executed view getup file view");
+  res.render("upfile_products", { layout: "upfile" });
+}
+
 export const viewGetUpFileController = async (req, res, next) => {
   logger.info("viewGetUpFileController: executed view getup file view");
   res.render("upfile", { layout: "upfile" });
 };
 
 export const viewPutUpFileController = async (req, res, next) => {
+  
   let pagina =
     "<!doctype html><html><head></head><body>" +
     "<p>Se subieron las fotos</p>" +
     '<br><a href="/">MENU</a></body></html>' +
     '<br><a href="/views/upfile">Subir más fotos</a></body></html>';
-  logger.info("viewPutUpFileController: executed put up file view");
+  logger.info("viewPutUpFileDocumentsController: executed put up file view");
+  res.send(pagina);
+};
+
+export const putUpFileProductsController = async (req, res, next) =>{
+  const files = req.files
+  if(!files){
+    const error = new Error("Please choose files")
+    error.httpStatusCode = 400
+    return next(error)
+  }
+  res.send(files)
+}
+
+export const viewGetUpFileProfilesController = async (req, res,next) => {
+  logger.info("viewGetUpFileProfilesController: executed view getup file view");
+  res.render("upfile_profiles", { layout: "upfile" });
+}
+
+export const putUpFileProfilesController = async (req, res, next) =>{
+  const files = req.files
+  if(!files){
+    const error = new Error("Please choose files")
+    error.httpStatusCode = 400
+    return next(error)
+  }
+  res.send(files)
+}
+
+export const viewPutUpFileDocumentsController = async (req, res, next) => {
+  
+  const id_ = req.session.id_;
+  const add = req.session.add;
+  const edc = req.session.edc;
+
+  console.log("Archivo id_",id_)
+  console.log("Archivo add", add)
+  console.log("Archivo edc", edc)
+  
+  const uid = req.session.email
+
+  console.log("email", uid)
+
+  const docs = {
+    id_doc: id_,
+    address: add,
+    edc: edc,
+  };
+
+  console.log(docs)
+
+  const user = await usersServices.setDocumentsService(uid, docs)
+  
+  console.log("USER USER", user)
+
+  let pagina =
+    "<!doctype html><html><head></head><body>" +
+    "<p>Se subieron las fotos</p>" +
+    '<br><a href="/">MENU</a></body></html>' +
+    '<br><a href="/views/upfile">Subir más fotos</a></body></html>';
+  logger.info("viewPutUpFileDocumentsController: executed put up file view");
   res.send(pagina);
 };
 

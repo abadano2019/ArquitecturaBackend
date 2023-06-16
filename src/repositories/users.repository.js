@@ -1,5 +1,5 @@
 import Factory from "../persistence/factory.js";
-import logger from "../logger/winston.js"
+import logger from "../logger/winston.js";
 import usersDTOPersistence from "../persistence/DTOs/users.DTO/userDTOPersistence.js";
 import usersDTOResponse from "../persistence/DTOs/users.DTO/userDTOResponse.js";
 
@@ -99,6 +99,51 @@ class UsersRepository {
       return userDTO;
     } catch (error) {
       logger.fatal("Error in updateUserRoleRepository, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+  userLogInOutRegistryRepository = async (uid, type, datetime) => {
+    try {
+      const userUpdated = await this.#dao.userLogInOutRegistry(
+        uid,
+        type,
+        datetime
+      );
+      let userDTO = undefined;
+      console.log("user UPDATED", userUpdated)
+      if (userUpdated) {
+        userDTO = new usersDTOResponse(userUpdated);
+      }
+      return userDTO;
+    } catch (error) {
+      logger.fatal(
+        "Error in userLogInOutRegistryRepository, Log detail:",
+        error
+      );
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+  setDocumentsRepository = async (uid, docs) => {
+    try {
+      const user = await this.#dao.setDocuments(uid, docs)
+      let userDTO = undefined;
+      if (user) {
+        userDTO = new usersDTOResponse(user);
+      }
+      return userDTO;
+    } catch (error) {
+      logger.fatal(
+        "Error in setDocumentsRepository, Log detail:",
+        error
+      );
       logger.fatal(error.name);
       logger.fatal(error.message);
       logger.fatal(error.cause);

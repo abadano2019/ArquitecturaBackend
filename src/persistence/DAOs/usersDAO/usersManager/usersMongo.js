@@ -5,7 +5,8 @@ import {
 } from "../../../../error/errors.enum.js";
 import { comparePasswords, hashPassword } from "../../../../utils.js";
 
-import CustomError from "../../../../error/CustomError.js"
+import CustomError from "../../../../error/CustomError.js";
+import UserDTOPersistence from "../../../DTOs/users.DTO/userDTOPersistence.js";
 import logger from "../../../../logger/winston.js";
 import { userModel } from "../../../mongodb/models/users.model.js";
 
@@ -37,6 +38,8 @@ export default class UsersManager {
           password: hashNewPassword,
           role: roleUser,
           cart: user.cart,
+          documents: [],
+          last_connection: "",
         };
         //await userModel.create(newUser);
         return await userModel.create(newUser);
@@ -51,11 +54,11 @@ export default class UsersManager {
   };
 
   loginUser = async (user) => {
-    console.log("user", user)
+    console.log("user", user);
     const { email, password } = user;
-    console.log("uuuuuuuuuuuu",email)
+    console.log("uuuuuuuuuuuu", email);
     const usuario = await userModel.findOne({ email });
-    console.log("XXXXXX",usuario)
+    console.log("XXXXXX", usuario);
     if (usuario) {
       const isPassword = await comparePasswords(password, usuario.password);
       if (isPassword) {
@@ -134,25 +137,22 @@ export default class UsersManager {
     }
   };
 
-
-updateUserRole = async (email) => {
+  updateUserRole = async (email) => {
     try {
       console.log("enté en el DAO", email);
       let user = await userModel.findOne({ email });
       console.log("encontré el usuario", user);
       if (user) {
         console.log("user", user);
-        if (user.role === "user"){
+        if (user.role === "user") {
           user.role = "premium";
-          "Level DAO - updateUserRole: user role updated to premium role"
-        }else{
-          user.role = "user"
-          "Level DAO - updateUserRole: user role updated to user role"
+          ("Level DAO - updateUserRole: user role updated to premium role");
+        } else {
+          user.role = "user";
+          ("Level DAO - updateUserRole: user role updated to user role");
         }
         await user.save();
-        logger.info(
-          "Level DAO - updateUserRole: user role updated"
-        );
+        logger.info("Level DAO - updateUserRole: user role updated");
       } else {
         logger.warning("Level DAO - updateUserRole: user not exist");
       }
@@ -166,4 +166,65 @@ updateUserRole = async (email) => {
       logger.fatal(error.Number);
     }
   };
+
+  userLogInOutRegistry = async (uid, type, datetime) => {
+    let userUpdated;
+
+    try {
+      const email = uid;
+      let user = await userModel.findOne({ email });
+
+      if (user) {
+        if (type === "in") {
+          user.last_connection = "Login: " + datetime;
+        } else {
+          user.last_connection = "Logout: " + datetime;
+        }
+        userUpdated = await user.save();
+
+        return userUpdated;
+      } else {
+        logger.warning("Level DAO - userLogInOutRegistry: user not exist");
+      }
+    } catch (error) {
+      logger.warning("Level DAO - userLogInOutRegistry: user not exist");
+      logger.fatal("Error in userLogInOutRegistry, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+  setDocuments = async (uid, docs) => {
+    try {
+      const email = uid;
+      console.log("email",email)
+      let userUpdated = undefined
+      let user = await userModel.findOne({ email });
+
+      if (user) {
+        user.documents = docs
+        userUpdated = await user.save();
+      }
+      else
+      {
+        logger.warning("Level DAO - setDocuments: user not exist");
+        throw new error("User")
+      }
+        
+      return userUpdated;
+      
+    } catch (error) {
+      logger.warning("Level DAO - setDocuments: user not exist");
+      logger.fatal("Error in setDocuments, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+    }
+  };
+
+
+
 }

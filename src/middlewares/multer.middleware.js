@@ -6,8 +6,10 @@ const storage = multer.diskStorage({
     cb(null, __dirname + "/public/img");
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname);
+    console.log("Nombre del archivo", file.originalname)
+    console.log("usuario: XXXXXXXXXXXXXXXXXX", req.session.email)
+    cb(null, "/id_doc/"+"ID_DOC - "+file.originalname);
   },
 });
 
-export const upload = multer({ storage: storage });
+export const upload_file = multer({ storage: storage });

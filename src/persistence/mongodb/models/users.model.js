@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const usersSchema = new mongoose.Schema({
   first_name: {
@@ -25,22 +25,30 @@ const usersSchema = new mongoose.Schema({
   },
   cart: {
     type: mongoose.Schema.Types.ObjectId,
-    ref:'Carts',
+    ref: "Carts",
   },
-  role:{
+  role: {
     type: String,
     required: true,
-    default: "user"
+    default: "user",
   },
-  tokenResetPassword:{
-    type:String,
-    default:"",
+  tokenResetPassword: {
+    type: String,
+    default: "",
+  },
+  documents: {
+    type: Array,
+    default: [],
+  },
+  last_connection: {
+    type: String,
+    default: "",
   }
-})
+});
 
-usersSchema.pre("findOne", function(next){
+usersSchema.pre("findOne", function (next) {
   this.populate("cart");
   next();
-})
+});
 
-export const userModel = mongoose.model('Users',usersSchema)
+export const userModel = mongoose.model("Users", usersSchema);

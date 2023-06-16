@@ -67,20 +67,25 @@ export const loginUserController = async (req, res) => {
   }*/
 
   const user = await usersServices.loginUserService(req.body);
+
   logger.info("loginUserController: user finded:", user);
   if (user) {
     req.session.email = user.email;
-    logger.info("loginUserController: email user session:", req.session.email)
+    const date = new Date();
+    const datetime = date.toLocaleString();
+
+    usersServices.userLogInOutRegistryService(user.email, "in", datetime);
     req.session.user = user.fullName;
+    logger.info("loginUserController: email user session:", req.session.user);
     if (user.role === "admin") {
       req.session.isAdmin = true;
-      logger.info("loginUserController: Role admin is loged in:", email);
+      logger.info("loginUserController: Role admin is loged in:", user.role);
       res.redirect("/");
-    } else if (user.role === "premium"){
+    } else if (user.role === "premium") {
       req.session.isAdmin = false;
       logger.info("loginUserController: Role premium is loged in:", email);
       res.redirect("/");
-    }else{
+    } else {
       req.session.isAdmin = false;
       logger.info("loginUserController: Role user is loged in:", email);
       res.redirect(`/views/products/`);
@@ -89,10 +94,13 @@ export const loginUserController = async (req, res) => {
     logger.warning("loginUserController: user not exist:");
     res.redirect("/views/errorLogin");
   }
-
 };
 
 export const logOutUserController = async (req, res) => {
+  const uid = req.session.email;
+  const date = new Date();
+  const datetime = date.toLocaleString();
+  usersServices.userLogInOutRegistryService(uid, "out", datetime);
   req.session.destroy((error) => {
     if (error) {
       logger.error("logOutUserController: error loged out", error);
@@ -243,9 +251,7 @@ export const changeUserRoleController = async (req, res, next) => {
         .status(403)
         .send({ message: "user role is admin, not allowed to change it" });
     } else {
-      const userUpdated = await usersServices.updateUserRoleService(
-        email
-      );
+      const userUpdated = await usersServices.updateUserRoleService(email);
       logger.info("changeUserRoleController: role changed successfully");
       res.status(200).send({ message: "role changed successfully" });
     }
@@ -258,3 +264,5 @@ export const changeUserRoleController = async (req, res, next) => {
     next(error);
   }
 };
+
+

@@ -230,7 +230,7 @@ export const resetPasswordController = async (req, res, next) => {
 export const changeUserRoleController = async (req, res, next) => {
   try {
     const { email } = req.params;
-    logger.info("changeUserRoleController: email user: ", email)
+    logger.info("changeUserRoleController: email user: ", email);
     const user = await usersServices.getUserByIdService(email);
     if (!user) {
       logger.error("changeUserRoleController: user not exist");
@@ -246,11 +246,8 @@ export const changeUserRoleController = async (req, res, next) => {
     const docValidate = await usersServices.validateDocumentsService(email);
     if (!docValidate) {
       logger.info("changeUserRoleController: same documents are missing");
-      res
-      .status(403)
-      .send("Documents are missing");
-    }else{
-
+      res.status(403).send("Documents are missing");
+    } else {
       if (user.role === "admin") {
         logger.warning("user role is admin, not allowed to change it");
         res

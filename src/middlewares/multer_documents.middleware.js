@@ -9,8 +9,6 @@ const storage = multer.diskStorage({
     console.log("Nombre del archivo", file.originalname)
 
     let prefix = (file.originalname).substring(0,3)
-    console.log("VER PREFIJO",prefix)
-    let folder = ""
     if (prefix === "ID_"){
       req.session.id_ = file.originalname
       cb(null, "/documents/id_/" + req.session.email + " - " + file.originalname);
@@ -25,7 +23,6 @@ const storage = multer.diskStorage({
       req.session.edc = file.originalname
       cb(null, "/documents/edc/" + req.session.email + " - " + file.originalname);
     }
-    
   },
 });
 

@@ -187,7 +187,7 @@ export const viewPutUpFileDocumentsController = async (req, res, next) => {
   
   const uid = req.session.email
 
-  console.log("email", uid)
+  logger.info("viewPutUpFileDocumentsController: email: ", uid)
 
   const docs = {
     id_doc: id_,
@@ -195,7 +195,7 @@ export const viewPutUpFileDocumentsController = async (req, res, next) => {
     edc: edc,
   };
 
-  console.log(docs)
+  logger.info("viewPutUpFileDocumentsController: docs: ",docs)
 
   const user = await usersServices.setDocumentsService(uid, docs)
   

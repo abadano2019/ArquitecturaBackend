@@ -107,9 +107,10 @@ class UsersServices {
 
   setDocumentsService = async (uid, docs) => {
     try {
-      console.log("service", uid)
-      console.log("service docs", docs)
+      logger.info("setDocumentsService, user email:", uid);
+      logger.info("setDocumentsService, user docs:", docs);
       const user = await this.#repository.setDocumentsRepository(uid,docs)
+      logger.info("setDocumentsService: set documentos OK")
       return user
       
     } catch (error) {
@@ -120,6 +121,38 @@ class UsersServices {
       logger.fatal(error.Number);
     }
   };
+
+  validateDocumentsService = async (uid) =>{
+    try{
+      logger.info("validateDocumentsService, user email:", uid);
+      const email = uid;
+      console.log("email", email)
+      const user = await this.#repository.getUserByIdRepository(email)
+      console.log("user:", user)
+      const docs = user.docs
+      console.log(docs)
+      if(docs.length == 0)
+      //if((docs[0]?.id_doc == "") || (docs[0]?.address == "") || (docs[0]?.edc == "") )
+        {
+          logger.info("validateDocumentsService: some documents are missing")
+          return false
+        }
+      else
+      {
+        logger.info("validateDocumentsService: documents OK")
+        return true
+      }
+    }catch (error){
+
+      logger.fatal("Error in validateDocumentsService, Log detail:", error);
+      logger.fatal(error.name);
+      logger.fatal(error.message);
+      logger.fatal(error.cause);
+      logger.fatal(error.Number);
+
+    }
+  }
+
 }
 
 export default new UsersServices(usersRepository);

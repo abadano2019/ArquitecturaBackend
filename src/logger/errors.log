@@ -3162,3 +3162,690 @@
   level: 'fatal',
   timestamp: '2023-06-15T04:06:37.738Z'
 }
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:130:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:19)',
+  timestamp: '2023-06-17T16:04:06.499Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.509Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.511Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.512Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.512Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: docValidate is not defined',
+  stack: 'ReferenceError: docValidate is not defined\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:17)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:04:06.514Z'
+}
+{
+  message: 'ReferenceError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.516Z'
+}
+{
+  message: 'docValidate is not defined',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.516Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.517Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:06.518Z'
+}
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:130:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:25)',
+  timestamp: '2023-06-17T16:04:35.879Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.890Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.891Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.892Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.893Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:04:35.895Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.897Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.898Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.898Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:04:35.899Z'
+}
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:131:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:25)',
+  timestamp: '2023-06-17T16:07:34.653Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.668Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.670Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.672Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.673Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:07:34.675Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.676Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.677Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.678Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:07:34.679Z'
+}
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:132:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:25)',
+  timestamp: '2023-06-17T16:08:39.050Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.060Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.062Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.063Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.064Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:08:39.066Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.068Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.069Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.069Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:08:39.070Z'
+}
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:134:15)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:25)',
+  timestamp: '2023-06-17T16:09:26.936Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.941Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.942Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.944Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.945Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:09:26.946Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.948Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.949Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.950Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:09:26.951Z'
+}
+{
+  level: 'fatal',
+  message: "Error in validateDocumentsService, Log detail: Cannot read properties of undefined (reading 'id_doc')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'id_doc')\n" +
+    '    at UsersServices.validateDocumentsService (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/services/users.services.js:134:19)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:246:25)',
+  timestamp: '2023-06-17T16:10:33.108Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.112Z'
+}
+{
+  message: "Cannot read properties of undefined (reading 'id_doc')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.113Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.115Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.116Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in resetPasswordController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:10:33.117Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.119Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.120Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.120Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:10:33.121Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: logger.message is not a function',
+  stack: 'TypeError: logger.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:248:14)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:17:04.813Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:17:04.815Z'
+}
+{
+  message: 'logger.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:17:04.816Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:17:04.817Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:17:04.818Z'
+}
+{
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: res.message is not a function',
+  stack: 'TypeError: res.message is not a function\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:249:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:19:39.262Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:19:39.266Z'
+}
+{
+  message: 'res.message is not a function',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:19:39.267Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:19:39.268Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:19:39.269Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:262:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:20:34.504Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:34.513Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:34.515Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:34.516Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:34.517Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:262:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:20:51.182Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:51.185Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:51.185Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:51.186Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:20:51.186Z'
+}
+{
+  message: 'changeUserRoleController: user not exist',
+  level: 'error',
+  timestamp: '2023-06-17T16:21:07.615Z'
+}
+{
+  name: 'Error user no exist',
+  Number: 400,
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Request faild. Error user not exist user not exist',
+  stack: 'Error user no exist: Request faild. Error user not exist user not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:237:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:21:07.618Z'
+}
+{
+  message: 'Error user no exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:21:07.625Z'
+}
+{
+  message: 'Request faild. Error user not exist user not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:21:07.627Z'
+}
+{
+  message: 'User not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:21:07.630Z'
+}
+{ message: 400, level: 'fatal', timestamp: '2023-06-17T16:21:07.632Z' }
+{
+  level: 'fatal',
+  message: "Error in addTicketController, Log detail: Cannot read properties of undefined (reading '0')",
+  stack: "TypeError: Cannot read properties of undefined (reading '0')\n" +
+    '    at addTicketController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/tickets.controller.js:81:66)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:36:49.338Z'
+}
+{
+  message: 'TypeError',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:36:49.346Z'
+}
+{
+  message: "Cannot read properties of undefined (reading '0')",
+  level: 'fatal',
+  timestamp: '2023-06-17T16:36:49.347Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:36:49.348Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:36:49.349Z'
+}
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductToCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductToCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:92:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:39:09.535Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:09.539Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:09.542Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:09.543Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-17T16:39:09.545Z' }
+{
+  name: 'Error products no exist',
+  Number: 500,
+  level: 'fatal',
+  message: 'Error in addProductToCartController, Log detail: Request faild. Error products not exist Product not exist',
+  stack: 'Error products no exist: Request faild. Error products not exist Product not exist\n' +
+    '    at CustomError (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/error/CustomError.js:13:22)\n' +
+    '    at addProductToCartController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/carts.controller.js:92:7)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:39:20.545Z'
+}
+{
+  message: 'Error products no exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:20.549Z'
+}
+{
+  message: 'Request faild. Error products not exist Product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:20.551Z'
+}
+{
+  message: 'Data product not exist',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:39:20.552Z'
+}
+{ message: 500, level: 'fatal', timestamp: '2023-06-17T16:39:20.553Z' }
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:262:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T16:52:07.954Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:52:07.967Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-06-17T16:52:07.969Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:52:07.971Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T16:52:07.972Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:262:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T17:05:38.363Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-06-17T17:05:38.371Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-06-17T17:05:38.373Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T17:05:38.374Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T17:05:38.374Z'
+}
+{
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'fatal',
+  message: 'Error in changeUserRoleController, Log detail: Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at new NodeError (node:internal/errors:399:5)\n' +
+    '    at ServerResponse.setHeader (node:_http_outgoing:645:11)\n' +
+    '    at ServerResponse.header (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:794:10)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:174:12)\n' +
+    '    at ServerResponse.json (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:278:15)\n' +
+    '    at ServerResponse.send (C:\\Users\\abada\\Desktop\\Clase 3\\Entregas\\Entrega 17\\Ariel Badano - 37535624 - 15ta entregable Programación Backend\\node_modules\\express\\lib\\response.js:162:21)\n' +
+    '    at changeUserRoleController (file:///C:/Users/abada/Desktop/Clase%203/Entregas/Entrega%2017/Ariel%20Badano%20-%2037535624%20-%2015ta%20entregable%20Programaci%C3%B3n%20Backend/src/controllers/users.controller.js:262:23)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2023-06-17T17:13:13.891Z'
+}
+{
+  message: 'Error',
+  level: 'fatal',
+  timestamp: '2023-06-17T17:13:13.897Z'
+}
+{
+  message: 'Cannot set headers after they are sent to the client',
+  level: 'fatal',
+  timestamp: '2023-06-17T17:13:13.898Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T17:13:13.899Z'
+}
+{
+  message: undefined,
+  level: 'fatal',
+  timestamp: '2023-06-17T17:13:13.899Z'
+}

@@ -15,6 +15,7 @@ export const viewProductsController = async (req, res, next) => {
 
       const productsPaginate = {
         user: user,
+        email: req.session.email,
         productsPag: productsPag,
       };
       logger.info(

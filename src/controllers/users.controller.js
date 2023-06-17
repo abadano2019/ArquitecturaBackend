@@ -230,9 +230,7 @@ export const resetPasswordController = async (req, res, next) => {
 export const changeUserRoleController = async (req, res, next) => {
   try {
     const { email } = req.params;
-
-    console.log("email", email);
-
+    logger.info("changeUserRoleController: email user: ", email)
     const user = await usersServices.getUserByIdService(email);
     if (!user) {
       logger.error("changeUserRoleController: user not exist");
@@ -245,18 +243,27 @@ export const changeUserRoleController = async (req, res, next) => {
       );
     }
 
-    if (user.role === "admin") {
-      logger.warning("user role is admin, not allowed to change it");
+    const docValidate = await usersServices.validateDocumentsService(email);
+    if (!docValidate) {
+      logger.info("changeUserRoleController: same documents are missing");
       res
-        .status(403)
-        .send({ message: "user role is admin, not allowed to change it" });
-    } else {
-      const userUpdated = await usersServices.updateUserRoleService(email);
-      logger.info("changeUserRoleController: role changed successfully");
-      res.status(200).send({ message: "role changed successfully" });
+      .status(403)
+      .send("Documents are missing");
+    }else{
+
+      if (user.role === "admin") {
+        logger.warning("user role is admin, not allowed to change it");
+        res
+          .status(403)
+          .send({ message: "user role is admin, not allowed to change it" });
+      } else {
+        const userUpdated = await usersServices.updateUserRoleService(email);
+        logger.info("changeUserRoleController: role changed successfully");
+        res.status(200).send({ message: "role changed successfully" });
+      }
     }
   } catch (error) {
-    logger.fatal("Error in resetPasswordController, Log detail:", error);
+    logger.fatal("Error in changeUserRoleController, Log detail:", error);
     logger.fatal(error.name);
     logger.fatal(error.message);
     logger.fatal(error.cause);
@@ -264,5 +271,3 @@ export const changeUserRoleController = async (req, res, next) => {
     next(error);
   }
 };
-
-

@@ -2,7 +2,7 @@
 <br />
 <div align="center">
     <img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/icon.png" width="80" height="80">
-    <p> E-COMMERCE BAZAR 5A </p>
+    <p> BACKEND E-COMMERCE BAZAR 5A </p>
   </a>
 </div>
 

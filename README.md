@@ -116,22 +116,22 @@ A continuación se marcan los pasos para poder utilizar la aplicación con datos
 
 Dentro de la carpeta src tenemos la siguiente estructura: 
 
-controllers: contiene todos los controladores que utilizan los routes
-data: contiene parte de los datos que maneja la persistencia en archivos ya que dicha persistencia está sin terminar para todas las funcionalidades
-docs: contiene la implementación de swagger para la documentación de los modulos
-error: contiene los archivos para el manejo de errores personalizados
+controllers: contiene todos los controladores que utilizan los routes.
+data: contiene parte de los datos que maneja la persistencia en archivos ya que dicha persistencia está sin terminar para todas las funcionalidades.
+docs: contiene la implementación de swagger para la documentación de los modulos.
+error: contiene los archivos para el manejo de errores personalizados.
 js: contiene algunas clases de entidades auxiliares como ser: cart, product, etc. 
-logger: contiene la implementación del logueo de errores y de trazas de ejecución
-middleware: contiene todos los middlewares implementados
-passport: contiene la implementación de las estrategias de logueo de passport
-persistence: contiene toda la estructura de persistencia y la aplicación del patron de diseño factory
-public: contien el front del sitio web sin integrar al backend también cuenta con la carpeta img con todos los archivos subidos al servidor por intermedio de multer
-repositories: carpeta en la cual se implementa el padrón repositorio para integrar los dao con los dto
-routes: contiene todas las rutas implementadas con el modulo router
-services: carpeta con todos los servicios utilizados por los controladores
-sessions: carpeta en la cual se guardan las sesiones de los usuarios en caso de setear sessiones en archivo
-test: contiene la implementación de artillery y testeo con mock
-views: contiene las vistas y layouts de las plantillas de handelbars
+logger: contiene la implementación del logueo de errores y de trazas de ejecución.
+middleware: contiene todos los middlewares implementados.
+passport: contiene la implementación de las estrategias de logueo de passport.
+persistence: contiene toda la estructura de persistencia y la aplicación del patron de diseño factory.
+public: contien el front del sitio web sin integrar al backend también cuenta con la carpeta img con todos los archivos subidos al servidor por intermedio de multer.
+repositories: carpeta en la cual se implementa el padrón repositorio para integrar los dao con los dto.
+routes: contiene todas las rutas implementadas con el modulo router.
+services: carpeta con todos los servicios utilizados por los controladores.
+sessions: carpeta en la cual se guardan las sesiones de los usuarios en caso de setear sessiones en archivo.
+test: contiene la implementación de artillery y testeo con mock.
+views: contiene las vistas y layouts de las plantillas de handelbars.
 supertest: carpeta con la utlización de supertest para el testeo de modulos.
 
 ![image](https://user-images.githubusercontent.com/48340360/227795274-ca088124-6a0d-486a-a4de-fd4999d8a43c.png)

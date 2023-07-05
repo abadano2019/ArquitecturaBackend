@@ -12,21 +12,43 @@
 <!-- ABOUT THE PROJECT -->
 ## Introducción
 
-AppBazar5A backend surge como una consecuencia del front de Bazar5A ya desarrollado en otras repositorios de mi gitHub para  proyecto familiar en donde se vuelcan muchos años de experiencia en venta de artículos de Bazar, el mismo consta de varias secciones como ser cristalería, electrodomésticos, cocina, vajilla entre otros, pudiendo adaptarse a las necesidades del mercado. Dentro de las funcionalidades un cliente puede ingresar a la vista de categorías, navegar entre las opciones de categorías disponibles, seleccionar una y ver sus productos asociados, ver los detalles de los productos, agregarlos al carrito de compra, emitir órdenes, ver el histórico de ordenes, enviar mensajes, agregar direcciones de envío, listarlas, ver el detalle de una en particular y eliminarlas de la lista de direcciones. 
+AppBazar5A backend surge como una consecuencia del front de Bazar 5A ya desarrollado en otros repositorios de mi gitHub para el cual se realizan una serie de funcionalidades para darle servicio al sitio web, el mismo consta de varios módulos entre los que podemos encontrar seguridad y la utilización de Passport, pasarela de pago con la implementación de Stripe, bases de datos NoSQL con la utilización de mongoose, con la posibilidad de implementar otras persistencias, entre otras cosas. Dentro de las funcionalidades un cliente puede agregar productos a su carrito, restarle o agregarle cantidad de elementos, eliminar un producto de su carrito, emitir órdenes de compra, realizar pago con la pasarela de pago Stripe, también cuenta con las funcionalidades de administración para poder agregar modifica y eliminar productos entre otras cosas. 
 
 ### Tecnologías utilizadas
 
-Dentro de las tecnologías utilizadas para el desarrollo de la aplicación podemos encontrar:
+Dentro de las tecnologías utilizadas para el desarrollo del backend podemos encontrar:
 
-##### * React Native
-##### * Java Script
-##### * Firebase rtdb
-##### * Firebase Storage
-##### * Firebase Autentication
-##### * Expo
-##### * SQLite
-##### * Utilización de la Camara de los dispositivos
-##### * Utilización de Geolocalización de Google
+##### * @faker-js/faker
+##### * artillery
+##### * bcrypt
+##### * connect-mongo
+##### * cookie-parser
+##### * cors
+##### * dotenv
+##### * express
+##### * express-compression
+##### * express-handlebars
+##### * express-session
+##### * jsonwebtoken
+##### * moment
+##### * mongoose
+##### * mongoose-paginate-v2
+##### * multer
+##### * nodemailer
+##### * passport
+##### * passport-discord
+##### * passport-github2
+##### * passport-google-oauth20
+##### * passport-jwt
+##### * passport-local
+##### * session-file-store
+##### * socket.io
+##### * stripe
+##### * swagger-jsdoc
+##### * swagger-ui-express
+##### * winston
+##### * chai
+##### * mocha
 
 React Native y Expo como herramientas base para la elaboración de la aplicación, Java Script para todo lo relacionado a lógica de decisión, Firebase se utilizó como repositorio de imagenes, base de datos y medio de registro y autenticación de usuarios, SQLite como base de datos local y librerías específicas para la utilización de la cámara del dispositivo y la geolocalización. 
 

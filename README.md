@@ -49,46 +49,69 @@ Dentro de las tecnologías utilizadas para el desarrollo del backend podemos enc
 ##### * winston (https://www.npmjs.com/package/winston)
 ##### * chai (https://www.npmjs.com/package/chai)
 ##### * mocha (https://www.npmjs.com/package/mocha)
+##### * Docker (https://docs.docker.com/desktop/install/windows-install/)
+##### * Kubernetes ()
+##### * Railway (https://railway.app/)
 
 El servidor de backend fue desarrollado con Express Js y junto con Node Js y Java Script forman la base medular para la aplicación, luego se le agregaron otras librerias para generar otras funcionalidades. 
 
 Repositorio: Para la persistencia se utilizó mongoose, connect-mongo y mongoose-paginate-v2 y por intermedio de patrones de diseño se dejó la posibilidad de implementar otros tipos de persistencia.
 
-Seguridad: se utilizó passport, passport-discord, passport-github2, passport-google-oauth20, passport-local, bcrypt, con passport se agregó el ingreso a la aplicación por intermedio de los usuarios ya existentes en otras aplicaciones, en este caso, google, discord y gitHub, por otro lado, existe la posibilidad de registro de forma local. Se usa un sistema de hasheo de información proporcionado por bcrypt.
+Seguridad: se utilizó passport, passport-discord, passport-github2, passport-google-oauth20, passport-jwt, passport-local, bcrypt, con passport se agregó el ingreso a la aplicación por intermedio de los usuarios ya existentes en otras aplicaciones, en este caso, google, discord y gitHub, por otro lado, existe la posibilidad de registro de forma local. Se usa un sistema de hasheo de información proporcionado por bcrypt.
 
 Documentación: Para la documentación de la aplicación se utiliza swagger-jsdoc y swagger-ui-express, si bien no están todos los módulos documentados hay una muestra de un par de ellos en la ruta (http://localhost:3000/api/docs/)
+
+Logueo: El logueo de información se realiza con la implementación de winston ya sea por consola o en archivo, ser manejan 4 niveles de logueo fatal: "magenta", error: "red", warning: "yellow", info: "cyan".
+
+Testeo: Para el testing unitario y de integración se utiliza chai, mocha, @faker-js/faker y supertest se realizó una muestra de unas pocas muestras para ver el funcionmaiento en la carpeta /supertest y en la carpeta /src/test
+
+Testeo de carga: Para el testeo de carga se utilizó Artillery se realizó sobre un par endpoints y los resultados se pueden encontrar en la carpeta src/test/artillery en el archivo src/test/artillery/read.me.txt se encuetran las consultas ejecutadas. 
+
+Usuarios: Para el manejo de usuarios se utilizó cookie-parser, bcrypt, express-session, jsonwebtoken, session-file-store, en la aplicación si bien se utilizón jwt, cookies y sessioens quedó utilizando sessiones las cuales son guardadas en la base de datos, en caso de querer cambiar se deben de hacer los ajustes necesarios. La solicitud de una nueva clave de usuario se realizan utilizando jwt. 
+
+Comunicación entre servidores: se utiliza cors
+
+Motor de plantillas: si bien en la carpeta public está todo el diseño del front el backend está conectado con formularios de express-handlebars, todo el front a no ser por el menú está diseñado con plantillas de handlebars, queda fuera del alcance de esta entrega la integración con el front por falta de tiempo.
+
+Pasarela de pago: Se implementa stripe y se deja pronto para el desarrollo de la pasarela de mercado pago.
+
+Middleware: Se implementas varios middlewares entre ellos se implementa el modulo de multer para subir archivos al servidor, se implementa de varias formas para documentos, perfiles y productos, se puede ver en la carpeta src/public/img, además se implementó middlewares de autotenticación, errores personalizados, validacion de jwt, 
+
+Docker, Kubernetes, Railway: Se utilizó docker para la generación de contendedores y utilizó kubernetes para la escalabilidad y se intentó utilizar railway pero por problemas de comuniciación con gitHub no se llegó a realizar el despligue ya que por problemas de configuración railway no se integra con gitHub.
+
+Otras: para el manejo del tiempo se utiliza moment, para el manejo de envio de mails nodemailer, para el manejo de datos entre clientes se implementó web socket con socket.io
 
 <!-- GETTING STARTED -->
 ## Instalación
 
 ### Requisitos previos
 
-Se recomienda el uso de Visual Studio Code para la visualización y administración del código, se debe tener instalado Node JS, en caso de querer utilizar datos propios, se debe utilizar una cuenta de gmail para la configuración de firebase y el servicio de google maps.
+Se recomienda el uso de Visual Studio Code para la visualización y administración del código, se debe tener instalado Node JS, en caso de querer utilizar datos propios se debe contar con una cuenta de mongodb.
 
 ### Pasos a seguir
 
 A continuación se marcan los pasos para poder utilizar la aplicación con datos propios.
 
-1. Configurar el servicio de realtime database en firebase. 
-2. Configurar el servicio de autenticación de firebase por intermedio de correo electónico.
-3. En caso de querer utilizar imágenes propias se deberá cambiar la url en el archivo productos.js ubicado en la carpeta src/constants/data
-4. Configurar los servicios necesarios para el uso de la api de geolocalización de google.maps 
-5. De las configuraciones vista en los puntos del 1 al 4 se deben obtener 2 api key una de firebase y otra de google.maps
+1. Configurar el servicio de mongodb  
 
-6. Clonar o descargar el repositorio, antes de ejecutar este comando debe posicionarse en la carpeta donde desea clonar el repositorio
+2. Clonar o descargar el repositorio, antes de ejecutar este comando debe posicionarse en la carpeta donde desea clonar el repositorio
    ```sh
    git clone https://github.com/abadano2019/AppBazar5A.git
    ```
-7. Instalar NPM packages
+3. Instalar NPM packages
    ```sh
    npm install
    ```
-8. En caso de querer utilizar datos propios modificar los archivos categories.js y products.js ubicados en la carpeta src/constants/data 
+4. Configurar la variable mongoUri en el archivo .env obtenida del punto 1
+5. Registrar un usuario cualquiera con el el mail adminCoder@coder.com el cual será administrador
+6. Ingresar con el usuario adminCoder@coder.com y cargar datos de productos
+7. Para el correcto uso del resto de las funcionalidades completar el resto de las variables en el archivo .env
   
 
 ## Estructura de carpetas
 
-![image](https://user-images.githubusercontent.com/48340360/227794486-d415326e-6c50-48be-8f82-f37c6beb055a.png)
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/7ce1d0c7-c962-48a9-810a-f0cbec7d4690)
+
 
 
 Dentro de la carpeta src tenemos la siguiente estructura, una carpeta components donde se encuentran los componentes de la aplicación, una carpeta con el nombre constants donde se encuentran los datos, la configuración para la conexión a firebase, la conexión al servicio de google.maps y la definición de colotes para ser utilizados por los estilos de los distintos componentes y vistas, una carpeta models donde se encuentran los distintos modelos a utilizar por las bases de datos, una carpeta navigation con toda la estructura y archivos para la navegación de las pantallas por intermedio de @react-navigation, una carpeta con el nombre screens con todas las vistas que la aplicación utiliza, una carpeta con el nombre Store con la implementación de 'redux-thunk' y una carpeta utils con elementos de uso reutilizable como ser el formulario de inicio y registro de sesión.

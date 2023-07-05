@@ -154,6 +154,9 @@ supertest: carpeta con la utlización de supertest para el testeo de modulos.
 
 ## Persistencia
 
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/002ebd9a-7851-4a70-a14b-69edae4294c2)
+
+
 Dentro de la carpeta components podemos destacar los siguientes archivos:
 * cart-item.jsx: encargado de desplegar un elemento del carrito con los botones de mas y menos para aumentar o disminuir la cantidad del producto seleccionado, también cuenta con la posibilidad de borrarse del carrito.
 

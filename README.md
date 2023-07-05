@@ -171,7 +171,13 @@ La estructura de carpetas para la persistencia está dividida en DAOs, DTOs, mon
 
 #### Pantalla de inicio
 
+Desde la pantalla de inicio http://localhost:3000 se puede acceder al login
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/85394824-793e-4527-96fa-aa3d91a4ee35)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/6902027b-7996-4d77-8871-167edd58012b)
+
+Desde la pantalla de login, se puede realizar el registro de un usuario nuevo, resetear la password, ingresar con usuaro y clave seleccionados desde el registro o ingresar desde el login unificado de google, gitHub o discord. 
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/981ca354-a71c-4568-b01f-01d6e47feb13)
 

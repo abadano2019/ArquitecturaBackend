@@ -213,9 +213,15 @@ Podemos ver los productos ofrecidos por el sitio web pudiendo navegar con los bo
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/41ba71e3-56c0-4d88-ac91-293a9013d38a)
 
+Podemos ingresar al carrito de compras pudiendo agregar o eliminar la cantidad de productos comprados o directamente borrar un producto del carrito de compras. Podemos realizar la compra por intermedio del botón buy o pay with stripe, en donde nos llegará un mail con el aviso de la transacción. La compra valida contra el stock actual del sitio web.
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e2ddd535-d488-42bb-b867-cc3136226443)
 
+Podemos ingresar al Chat
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/b7d18fa2-6cd8-45df-b927-683a19ee045f)
+
+Podemos subir los archivos necesarios para el cambio de rol
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/f9b3d4d5-7758-400e-87cc-d0255ba9cbf5)
 

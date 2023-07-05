@@ -81,6 +81,15 @@ Docker, Kubernetes, Railway: Se utilizó docker para la generación de contended
 
 Otras: para el manejo del tiempo se utiliza moment, para el manejo de envio de mails nodemailer, para el manejo de datos entre clientes se implementó web socket con socket.io
 
+## Arquitectura y patrones de diseño
+
+Para el desarrollo de la arquitectura del servidor se utiliza la separación de capas Controladores, Servicios y Persistencia 
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e722fdd1-1507-43da-9f67-3d44cc324c5a)
+
+Se implementan los patrones de diseño, DAO, DTO, Factory y Repository para la persistencia y el patrón de diseño Singleton para la clase factory de la persistencia.
+
+
 <!-- GETTING STARTED -->
 ## Instalación
 

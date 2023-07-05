@@ -268,34 +268,27 @@ Previo a la ejecución de la app se deben instalar las dependencias del proyecto
 
 Ejecute el comando npm install para instalar todas las dependencias del archivo node_modules del proyecto.
 
-### `build`
+### npm start (otras persistencias)
 
-Para generar un ejecutable (apk) para utilizar en dispositivos Android ejecute el comando 
+Desde una terminal donde se esté ubicado en la raiz del proyecto se puede iniciar la aplicación ejecutando el comando npm start fs para persistir en archivos, npm start memory para persistir en memoria RAM (Tener presente que es información se perderá al momento de apagar el servidor), npm start sql para persistir en base de datos relacional SQL, npm start mongo para persistir en mongodb.
 
-  ```sh
-   eas build -p android --profile prod
-   ```
+Previo a la ejecución de la app se deben instalar las dependencias del proyecto.
 
-previo registro de un usuario en el sitio de expo dev https://expo.dev/
+Learn More
 
-Para mayor información dirigirse a la siguiente página (ANDROID): [Build APKs for Android Emulators and devices](https://docs.expo.dev/build-reference/apk/).
-o dirigirse a la siguiente página (IOS): [Build for iOS Simulators](https://docs.expo.dev/build-reference/simulators/).
+Si desea aprender sobre Express Js dirijase a los siguientes links: 
 
-## Learn More
-
-Si desea aprender sobre Expo / React Native dirijase a los siguientes links: 
-
-[Create a new app with Expo documentation](https://docs.expo.dev/get-started/create-a-new-app/).
-[Expo documentation](https://docs.expo.dev/). [React Native documentation] (https://reactnative.dev/)
+https://expressjs.com/
+https://devdocs.io/express/
 
 <!-- REFERENCIAS -->
 ## Referencias
 
-* Curso desarrollo de aplicaciones - CoderHouse.com - Profesor: Ing.Daniel Alberto Soto Guillen
+* Curso programación backend - CoderHouse.com - Profesor: Farid Sesim
 
 <!-- CONTACT -->
 ## Contacto
 
 Ariel Badano - abadano05@gmail.com
 
-Project Link: [https://github.com/abadano2019/AppBazar5A](https://github.com/abadano2019/AppBazar5A)
+Project Link: (https://github.com/abadano2019/ArquitecturaBackend)https://github.com/abadano2019/ArquitecturaBackend

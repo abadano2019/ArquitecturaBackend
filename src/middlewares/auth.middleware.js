@@ -1,6 +1,6 @@
 import logger from "../logger/winston.js";
-import productsServices from "../services/products.services.js";
-import usersServices from "../services/users.services.js";
+import productsServices from "../services/products.service.js";
+import usersServices from "../services/users.service.js";
 
 export const getAuthAdmin = function (req, res, next) {
   if (req.user) {
@@ -43,6 +43,7 @@ export const getAuthUser = async function (req, res, next) {
 };
 
 export const getAuthUserSession = async function (req, res, next) {
+  console.log("AUTH: ", req.session.email)
   if (req.session.email) {
     const user = await usersServices.getUserByIdService(req.session.email);
     const user_role = user.role;

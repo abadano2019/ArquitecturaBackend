@@ -10,8 +10,11 @@
 </form>
 <br/><br/>
 
-<button onclick="location.href='/views/realTimeProductsDelete'">DELETE PRODUCT</button>
-<button onclick="location.href='/views/realTimeProductsModify'">MODIFY PRODUCT</button>
+<button onclick="backToMenu()">Back to Menu</button>
+<!--<button onclick="location.href='/views/realTimeProductsDelete'">DELETE PRODUCT</button>-->
+<button onclick="deleteProduct()">DELETE PRODUCT</button>
+<!--<button onclick="location.href='/views/realTimeProductsModify'">MODIFY PRODUCT</button>-->
+<button onclick="modifyProduct()">MODIFY PRODUCT</button>
 
 <p id="productoIngresado"></p>
 
@@ -66,9 +69,9 @@
         const stock = inputStock.value
         const status = inputStatus.value
         const category = inputCategory.value
-                
+        sessionStorage.setItem("session","ok")       
         socketClient.emit('addProduct',{title, description, price, code,stock,status,category})
-                
+        sessionStorage.setItem("session","ok")       
         fetch('http://localhost:3000/api/products', {
             method: 'POST',
             body: JSON.stringify({
@@ -88,11 +91,13 @@
         .then((response) => {
                 try{
                 if (response.number > 200){
+                    sessionStorage.setItem("session","ok")
                     console.log("Error:", response)
                     window.alert(JSON.stringify(response))
                 }
                 else
                 {
+                    sessionStorage.setItem("session","ok")
                     console.log(response)
                     console.log(response.number)
                     console.log('Producto cargado');
@@ -103,5 +108,25 @@
                 console.log(error)
             }            
         })
+
     }
+
+    function backToMenu()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/menu";
+        }
+
+    function deleteProduct()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href="http://localhost:3000/views/realTimeProductsDelete";
+    }
+
+    function modifyProduct()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href="http://localhost:3000/views/realTimeProductsModify";
+    }
+
 </script>

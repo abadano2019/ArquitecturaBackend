@@ -1,5 +1,5 @@
 import cartsReposotory from "../repositories/carts.repository.js";
-import productsServices from "./products.services.js";
+import productsServices from "./products.service.js";
 
 class CartsServices {
   #repository;
@@ -58,6 +58,11 @@ class CartsServices {
 
   updateCartProductQuantityService = async (cid, pid, cantidad) => {
     try {
+      console.log("////////////////////////////////////////////////////////////////////////////")
+      console.log("CID: ", cid)
+      console.log("PID: ", pid)
+      console.log("cantidad: ", cantidad)
+      
       return await this.#repository.updateCartProductQuantityRepository(
         cid,
         pid,

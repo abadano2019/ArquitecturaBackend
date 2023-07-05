@@ -12,8 +12,19 @@ import { userModel } from "../../../mongodb/models/users.model.js";
 
 export default class UsersManager {
   async getUserById(email) {
-    const user = await userModel.findOne({ email: email });
+    const user = await userModel.findOne({ email: email }).lean();
     return user;
+  }
+
+  async deleteUser(email) {
+    const user = await userModel.findOneAndRemove({ email: email });
+    console.log("Encontrado: ", user)
+    return user;
+  }
+
+  async getUsers() {
+    const users = await userModel.find();
+    return users;
   }
 
   createUserPassport = async (user) => {

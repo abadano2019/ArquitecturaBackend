@@ -1,6 +1,7 @@
 import Factory from "../persistence/factory.js";
 import cartDTOPersistence from "../persistence/DTOs/carts.DTO/cartDTOPersistence.js";
 import cartDTOResponse from "../persistence/DTOs/carts.DTO/cartDTOResponse.js";
+import mongoose from "mongoose";
 
 class CartsRepository {
   #dao;
@@ -24,7 +25,8 @@ class CartsRepository {
 
   getCartByIdRepository = async (idCart) => {
     try {
-      console.log(idCart);
+      //console.log("idCart: " + idCart);
+      //const cid = mongoose.Types.ObjectId(idCart)
       const cart = await this.#dao.getCartById(idCart);
       console.log(cart);
       const cartResponse = new cartDTOResponse(cart);

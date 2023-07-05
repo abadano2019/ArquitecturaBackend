@@ -1,9 +1,13 @@
 <h4 id="nombreUsuario"></h4>
 
+<button onclick="logout()">Salir</button>
+
 <form id="formulario">
-<input type="text" name="mensaje" id="mensaje">
-<input type="submit" value="ENVIAR">
+    <input type="text" name="mensaje" id="mensaje">
+    <input type="submit" value="ENVIAR">
 </form>
+
+
 
 <p id="chat"></p>
 
@@ -87,5 +91,11 @@
             }
         }).showToast()
     })
+
+    function logout()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/users/logout";
+        }
 
 </script>

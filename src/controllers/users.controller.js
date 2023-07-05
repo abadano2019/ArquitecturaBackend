@@ -13,10 +13,45 @@ import {
 
 import CustomError from "../error/CustomError.js";
 import config from "../config.js";
-import createUserService from "../services/carts.services.js";
+import createUserService from "../services/carts.service.js";
 import logger from "../logger/winston.js";
 import { transporter } from "../nodemailer.js";
-import usersServices from "../services/users.services.js";
+import usersServices from "../services/users.service.js";
+
+export const getUsersController = async (req, res) => {
+  const users = await usersServices.getUsersService();
+  if (users.length != 0) {
+    res.json({ message: "Users: ", users });
+  } else {
+    res.json({ message: "User not found" });
+  }
+};
+
+export const deleteUserController = async (req, res, next) => {
+  try {
+    const { email } = req.params;
+    console.log(email);
+    const user = await usersServices.deleteUserService(email);
+    if (user) {
+      res.json({ message: "Deleted user: ", user });
+    } else {
+      res.json({ message: "User not found" });
+    }
+  } catch (error) {}
+};
+
+export const cleanUsersController = async (req, res, next) => {
+  try {
+    await usersServices.cleanUsersService();
+  } catch (error) {
+    logger.fatal("Error in cleanUsersController, Log detail:", error);
+    logger.fatal(error.name);
+    logger.fatal(error.message);
+    logger.fatal(error.cause);
+    logger.fatal(error.Number);
+    next(error);
+  }
+};
 
 export const createUserController = async (req, res) => {
   return createUserService(user);
@@ -47,25 +82,6 @@ export const loginUserController = async (req, res) => {
     );
   }
 
-  /*const user = await usersServices.loginUserService(req.body);
-  logger.info("loginUserController: finded user:", user);
-  if (user) {
-    req.session.email = user.email;
-    req.session.user = user.fullName;
-    if (email === "adminCoder@coder.com") {
-      req.session.isAdmin = true;
-      logger.info("loginUserController: admin is loged in:", email);
-      res.redirect("/");
-    } else {
-      req.session.isAdmin = false;
-      logger.info("loginUserController: user is loged in:", email);
-      res.redirect(`/views/products/`);
-    }
-  } else {
-    logger.warning("loginUserController: user not exist:");
-    res.redirect("/views/errorLogin");
-  }*/
-
   const user = await usersServices.loginUserService(req.body);
 
   logger.info("loginUserController: user finded:", user);
@@ -80,14 +96,14 @@ export const loginUserController = async (req, res) => {
     if (user.role === "admin") {
       req.session.isAdmin = true;
       logger.info("loginUserController: Role admin is loged in:", user.role);
-      res.redirect("/");
+      res.redirect("/views/menu/");
     } else if (user.role === "premium") {
       req.session.isAdmin = false;
-      logger.info("loginUserController: Role premium is loged in:", email);
-      res.redirect("/");
+      logger.info("loginUserController: Role premium is loged in:", user.role);
+      res.redirect("/views/menu/");
     } else {
       req.session.isAdmin = false;
-      logger.info("loginUserController: Role user is loged in:", email);
+      logger.info("loginUserController: Role user is loged in:", user.role);
       res.redirect(`/views/products/`);
     }
   } else {
@@ -98,9 +114,27 @@ export const loginUserController = async (req, res) => {
 
 export const logOutUserController = async (req, res) => {
   const uid = req.session.email;
+  console.log("usuario: " + req.session.email);
   const date = new Date();
   const datetime = date.toLocaleString();
   usersServices.userLogInOutRegistryService(uid, "out", datetime);
+  req.session.destroy((error) => {
+    if (error) {
+      logger.error("logOutUserController: error loged out", error);
+      res.json({ message: error });
+    } else {
+      logger.info("logOutUserController: user loged out");
+      res.redirect("/views/login");
+    }
+  });
+};
+
+export const logOutUserExitController = async (req, res) => {
+  const { email } = req.params;
+  console.log(email);
+  const date = new Date();
+  const datetime = date.toLocaleString();
+  usersServices.userLogInOutRegistryService(email, "out", datetime);
   req.session.destroy((error) => {
     if (error) {
       logger.error("logOutUserController: error loged out", error);

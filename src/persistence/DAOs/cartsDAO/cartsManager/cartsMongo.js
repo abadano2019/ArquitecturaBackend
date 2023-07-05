@@ -97,7 +97,7 @@ export default class CartsManager {
   // Metodo para agregar un producto de carrito a un carrito
   async addProductCart(cid, pid) {
     try {
-      const objectPid = mongoose.Types.ObjectId(pid);
+      const objectPid = new mongoose.Types.ObjectId(pid);
       let cart = await cartsModel.findById(cid);
       logger.info("Level DAO - cart finded:", cart);
       let newCartProducts = [];
@@ -283,8 +283,8 @@ export default class CartsManager {
       console.log("ATENCION: Debe ingresar un id de producto valido");
       return "ATENCION: Debe ingresar un id valido";
     }
-
-    if (!cantidad) {
+    console.log("CAN TTTTTT IDAD.:", cantidad)
+    if ((cantidad === "")||(cantidad < 0)) {
       console.log("Atención: no se encuentran los datos a modificar");
       return "Atención: no se encuentran los datos de modificación";
     } else {

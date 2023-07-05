@@ -31,6 +31,14 @@ export default class UsersDAO {
     return this.#usersDAO.getUserById(email);
   }
 
+  async deleteUser(email) {
+    return this.#usersDAO.deleteUser(email);
+  }
+  
+  async getUsers() {
+    return this.#usersDAO.getUsers();
+  }
+
   async createUser(user, cart) {
     return this.#usersDAO.createUser(user, cart);
   }
@@ -45,24 +53,21 @@ export default class UsersDAO {
 
   async updateUserToken(user, token) {
     return this.#usersDAO.updateUserToken(user, token);
-  } 
-  
-  async updateUserPassword(user, password,token) {
-    return this.#usersDAO.updateUserPassword(user, password,token);
-  }  
+  }
+
+  async updateUserPassword(user, password, token) {
+    return this.#usersDAO.updateUserPassword(user, password, token);
+  }
 
   async updateUserRole(user) {
     return this.#usersDAO.updateUserRole(user);
-  } 
+  }
 
   userLogInOutRegistry = async (email, type, datetime) => {
-    return this.#usersDAO.userLogInOutRegistry(email,type,datetime);  
-  }
+    return this.#usersDAO.userLogInOutRegistry(email, type, datetime);
+  };
 
   setDocuments = async (uid, docs) => {
-    return this.#usersDAO.setDocuments(uid,docs);  
-  }
-    
-
+    return this.#usersDAO.setDocuments(uid, docs);
+  };
 }
-

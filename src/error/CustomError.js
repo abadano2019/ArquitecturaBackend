@@ -10,7 +10,7 @@
 }*/
 
 export const CustomError = (name, cause, message, code, description) => {
-    const newError = new Error(message + " " + description,{cause})
+    let newError = new Error(message + " " + description,{cause})
     newError.name = name
     newError.Number = code
     throw newError

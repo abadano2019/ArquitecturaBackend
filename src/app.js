@@ -22,6 +22,7 @@ import jwtRouter from "./routes/jwt.router.js";
 import logger from "../src/logger/winston.js";
 import mongoStore from "connect-mongo";
 import passport from "passport";
+import paymentsRouters from "./routes/payments.router.js"
 import productsRouters from "../src/routes/products.router.js";
 import session from "express-session";
 import { swaggerSetup } from "../src/docs/swaggerSpecs.js";
@@ -47,11 +48,13 @@ app.use(
     secret: "secretCoder23",
     resave: false,
     saveUninitialized: false,
-    cookies: { maxAge: 500000 },
+    cookies:{
+      maxAge:1000,
+    },
     store: new mongoStore({
       mongoUrl: config.MONGO_URI,
     }),
-    //cookie:{maxAge:50000}
+    //cookie:{maxAge:1000}
   })
 );
 app.use(express.json());
@@ -60,6 +63,7 @@ app.use("/api/products", productsRouters);
 app.use("/api/carts", cartsRouters);
 app.use("/views", viewsRouter);
 app.use("/users", usersRouter);
+app.use("/api/payments", paymentsRouters)
 app.use("/jwt", jwtRouter);
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSetup));
 
@@ -71,7 +75,7 @@ app.use(passport.session());
 
 // archivos estaticos
 app.use(express.static(__dirname + "/public"));
-logger.info("__dirname:", __dirname);
+logger.info("__dirname: " + __dirname);
 
 // handlebars
 app.engine("handlebars", handlebars.engine());
@@ -90,7 +94,7 @@ socketServer.on("connection", (socket) => {
   logger.info(`Usuario conectado ${socket.id}`);
 
   socket.on("disconnect", () => {
-    logger.info("Uusario desconectado");
+    logger.info(`Usuario desconectado ${socket.id}`);
   });
 
   socket.on(

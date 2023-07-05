@@ -4,13 +4,13 @@ import { Strategy as DiscordStrategy } from "passport-discord";
 import { Strategy as GithubStrategy } from "passport-github2";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 import { Strategy as LocalStrategy } from "passport-local";
-import cartsServices from "../services/carts.services.js";
+import cartsServices from "../services/carts.service.js";
 import config from "../config.js";
 import { hashPassword } from "../utils.js";
 import logger from "../logger/winston.js"
 import passport from "passport";
 import { userModel } from "../persistence/mongodb/models/users.model.js";
-import usersServices from "../services/users.services.js";
+import usersServices from "../services/users.service.js";
 
 passport.use(
   "registro",

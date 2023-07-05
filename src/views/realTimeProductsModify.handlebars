@@ -11,8 +11,12 @@
 </form>
 <br/><br/>
 
-<button onclick="location.href='/views/realTimeProductsDelete'">DELETE PRODUCT</button>
-<button onclick="location.href='/views/realTimeProducts2'">ADD PRODUCT</button>
+<button onclick="backToMenu()">Back to Menu</button>
+
+<!--<button onclick="location.href='/views/realTimeProductsDelete'">DELETE PRODUCT</button>-->
+<button onclick="deleteProduct()">DELETE PRODUCT</button>
+<!--<button onclick="location.href='/views/realTimeProducts2'">ADD PRODUCT</button>-->
+<button onclick="addProduct()">ADD PRODUCT</button>
 
 <p id="productoIngresado"></p>
 
@@ -109,6 +113,24 @@
             
             
         })
+    }
+
+    function backToMenu()
+    {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/menu";
+    }
+    
+    function deleteProduct()
+    {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/realTimeProductsDelete";
+    }
+    
+    function addProduct()
+    {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/realTimeProducts2";
     }
     
     

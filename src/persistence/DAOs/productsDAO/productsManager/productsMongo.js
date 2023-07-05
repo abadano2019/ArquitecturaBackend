@@ -77,7 +77,9 @@ export default class ProductsManager {
 
   getProductById = async (id) => {
     try {
+      console.log("ID en el DAO : ", id)
       const productDB = await productsModel.findById(id);
+      //const productDB = await productsModel.findOne({id:'63f4215cc86ffdd3d04dc124'});
       return productDB;
     } catch (error) {
       console.log("Error: GetProductsById", error);

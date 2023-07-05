@@ -2,6 +2,7 @@ import Factory from "../persistence/factory.js";
 import logger from "../logger/winston.js";
 import usersDTOPersistence from "../persistence/DTOs/users.DTO/userDTOPersistence.js";
 import usersDTOResponse from "../persistence/DTOs/users.DTO/userDTOResponse.js";
+import usersDTOResponseUsers from "../persistence/DTOs/users.DTO/userDTOResponseUsers.js";
 
 class UsersRepository {
   #dao;
@@ -19,6 +20,31 @@ class UsersRepository {
         userDTO = new usersDTOResponse(user);
       }
       return userDTO;
+    } catch (error) {}
+  };
+
+  deleteUserRepository = async (email) => {
+    try {
+      const user = await this.#dao.deleteUser(email);
+      let userDTO = undefined;
+      if (user) {
+        userDTO = new usersDTOResponse(user);
+      }
+      return userDTO;
+    } catch (error) {}
+  };
+
+  getUsersRepository = async () => {
+    try {
+      const users = await this.#dao.getUsers();
+      let usersDTO = [];
+      let userDTO;
+      users.forEach((user) => {
+        userDTO = new usersDTOResponseUsers(user);
+        usersDTO.push(userDTO);
+      });
+
+      return usersDTO;
     } catch (error) {}
   };
 
@@ -114,7 +140,7 @@ class UsersRepository {
         datetime
       );
       let userDTO = undefined;
-      console.log("user UPDATED", userUpdated)
+      console.log("user UPDATED", userUpdated);
       if (userUpdated) {
         userDTO = new usersDTOResponse(userUpdated);
       }
@@ -133,17 +159,14 @@ class UsersRepository {
 
   setDocumentsRepository = async (uid, docs) => {
     try {
-      const user = await this.#dao.setDocuments(uid, docs)
+      const user = await this.#dao.setDocuments(uid, docs);
       let userDTO = undefined;
       if (user) {
         userDTO = new usersDTOResponse(user);
       }
       return userDTO;
     } catch (error) {
-      logger.fatal(
-        "Error in setDocumentsRepository, Log detail:",
-        error
-      );
+      logger.fatal("Error in setDocumentsRepository, Log detail:", error);
       logger.fatal(error.name);
       logger.fatal(error.message);
       logger.fatal(error.cause);

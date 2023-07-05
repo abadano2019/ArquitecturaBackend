@@ -4,17 +4,21 @@ import {
   putUpFileProductsController,
   putUpFileProfilesController,
   viewCartByIdController,
+  viewCartItemsController,
+  viewCheckoutController,
   viewGetUpFileController,
   viewGetUpFileDocumentsController,
   viewGetUpFileProductsController,
   viewGetUpFileProfilesController,
   viewListProductsController,
+  viewMenuController,
   viewProductsController,
   viewProductsCookiesController,
   viewProductsRealTime2Controller,
   viewProductsRealTimeController,
   viewPutUpFileController,
   viewPutUpFileDocumentsController,
+  viewUsersController
 } from "../controllers/views.controller.js";
 import { getAuthAdminPremiumSession, getAuthAdminSession, getAuthUserSession } from "../middlewares/auth.middleware.js";
 
@@ -33,10 +37,20 @@ const router = new Router();
 router.get("/", viewListProductsController);
 
 // Vista para ser utilizada con protocolo WebSocket, layount home, implementación de un Chat
-router.get("/chat", getAuthUserSession, viewChatController);
+router.get("/chat", viewChatController);
 
 // Vista para ser utilizada para visualizar los productos paginados
 router.get("/products", getAuthUserSession, viewProductsController);
+
+// Vista para ser utilizada para visualizar los productos paginados
+router.get("/menu", getAuthAdminPremiumSession, viewMenuController);
+
+router.get("/cartItems", getAuthUserSession, viewCartItemsController);
+
+router.post("/checkout", getAuthUserSession, viewCheckoutController);
+
+// Vista para ser utilizada para visualizar los productos paginados
+router.get("/users", getAuthAdminSession, viewUsersController);
 
 // Vista para ser utilizada para visualizar los productos paginados
 router.get(

@@ -6,6 +6,7 @@ import {
   deleteProductsCartController,
   getCartByIdController,
   getCartsController,
+  subtractProductFromCartController,
   updateCartProductController,
   updateCartProductQuantityController,
 } from "../controllers/carts.controller.js";
@@ -21,13 +22,16 @@ const router = Router();
 router.get("/", getCartsController);
 
 // Busqueda de productos por id de carrito
-router.get("/:idCart", getCartByIdController);
+router.get("/:cid", getCartByIdController);
 
 // Alta de carrito
 router.post("/", addCartController)
 
 // Se redirecciona al endpoint /:cid/products/:pid
 router.post("/addToCart/product/:pid", addProductToCartController)
+
+// Se redirecciona al endpoint /:cid/products/:pid
+router.post("/subtractFromCart/product/:pid", subtractProductFromCartController)
 
 // Alta de producto a un carrito, debe existir el carrito y debe existir el producto en el archivo de productos
 router.post("/:cid/products/:pid", addProductCartController)

@@ -1,5 +1,6 @@
 export const ErrorsName = {
   PRODUCT_DATA_ERROR: 'Error products',
+  PRODUCT_DATA_QUANTITY: 'Error product quantity',
   PRODUCT_DATA_NO_EXIST: 'Error products no exist',
   PRODUCT_DATA_COLLECTION: 'Error products get products', 
   PRODUCT_DATA_PRIMARY_KEY: 'Error products code exist', 
@@ -11,6 +12,7 @@ export const ErrorsName = {
   USER_DATA_NO_EXIST: 'Error user no exist',
   CART_DATA_ERROR: 'Error cart',
   CART_DATA_NO_EXIST: 'Error cart no exist',
+  CART_EMPTY: 'Error cart empty',
   MESSAGE_CHAT_COLLECTION: "Error message chat",
   MESSAGE_CHAT_ERROR:"Error chat",
   DATA_TYPE_STRING_ERROR: "Error in data type",
@@ -20,6 +22,7 @@ export const ErrorsName = {
 
 export const ErrorsMessage = {
   PRODUCT_DATA_ERROR: 'Request failed. Valid properties required',
+  PRODUCT_DATA_QUANTITY: 'Request failed. Product without quantity',
   PRODUCT_DATA_NO_EXIST: 'Request faild. Error products not exist',
   PRODUCT_DATA_COLLECTION: 'Request faild. Products get products',
   PRODUCT_DATA_PRIMARY_KEY: 'Request faild. Error products code exist',
@@ -30,7 +33,8 @@ export const ErrorsMessage = {
   USER_DATA_ERROR: 'Request faild. Valid properties required',
   USER_DATA_NO_EXIST: 'Request faild. Error user not exist',
   CART_DATA_ERROR: 'Request failed. Valid properties required',
-  CART_DATA_NO_EXIST:  'Request faild: Error cart not fount',
+  CART_DATA_NO_EXIST:  'Request faild: Error cart not found',
+  CART_EMPTY: 'Request failed. Error cart empty',
   MESSAGE_CHAT_ERROR:"Request failed. Valid properties required",
   MESSAGE_CHAT_COLLECTION: "Error messages chat: get collection chat",
   DATA_TYPE_STRING_ERROR: 'Error: Data type string is required',
@@ -40,6 +44,7 @@ export const ErrorsMessage = {
 
 export const ErrorsCause = {
   PRODUCT_DATA_ERROR: 'Properties missing',
+  PRODUCT_DATA_QUANTITY: 'Quantity equal to zero',
   PRODUCT_DATA_NO_EXIST: 'Data product not exist', 
   PRODUCT_DATA_COLLECTION: 'Fail in get collection products',
   PRODUCT_DATA_PRIMARY_KEY: 'Fail primary key product code already existe',
@@ -51,6 +56,7 @@ export const ErrorsCause = {
   USER_DATA_NO_EXIST: 'User not exist', 
   CART_DATA_ERROR: 'Data cart not exist', 
   CART_DATA_NO_EXIST: 'Data cart not exist',
+  CART_EMPTY: 'Data cart is empty',
   MESSAGE_CHAT_ERROR: 'Properties missing',
   MESSAGE_CHAT_COLLECTION: "Fail in get collection chat",
   DATA_TYPE_STRING_ERROR: 'Data type string is expected',

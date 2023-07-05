@@ -11,7 +11,7 @@
  <input id="button" type="submit" value="subir" disabled>
  </form>
  
-
+ <button onclick="backToMenu()">Back to Menu</button>
  <script>
 
     const button = document.getElementById("button")
@@ -92,6 +92,11 @@
     const address = document.getElementById('address')
     const edc_ = document.getElementById('edc')
     
-
+    function backToMenu()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/menu";
+        }
+ 
 
  </script>

@@ -6,7 +6,7 @@ import {
 
 import CustomError from "../error/CustomError.js";
 import logger from "../logger/winston.js";
-import messagesServices from "../services/messages.services.js";
+import messagesServices from "../services/messages.service.js";
 
 export const getMessagesController = async (req, res) => {
   try {

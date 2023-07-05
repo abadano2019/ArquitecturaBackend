@@ -29,9 +29,9 @@ class ProductsServices {
 
   getProductByIdService = async (id) => {
     try {
-      logger.info("getProductOwner - service init - product id:", id);
+      logger.info("getProductByIdService - service init - product id:" + id);
       const product = await this.#repository.getProductByIdRepository(id);
-      logger.info("getProductOwner - product owner", product);
+      logger.info("getProductByIdService - product finded: ", product);
       return product;
     } catch (error) {
       CustomError(
@@ -88,7 +88,8 @@ class ProductsServices {
         );
       }
       else{
-        logger.info("getProductOwner - Product owner ********** :", product.owner)
+        console.log(product)
+        logger.info("getProductOwner - Product owner: " + product.owner)
         return product.owner
       }
     } catch (error) {

@@ -13,8 +13,11 @@
 </form>
 <br/><br/>
 
-<button onclick="location.href='/views/realTimeProducts2'">ADD PRODUCT</button>
-<button onclick="location.href='/views/realTimeProductsModify'">MODIFY PRODUCT</button>
+<button onclick="backToMenu()">Back to Menu</button>
+<!--<button onclick="location.href='/views/realTimeProducts2'">ADD PRODUCT</button>-->
+<button onclick="addProduct()">ADD PRODUCT</button>
+<!--<button onclick="location.href='/views/realTimeProductsModify'">MODIFY PRODUCT</button>-->
+<button onclick="modifyProduct()">MODIFY PRODUCT</button>
 
 <p id="productoIngresado"></p>
 
@@ -85,11 +88,13 @@
         .then((response) => {
             try{
                 if (response.number > 200){
+                    sessionStorage.setItem("session","ok")
                     console.log("error:", response)
                     window.alert(JSON.stringify(response))
                 }
                 else
                 {
+                    sessionStorage.setItem("session","ok")
                     console.log(response)
                     console.log(response.number)
                     console.log('Producto eliminado');
@@ -100,6 +105,24 @@
                 console.log(error)
             }
         })
+    }
+
+    function backToMenu()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/menu";
+        }
+    
+    function modifyProduct()
+    {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/realTimeProductsModify";
+    }
+    
+    function addProduct()
+    {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/realTimeProducts2";
     }
     
     

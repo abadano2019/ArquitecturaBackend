@@ -2,6 +2,7 @@ import Factory from "../persistence/factory.js";
 import mongoose from "mongoose";
 import productsDTOPersistence from "../persistence/DTOs/products.DTO/productDTOPersistence.js";
 import productsDTOResponse from "../persistence/DTOs/products.DTO/productDTOResponse.js";
+import productsDTOResponsePaginate from "../persistence/DTOs/products.DTO/productDTOResponsePaginate.js";
 
 class ProductsRepository {
   #dao;
@@ -21,7 +22,8 @@ class ProductsRepository {
         const productResp = new productsDTOResponse(product);
         productsResponse.push(productResp);
       });
-      return productsResponse;
+      const productsPaginate = new productsDTOResponsePaginate(products, productsResponse)
+      return productsPaginate;
     } catch (error) {}
   };
 
@@ -40,16 +42,21 @@ class ProductsRepository {
 
   getProductByIdRepository = async (id) => {
     try {
-      logger.info("getProductByIdRepository - product id: ", id);
+      console.log("Entra en repository get product by id" + id)
+      //logger.info("getProductByIdRepository - product id: " + id);
       const _id = new mongoose.Types.ObjectId(id);
-      logger.info("getProductByIdRepository - product ObjectId: ", _id);
+      console.log("Id mongoose object id "+ _id)
+      //logger.info("getProductByIdRepository - product ObjectId: ", _id);
       const product = await this.#dao.getProductById(_id);
+      console.log("producto encontrado REPOSITORY")
       let productDTO = undefined;
       if (product) {
         productDTO = new productsDTOResponse(product);
       }
       return productDTO;
-    } catch (error) {}
+    } catch (error) {
+    
+    }
   };
 
   addProductRepository = async (producto) => {

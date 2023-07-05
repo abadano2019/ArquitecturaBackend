@@ -7,7 +7,7 @@ import {
 import CustomError from "../error/CustomError.js";
 import { generateToken } from "../utils.js";
 import logger from "../logger/winston.js"
-import usersService from "../services/users.services.js";
+import usersService from "../services/users.service.js";
 
 export const loginJwtController = async (req, res, next) => {
   try {

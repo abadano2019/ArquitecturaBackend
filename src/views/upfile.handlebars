@@ -8,3 +8,15 @@
  <input type="submit" value="subir">
  </form>
  
+
+ <button onclick="backToMenu()">Back to Menu</button>
+
+
+ <script>
+
+    function backToMenu()
+        {
+          sessionStorage.setItem("session","ok")
+          window.location.href = "http://localhost:3000/views/menu";
+        }
+ </script>

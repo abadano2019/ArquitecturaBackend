@@ -7,9 +7,10 @@ import {
 import CustomError from "../error/CustomError.js";
 import Product from "../js/product.js";
 import logger from "../logger/winston.js";
-import productsServices from "../services/products.services.js";
+import productsServices from "../services/products.service.js";
 import { socketServer } from "../app.js";
-import usersServices from "../services/users.services.js";
+import { transporter } from "../nodemailer.js";
+import usersServices from "../services/users.service.js";
 
 export const getProductsController = async (req, res, next) => {
   try {
@@ -87,7 +88,7 @@ export const addProductController = async (req, res, next) => {
     } = req.body;
 
     const owner = req.session.email;
-    console.log("Owner:::::::", owner);
+    console.log("Owner: ", owner);
 
     const priceInt = parseInt(price);
     const stockInt = parseInt(stock);
@@ -180,7 +181,7 @@ export const addProductController = async (req, res, next) => {
     );
 
     const cod = await productsServices.addProductService(product);
-    logger.info("addProductController: Control flag", cod);
+    logger.info("addProductController: Control flag: " + cod);
     if (cod === "ADDPROD-COD1") {
       logger.warning(
         "addProductController: primary key restriction code product already exist"
@@ -191,10 +192,10 @@ export const addProductController = async (req, res, next) => {
       });
     } else {
       if (cod === "ADDPROD-COD2") {
-        const products = await productsServices.getProducts_Service();
+        const products = await productsServices.getProductsService();
         socketServer.emit("productoAgregado", { products });
-        logger.info("addProductController: product added");
-        res.json({ mesage: "Producto agregado", product });
+        logger.info("addProductController: product added", product);
+        res.json({ mesage: "Producto agregado: ", product });
       }
     }
   } catch (error) {
@@ -361,13 +362,23 @@ export const deleteProductController = async (req, res, next) => {
 
     if (product) {
       const owner = await productsServices.getProductOwner(product.id);
-      logger.info("deleteProductController: product owner:", owner);
+      logger.info("deleteProductController: product owner: " + owner);
       if (user.role === "premium") {
         if (owner === req.session.email) {
-          productsServices.deleteProductService(idProduct);
+          await productsServices.deleteProductService(idProduct);
+          const mail = await transporter.sendMail({
+            from: "BAZAR 5A",
+            to: user.email,
+            subject: "Product eliminado",
+            text: `Estimado Usuario: El producto ${product.title} creado por usted, correspondiente al sitio Bazar5A ha sido eliminado`,
+          });
+          logger.info(`cleanUsersService: Sended mail to" ${user.email}`);
           const products = await productsServices.getProductsService();
           socketServer.emit("productoEliminado", { products });
-          logger.info("deleteProductController: deleted product - user permium", product);
+          logger.info(
+            "deleteProductController: deleted product - user permium",
+            product
+          );
           res.json({ mesage: "Producto eliminado", product });
         } else {
           logger.warning("deleteProductController: product owner not valid");
@@ -380,10 +391,20 @@ export const deleteProductController = async (req, res, next) => {
           );
         }
       } else {
-        productsServices.deleteProductService(idProduct);
+        await productsServices.deleteProductService(idProduct);
+        const mail = await transporter.sendMail({
+          from: "BAZAR 5A",
+          to: user.email,
+          subject: "Product eliminado",
+          text: `Estimado Usuario: El producto ${product} creado por usted, correspondiente al sitio Bazar5A ha sido eliminado`,
+        });
+
         const products = await productsServices.getProductsService();
         socketServer.emit("productoEliminado", { products });
-        logger.info("deleteProductController: deleted product - user admin", product);
+        logger.info(
+          "deleteProductController: deleted product - user admin",
+          product
+        );
         res.json({ mesage: "Producto eliminado", product });
       }
     } else {

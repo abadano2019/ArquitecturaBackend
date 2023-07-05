@@ -20,5 +20,7 @@ export default {
   GMAIL_PASSWORD: process.env.GMAIL_PASSWORD,
   GMAIL_USER: process.env.GMAIL_USER,
   COMPRESION: process.env.COMPRESION,
-  NODE_ENV: process.env.NODE_ENV
+  NODE_ENV: process.env.NODE_ENV,
+  STRIPE_FRONT_KEY: process.env.STRIPE_PUBLIC_KEY,
+  STRIPE_BACK_KEY: process.env.STRIPE_SECRET_KEY,
 };

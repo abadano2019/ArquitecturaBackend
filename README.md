@@ -175,6 +175,8 @@ Desde la pantalla de inicio http://localhost:3000 se puede acceder al login
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/85394824-793e-4527-96fa-aa3d91a4ee35)
 
+Pantalla de Registro de un usuario: 
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/6902027b-7996-4d77-8871-167edd58012b)
 
 Desde la pantalla de login, se puede realizar el registro de un usuario nuevo, resetear la password, ingresar con usuaro y clave seleccionados desde el registro o ingresar desde el login unificado de google, gitHub o discord. 
@@ -184,7 +186,11 @@ Desde la pantalla de login, se puede realizar el registro de un usuario nuevo, r
 
 #### Pantallas del administrador
 
+Para acceder al menú de administrador, se debe registar e ingresar con el usuairo adminCoder@coder.com o cambiar un usuario a usuario Premium.
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/9f9ed93c-9da9-4a7a-8cd3-dd1e34a5e372)
+
+Desde el menú de usuario podemos subir archivos genericos, archivos de documentos, de profiles y de productos, podemos listar todos los productos con actualización en tiempo real (por utilizar web socket) listar los productos sin ser actualizados en tiempo real, borrar los usuaros con 2 o mas dias de inactividad y podemos realizar el alta, modificación y eliminación de productos.
 
 #### Funcionalidades de usuarios
 

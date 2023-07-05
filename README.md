@@ -232,18 +232,17 @@ Podemos subir los archivos necesarios para el cambio de rol
 <!-- ROADMAP -->
 ## Mejoras
 
-Esta es una primera versión del proyecto AppBazar5A, en el cual quedan para definir en un nuevo alcance otras funcionalidades como ser:
+Esta es una primera versión del proyecto Bazar 5A Backend, en el cual queda para definir, en una nueva iteracion, un nuevo alcance con otras funcionalidades y mejoras, como ser:
 
-* Agregar los modelos de datos que faltan e impactar datos contra firebase.
-* Generar una vista para ampliar los datos de registro de los usuarios.
-* Generar módulo de mantenimiento de los productos para poder modificar y eliminar productos existente y agregar nuevos.
-* Utilizar el template form generado para la autorización para el formulario de contacto.
-* Publicar la aplicación al menos en Play Store de Google. 
-* Generar un modelo y vista para los productos favoritos o deseados del usuario.
-* Generar las validaciones necesarias para el control de stock de los productos.
-* Agregar otras fotos en un carrusel sobre los productos seleccionados.
-
-entre otras cosas
+* Agregar la implementación de otras persistencias.
+* Integrarlo al Front ya diseñado.
+* Implementar jwt para el logueo de los usuarios.
+* Lograr el despliegue de la aplicación en railway u otra plataforma.
+* Terminar de armar los archivos de configuración para el correcto funcionamiento de kubernetes 
+* Optimización del código
+* Implementar el front personalizado para la pasarela de pago Stripe
+* Implementar la pasarela de pago de marcado pago
+  
 
 # ANEXO
 

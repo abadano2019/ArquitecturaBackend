@@ -51,8 +51,11 @@ Dentro de las tecnologías utilizadas para el desarrollo del backend podemos enc
 ##### * mocha (https://www.npmjs.com/package/mocha)
 
 El servidor de backend fue desarrollado con Express Js y junto con Node Js y Java Script forman la base medular para la aplicación, luego se le agregaron otras librerias para generar otras funcionalidades. 
+
 Repositorio: Para la persistencia se utilizó mongoose, connect-mongo y mongoose-paginate-v2 y por intermedio de patrones de diseño se dejó la posibilidad de implementar otros tipos de persistencia.
+
 Seguridad: se utilizó passport, passport-discord, passport-github2, passport-google-oauth20, passport-local, bcrypt, con passport se agregó el ingreso a la aplicación por intermedio de los usuarios ya existentes en otras aplicaciones, en este caso, google, discord y gitHub, por otro lado, existe la posibilidad de registro de forma local. Se usa un sistema de hasheo de información proporcionado por bcrypt.
+
 Documentación: Para la documentación de la aplicación se utiliza swagger-jsdoc y swagger-ui-express, si bien no están todos los módulos documentados hay una muestra de un par de ellos en la ruta (http://localhost:3000/api/docs/)
 
 <!-- GETTING STARTED -->

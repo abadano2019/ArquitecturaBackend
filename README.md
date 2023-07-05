@@ -157,18 +157,17 @@ supertest: carpeta con la utlización de supertest para el testeo de modulos.
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/002ebd9a-7851-4a70-a14b-69edae4294c2)
 
 
-Dentro de la carpeta components podemos destacar los siguientes archivos:
-* cart-item.jsx: encargado de desplegar un elemento del carrito con los botones de mas y menos para aumentar o disminuir la cantidad del producto seleccionado, también cuenta con la posibilidad de borrarse del carrito.
+La estructura de carpetas para la persistencia está dividida en DAOs, DTOs, mongodb, sqldb y la clase factory, correspondiente al patrón de diseño factory.
 
-* category-item.jxs: encargado de desplegar una tarjeta con el nombre de una categoría. El dato se encuentra disponible en el archivo categories.js en la ruta /src/constants/data
+* DAOs: Dentro de la carpeta DAOs se crea una carpeta por tipo de entidad a ser persistida (<entidad>DAO), dentro de la entidad existe una carpeta manager (<entidad>Manager) y una clase que administra el tipo de persistencia seleccionada. Dentro de la carpeta manager tenemos un archivo por tipo de persistencia, todos los archivos deben implementar las mismas funcionalidades para que su uso sea transparente para el resto de las capas de la aplicación.
+  
+* DTOs: Dentro de la carpeta DTOs se crea una carpeta por tipo de entidad (<carts>.DTO) las cuales utilizaran el patron DTO, dentro de cada carpeta podemos encontrar varias archivos del tipo response o persistence.
+  
+* mongodb: Dentro de la carpeta mongodb encontramos un archivo encargado de la conexión a la base de datos de mongo y una carpeta models con todos los modelos de tablas utilizados por la base de datos mongodb.
 
-* image-selector.jsx: encargado de verificar permisos de usa de la cámara del dispositivo y posterior toma de imagen.
+* sqldb: Dentro de la carpeta sqldb tenemos el archivo encargado de la conexión a una base de datos de sql y una carpeta models para la definición de la estructura de sus tablas. Esta persistencia no se encuentra implementada en esta aplicación para esta versión. 
 
-* order-item.jsx: encargado de desplegar la información de una orden, esta información se encuentra en firebase en rtdb por usuario de generación de orden.
-
-* place-item.jsx: encargado de desplegar la información de una dirección cargada por el usuario, la información de guarda en SQLite, la dirección puede ser borrada por intermedio del icono de borrado.
-
-* product-item.jsx: encargado de desplegar la información de un producto para la vista por categorías.
+* factory.js: La clase factroy implementa el patrón de diseño factory para la persistencia, el cual activa la persistencia que es llamada la iniciar el servidor.
 
 #### constants
 

@@ -95,7 +95,7 @@ A continuación se marcan los pasos para poder utilizar la aplicación con datos
 
 1. Clonar o descargar el repositorio, antes de ejecutar este comando debe posicionarse en la carpeta donde desea clonar el repositorio
    ```sh
-   git clone https://github.com/abadano2019/AppBazar5A.git
+   git clone (https://github.com/abadano2019/ArquitecturaBackend)
    ```
 2. Instalar NPM packages
    ```sh

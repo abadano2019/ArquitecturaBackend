@@ -86,22 +86,22 @@ Otras: para el manejo del tiempo se utiliza moment, para el manejo de envio de m
 
 ### Requisitos previos
 
-Se recomienda el uso de Visual Studio Code para la visualización y administración del código, se debe tener instalado Node JS, en caso de querer utilizar datos propios se debe contar con una cuenta de mongodb.
+Se recomienda el uso de Visual Studio Code para la visualización y administración del código o herramienta similar, se debe tener instalado Node JS y mongodb que se el motor de base de datos que está implementado, en caso de querer utilizar datos propios se debe contar con una cuenta de mongodb, en caso de querer utilizar otra persistencia se debe implementar las clases proporcionadas en el codigo fuente.
 
 ### Pasos a seguir
 
 A continuación se marcan los pasos para poder utilizar la aplicación con datos propios.
+ 
 
-1. Configurar el servicio de mongodb  
-
-2. Clonar o descargar el repositorio, antes de ejecutar este comando debe posicionarse en la carpeta donde desea clonar el repositorio
+1. Clonar o descargar el repositorio, antes de ejecutar este comando debe posicionarse en la carpeta donde desea clonar el repositorio
    ```sh
    git clone https://github.com/abadano2019/AppBazar5A.git
    ```
-3. Instalar NPM packages
+2. Instalar NPM packages
    ```sh
    npm install
    ```
+3. Configurar el servicio de mongodb
 4. Configurar la variable mongoUri en el archivo .env obtenida del punto 1
 5. Registrar un usuario cualquiera con el el mail adminCoder@coder.com el cual será administrador
 6. Ingresar con el usuario adminCoder@coder.com y cargar datos de productos
@@ -114,9 +114,25 @@ A continuación se marcan los pasos para poder utilizar la aplicación con datos
 
 
 
-Dentro de la carpeta src tenemos la siguiente estructura, una carpeta components donde se encuentran los componentes de la aplicación, una carpeta con el nombre constants donde se encuentran los datos, la configuración para la conexión a firebase, la conexión al servicio de google.maps y la definición de colotes para ser utilizados por los estilos de los distintos componentes y vistas, una carpeta models donde se encuentran los distintos modelos a utilizar por las bases de datos, una carpeta navigation con toda la estructura y archivos para la navegación de las pantallas por intermedio de @react-navigation, una carpeta con el nombre screens con todas las vistas que la aplicación utiliza, una carpeta con el nombre Store con la implementación de 'redux-thunk' y una carpeta utils con elementos de uso reutilizable como ser el formulario de inicio y registro de sesión.
+Dentro de la carpeta src tenemos la siguiente estructura: 
 
-#### components
+controllers: contiene todos los controladores que utilizan los routes
+data: contiene parte de los datos que maneja la persistencia en archivos ya que dicha persistencia está sin terminar para todas las funcionalidades
+docs: contiene la implementación de swagger para la documentación de los modulos
+error: contiene los archivos para el manejo de errores personalizados
+js: contiene algunas clases de entidades auxiliares como ser: cart, product, etc. 
+logger: contiene la implementación del logueo de errores y de trazas de ejecución
+middleware: contiene todos los middlewares implementados
+passport: contiene la implementación de las estrategias de logueo de passport
+persistence: contiene toda la estructura de persistencia y la aplicación del patron de diseño factory
+public: contien el front del sitio web sin integrar al backend también cuenta con la carpeta img con todos los archivos subidos al servidor por intermedio de multer
+repositories: carpeta en la cual se implementa el padrón repositorio para integrar los dao con los dto
+routes: contiene todas las rutas implementadas con el modulo router
+services: carpeta con todos los servicios utilizados por los controladores
+sessions: carpeta en la cual se guardan las sesiones de los usuarios en caso de setear sessiones en archivo
+test: contiene la implementación de artillery y testeo con mock
+views: contiene las vistas y layouts de las plantillas de handelbars
+supertest: carpeta con la utlización de supertest para el testeo de modulos.
 
 ![image](https://user-images.githubusercontent.com/48340360/227795274-ca088124-6a0d-486a-a4de-fd4999d8a43c.png)
 

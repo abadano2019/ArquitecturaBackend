@@ -169,13 +169,26 @@ La estructura de carpetas para la persistencia está dividida en DAOs, DTOs, mon
 
 * factory.js: La clase factroy implementa el patrón de diseño factory para la persistencia, el cual activa la persistencia que es llamada la iniciar el servidor.
 
-#### Pantallas del administrador
-
-### Pantalla de inicio
+#### Pantalla de inicio
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/85394824-793e-4527-96fa-aa3d91a4ee35)
 
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/981ca354-a71c-4568-b01f-01d6e47feb13)
 
+
+#### Pantallas del administrador
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/9f9ed93c-9da9-4a7a-8cd3-dd1e34a5e372)
+
+#### Funcionalidades de usuarios
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/41ba71e3-56c0-4d88-ac91-293a9013d38a)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e2ddd535-d488-42bb-b867-cc3136226443)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/b7d18fa2-6cd8-45df-b927-683a19ee045f)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/f9b3d4d5-7758-400e-87cc-d0255ba9cbf5)
 
 
 * data: contiene archivos .js con la información necesaria para el renderizado de lo componentes de productos y categorias, además cuenta con otros archivos de prueba en desarrollo.

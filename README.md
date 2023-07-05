@@ -18,39 +18,39 @@ AppBazar5A backend surge como una consecuencia del front de Bazar 5A ya desarrol
 
 Dentro de las tecnologías utilizadas para el desarrollo del backend podemos encontrar:
 
-##### * @faker-js/faker
-##### * artillery
-##### * bcrypt
-##### * connect-mongo
-##### * cookie-parser
-##### * cors
-##### * dotenv
-##### * express
-##### * express-compression
-##### * express-handlebars
-##### * express-session
-##### * jsonwebtoken
-##### * moment
-##### * mongoose
-##### * mongoose-paginate-v2
-##### * multer
-##### * nodemailer
-##### * passport
-##### * passport-discord
-##### * passport-github2
-##### * passport-google-oauth20
-##### * passport-jwt
-##### * passport-local
-##### * session-file-store
-##### * socket.io
-##### * stripe
-##### * swagger-jsdoc
-##### * swagger-ui-express
-##### * winston
-##### * chai
-##### * mocha
+##### * @faker-js/faker (https://www.npmjs.com/package/@faker-js/faker)
+##### * artillery (https://www.npmjs.com/package/artillery)
+##### * bcrypt (https://www.npmjs.com/package/bcrypt)
+##### * connect-mongo (https://www.mongodb.com/blog/post/quick-start-nodejs-mongodb-how-to-get-connected-to-your-database)
+##### * cookie-parser (http://expressjs.com/en/resources/middleware/cookie-parser.html)
+##### * cors (https://www.npmjs.com/package/cors)
+##### * dotenv (https://www.npmjs.com/package/dotenv)
+##### * express js (https://expressjs.com/)
+##### * express-compression (https://www.npmjs.com/package/express-compression)
+##### * express-handlebars (https://www.npmjs.com/package/express-handlebars)
+##### * express-session (https://www.npmjs.com/package/express-session)
+##### * jsonwebtoken (https://www.npmjs.com/package/express-jwt)
+##### * moment (https://momentjs.com/)
+##### * mongoose (https://www.npmjs.com/package/mongoose)
+##### * mongoose-paginate-v2 (https://www.npmjs.com/package/mongoose-paginate-v2)
+##### * multer (https://expressjs.com/en/resources/middleware/multer.html)
+##### * nodemailer (https://www.npmjs.com/package/nodemailer)
+##### * passport (https://www.passportjs.org/)
+##### * passport-discord (https://www.passportjs.org/packages/passport-discord/)
+##### * passport-github2 (https://www.passportjs.org/packages/passport-github2/)
+##### * passport-google-oauth20 (https://www.passportjs.org/packages/passport-google-oauth20/)
+##### * passport-jwt (https://www.passportjs.org/packages/passport-jwt/)
+##### * passport-local (https://www.passportjs.org/packages/passport-local/)
+##### * session-file-store (https://www.npmjs.com/package/session-file-store)
+##### * socket.io (https://www.npmjs.com/package/socket.io)
+##### * stripe (https://www.npmjs.com/package/stripe)
+##### * swagger-jsdoc (https://www.npmjs.com/package/swagger-jsdoc)
+##### * swagger-ui-express (https://www.npmjs.com/package/swagger-ui-express)
+##### * winston (https://www.npmjs.com/package/winston)
+##### * chai (https://www.npmjs.com/package/chai)
+##### * mocha (https://www.npmjs.com/package/mocha)
 
-React Native y Expo como herramientas base para la elaboración de la aplicación, Java Script para todo lo relacionado a lógica de decisión, Firebase se utilizó como repositorio de imagenes, base de datos y medio de registro y autenticación de usuarios, SQLite como base de datos local y librerías específicas para la utilización de la cámara del dispositivo y la geolocalización. 
+El servidor de backend fue desarrollado con Express Js y junto con Node Js y Java Script forman la base medular para la aplicación, luego se le agregaron otras librerias para generar otras funcionalidades. 
 
 <!-- GETTING STARTED -->
 ## Instalación

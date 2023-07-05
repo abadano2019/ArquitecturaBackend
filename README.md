@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Introducción
 
-AppBazar5A backend surge como una consecuencia del front de Bazar 5A ya desarrollado en otros repositorios de mi gitHub para el cual se realizan una serie de funcionalidades para darle servicio al sitio web, el mismo consta de varios módulos entre los que podemos encontrar seguridad y la utilización de Passport, pasarela de pago con la implementación de Stripe, bases de datos NoSQL con la utilización de mongoose, con la posibilidad de implementar otras persistencias, entre otras cosas. Dentro de las funcionalidades un cliente puede agregar productos a su carrito, restarle o agregarle cantidad de elementos, eliminar un producto de su carrito, emitir órdenes de compra, realizar pago con la pasarela de pago Stripe, también cuenta con las funcionalidades de administración para poder agregar modifica y eliminar productos entre otras cosas. 
+Bazar 5A Backend surge como una consecuencia de funcionamiento para el front de Bazar 5A ya desarrollado en otro repositorio existente en mi gitHub para el cual se realiza la implementación y desarrollo de un servidor bajo tecnología Express Js para darle los servicio necesarios al sitio web, el mismo consta de varios módulos entre los que podemos encontrar seguridad con la utilización de estrategias de Passport, la utilización de una pasarela de pago con la implementación de Stripe, bases de datos NoSQL con la utilización de mongoose y con la posibilidad de implementar otras persistencias. Dentro de las funcionalidades ofrecidas para los clientes podemos encontrar todo el soporte al manejo de un carrito de compras, en donde se agregan productos, donde se puede restar o agregar productos, eliminar un producto del carrito, emitir órdenes de compra, realizar el pago por intermedio de stripe, también cuenta con las funcionalidades de administración para poder agregar, modificar y eliminar productos de la base de datos entre otras cosas. 
 
 ### Tecnologías utilizadas
 
@@ -86,7 +86,7 @@ Otras: para el manejo del tiempo se utiliza moment, para el manejo de envio de m
 
 ### Requisitos previos
 
-Se recomienda el uso de Visual Studio Code para la visualización y administración del código o herramienta similar, se debe tener instalado Node JS y mongodb que se el motor de base de datos que está implementado, en caso de querer utilizar datos propios se debe contar con una cuenta de mongodb, en caso de querer utilizar otra persistencia se debe implementar las clases proporcionadas en el codigo fuente.
+Se recomienda el uso de Visual Studio Code para la visualización y administración del código o herramienta similar, se debe tener instalado Node JS y Mongodb, que se el motor de base de datos que está implementado, en caso de querer utilizar datos propios se debe contar con una cuenta de Mongodb, en caso de querer utilizar otra persistencia se debe implementar las clases proporcionadas en el código fuente.
 
 ### Pasos a seguir
 
@@ -102,25 +102,22 @@ A continuación se marcan los pasos para poder utilizar la aplicación con datos
    npm install
    ```
 3. Configurar el servicio de mongodb
-4. Configurar la variable mongoUri en el archivo .env obtenida del punto 1
-5. Registrar un usuario cualquiera con el el mail adminCoder@coder.com el cual será administrador
+4. Configurar la variable mongoUri en el archivo .env obtenida
+5. Registrar el usuario adminCoder@coder.com el cual está configurado como administrador
 6. Ingresar con el usuario adminCoder@coder.com y cargar datos de productos
 7. Para el correcto uso del resto de las funcionalidades completar el resto de las variables en el archivo .env
   
-
 ## Estructura de carpetas
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/7ce1d0c7-c962-48a9-810a-f0cbec7d4690)
-
-
 
 Dentro de la carpeta src tenemos la siguiente estructura: 
 
 controllers: contiene todos los controladores que utilizan los routes.
 
-data: contiene parte de los datos que maneja la persistencia en archivos ya que dicha persistencia está sin terminar para todas las funcionalidades.
+data: contiene parte de los datos que maneja la persistencia en archivos ya que dicha persistencia está sin terminar para varias de las funcionalidades.
 
-docs: contiene la implementación de swagger para la documentación de los modulos.
+docs: contiene la implementación de swagger para la documentación de los módulos.
 
 error: contiene los archivos para el manejo de errores personalizados.
 
@@ -232,7 +229,7 @@ Podemos subir los archivos necesarios para el cambio de rol
 <!-- ROADMAP -->
 ## Mejoras
 
-Esta es una primera versión del proyecto Bazar 5A Backend, en el cual queda para definir, en una nueva iteracion, un nuevo alcance con otras funcionalidades y mejoras, como ser:
+Esta es una primera versión del proyecto Bazar 5A Backend, en el cual queda para definir para una nueva iteracion, un nuevo alcance con otras funcionalidades y mejoras, como ser:
 
 * Agregar la implementación de otras persistencias.
 * Integrarlo al Front ya diseñado.
@@ -246,14 +243,9 @@ Esta es una primera versión del proyecto Bazar 5A Backend, en el cual queda par
 
 # ANEXO
 
-Proyecto desarrollado utilizando Expo [Create an app using Expo](https://docs.expo.dev/tutorial/create-your-first-app/).
+Proyecto desarrollado utilizando Express JS [Empezando con Express JS](https://expressjs.com/en/starter/installing.html).
 
-Proyecto AppBazar5A (https://github.com/abadano2019/AppBazar5A)
-
-Testeado en Android Studio Dolphin con los siguiente dispositivos virtuales:
-
-![image](https://user-images.githubusercontent.com/48340360/227805485-b123b23d-3e93-4f37-abf9-0995b24bba65.png)
-
+Proyecto Bazar 5A Backend  (https://github.com/abadano2019/ArquitecturaBackend)
 
 ## Comandos disponibles
 

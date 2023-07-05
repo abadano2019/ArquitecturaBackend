@@ -169,9 +169,14 @@ La estructura de carpetas para la persistencia está dividida en DAOs, DTOs, mon
 
 * factory.js: La clase factroy implementa el patrón de diseño factory para la persistencia, el cual activa la persistencia que es llamada la iniciar el servidor.
 
-#### constants
+#### Pantallas del administrador
 
-![image](https://user-images.githubusercontent.com/48340360/227796245-eb228be7-b68c-4015-bf43-046904765d8a.png)
+### Pantalla de inicio
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/85394824-793e-4527-96fa-aa3d91a4ee35)
+
+
+
 
 * data: contiene archivos .js con la información necesaria para el renderizado de lo componentes de productos y categorias, además cuenta con otros archivos de prueba en desarrollo.
 * firebase: cuenta con la configuración necesaria para la conexión con firebase para el uso de la rtdb y el servicio de autenticación y registro de usuarios. 

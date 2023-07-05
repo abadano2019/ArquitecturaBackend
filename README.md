@@ -89,6 +89,8 @@ Para el desarrollo de la arquitectura del servidor se utiliza la separación de 
 
 Se implementan los patrones de diseño, DAO, DTO, Factory y Repository para la persistencia y el patrón de diseño Singleton para la clase factory de la persistencia.
 
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/d5337b62-be21-4349-859b-cd583c151873)
+
 
 <!-- GETTING STARTED -->
 ## Instalación

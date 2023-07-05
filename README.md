@@ -2,7 +2,7 @@
 <br />
 <div align="center">
     <img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/icon.png" width="80" height="80">
-    <p> BACKEND E-COMMERCE BAZAR 5A </p>
+    <p>  E-COMMERCE BAZAR 5A BACKEND </p>
   </a>
 </div>
 
@@ -12,7 +12,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Introducción
 
-AppBazar5A surge como un proyecto familiar en donde se vuelcan muchos años de experiencia en venta de artículos de Bazar. Consta de varias secciones como ser cristalería, electrodomésticos, cocina, vajilla entre otros, pudiendo adaptarse a las necesidades del mercado. Dentro de las funcionalidades un cliente puede ingresar a la vista de categorías, navegar entre las opciones de categorías disponibles, seleccionar una y ver sus productos asociados, ver los detalles de los productos, agregarlos al carrito de compra, emitir órdenes, ver el histórico de ordenes, enviar mensajes, agregar direcciones de envío, listarlas, ver el detalle de una en particular y eliminarlas de la lista de direcciones. 
+AppBazar5A backend surge como una consecuencia del front de Bazar5A ya desarrollado en otras repositorios de mi gitHub para  proyecto familiar en donde se vuelcan muchos años de experiencia en venta de artículos de Bazar, el mismo consta de varias secciones como ser cristalería, electrodomésticos, cocina, vajilla entre otros, pudiendo adaptarse a las necesidades del mercado. Dentro de las funcionalidades un cliente puede ingresar a la vista de categorías, navegar entre las opciones de categorías disponibles, seleccionar una y ver sus productos asociados, ver los detalles de los productos, agregarlos al carrito de compra, emitir órdenes, ver el histórico de ordenes, enviar mensajes, agregar direcciones de envío, listarlas, ver el detalle de una en particular y eliminarlas de la lista de direcciones. 
 
 ### Tecnologías utilizadas
 

@@ -215,6 +215,8 @@ Podemos ver los productos ofrecidos por el sitio web pudiendo navegar con los bo
 
 Podemos ingresar al carrito de compras pudiendo agregar o eliminar la cantidad de productos comprados o directamente borrar un producto del carrito de compras. Podemos realizar la compra por intermedio del botón buy o pay with stripe, en donde nos llegará un mail con el aviso de la transacción. La compra valida contra el stock actual del sitio web.
 
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/ab0ecc03-b4fd-4b5d-9f4a-754a2b605f59)
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e2ddd535-d488-42bb-b867-cc3136226443)
 
 Podemos ingresar al Chat
@@ -226,99 +228,6 @@ Podemos subir los archivos necesarios para el cambio de rol
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/f9b3d4d5-7758-400e-87cc-d0255ba9cbf5)
 
 
-* data: contiene archivos .js con la información necesaria para el renderizado de lo componentes de productos y categorias, además cuenta con otros archivos de prueba en desarrollo.
-* firebase: cuenta con la configuración necesaria para la conexión con firebase para el uso de la rtdb y el servicio de autenticación y registro de usuarios. 
-* db: cuenta con la configuración necesaria para la conexión con SQLite y las transacciones de inicialización, inserción, búsqueda y borrado de datos que la aplicación utiliza.
-* maps: cuenta con la configuración necesaria para la conexión con el servicio de google.maps
-* theme: cuenta con las definiciones de colores utilizada por los estilos de los componentes.
-
-#### models
-
-![image](https://user-images.githubusercontent.com/48340360/227796737-23bfa035-bd2c-473b-a11c-48c41c0f5e67.png)
-
-* places.js: archivos con el modelo especifico utilizado por SQLite para las direcciones cargados por los usuarios.
-
-Nota: falta integrar la definición de los restantes modelos de datos 
-
-#### navigation
-
-![image](https://user-images.githubusercontent.com/48340360/227796925-c6661f5a-eaaf-405b-9e93-59cc1016f376.png)
-
-La aplicación cuanta con 2 stack de navegación uno para las direcciones, donde se dan de alta, se listan y se pueden ver en detalles y otro para las categorías de los productos donde se pueden listar los productos por categoría y luego ver en detalle. El primer stack se encuentra bajo el item del menú (Tab de navegación) shop y el segundo stack para el item places.
-
-![image](https://user-images.githubusercontent.com/48340360/227798283-a0e58de9-b321-49e1-97e1-bf0915371e95.png)
-
-Luego se pueden ver otros tres items uno para ver las ordenes generadas por el usuario, el histórico de órdenes (se guardan en una base de dato de firebase), otro para ver el carrito del usuario, no tienen persistencia una vez que se cierra la aplicación el carrito se borra y un formulario de contacto simple. 
-
-#### vistas
-
-![image](https://user-images.githubusercontent.com/48340360/227798846-5ffcd2bc-2f3b-4bd4-858f-72d0a2cc370f.png)
-
-
-En esta carpeta contamos con las vistas o páginas de la aplicación:
-
-* auth.jsx: despliega la página de inicio donde un usuario se puede registrar o autenticarse para el ingreso a la aplicación.
-
-* cart.jsx: despliga la página del carrito donde podremos ver los producos seleccionados por el usuario junto con la suma total de los productos agregados.
-
-* categories.jsx: despliega la página de las categorías donde se pueden seleccionar la categoría deseada para visualizar los productos correspondientes a esa categoría.
-
-* contact.jsx: despliega la pantalla de contacto de la aplicación donde se puede ingresar nombre, mail y mensaje que se desea enviar. En esta versión de la aplicación los datos quedan en redux y no son almacenado en ninguna base de datos.
-
-* maps.jsx: despliega la pantalla que proporciona la funcionalidad de elegir una dirección personalizada, distinta a la de la geolocalización del usuario.
-
-* new-place.jsx: despliega la pantalla responsable de obtener los datos necesarios para agregar una nueva dirección del usuario, se ingresa nombre, una foto tomada desde el dispositivo y una localización.
-
-* order-detail.jsx: despliega la pantalla con los productos correspondientes a una orden seleccionada por el usuario.
-
-* orders.jsx: despliega el histórico de ordenes de un usuario
-
-* place-detail.jsx: despliega el detalla de una dirección seleccionada por el usuario de la lista de direcciones disponibles.
-
-* place-list.jsx: despliega la lista de dirección disponibles de un usuario.
-
-* product-detail.jsx: despliega el detalle de un producto seleccionado por el usuario, desde esta pantalla se puede agregar el producto al carrito.
-
-* products.jsx: despliega la lista de productos para una categoría determinada seleccionada por el usuario.
-
-#### store
-
-![image](https://user-images.githubusercontent.com/48340360/227798900-d28078ab-0b8c-441e-8b97-0b7af89cb666.png)
-
-![image](https://user-images.githubusercontent.com/48340360/227798921-8bfc52b5-94e8-40e8-b827-b8953b9dacec.png)
-
-![image](https://user-images.githubusercontent.com/48340360/227798951-b6d5bbc8-7288-4512-82b1-b2614d8c6bfa.png)
-
-![image](https://user-images.githubusercontent.com/48340360/227798969-81dbed76-08c9-468e-a344-399950e56414.png)
-
-la carpeta store cuenta con toda la estructura para el uso de redux-thunk, se utiliza para los usuarios, el carrito, las categorías, para el formulario de contacto, para las ordenes, para las direcciones y para los productos.
-
-### Otros archivos
-
-Dentro de la carpeta assets podemos encontrar los iconos de la aplicación y las fuentes utilizada
-
-![image](https://user-images.githubusercontent.com/48340360/227800339-7429ca8c-fb4b-4bd5-8def-9faa2fa8124f.png)
-
-
-#### fonts
-
-![image](https://user-images.githubusercontent.com/48340360/227800377-32d6f434-a793-4500-9433-8eb80d7a9925.png)
-
-#### icono
-
-<img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/icon.png" width="80" height="80">
-
-#### splash
-
-<img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/splash.png" width="160" height="320">
-
-#### adaptive-icon
-
-<img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/adaptive-icon.png" width="80" height="80">
-
-#### favicon
-
-<img src="https://github.com/abadano2019/AppBazar5A/blob/master/assets/favicon.png" width="30" height="30">
 
 <!-- ROADMAP -->
 ## Mejoras

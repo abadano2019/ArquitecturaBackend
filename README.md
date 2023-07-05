@@ -194,15 +194,22 @@ Desde el menú de usuario podemos subir archivos genericos, archivos de document
 
 #### CRUD de productos
 
+##### Alta de productos
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/12b438f3-94e8-4080-bf2f-3d1586119c7b)
 
+##### Modificación de productos
+
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e02de3df-458f-462c-9910-cfa3ebb408f6)
+
+##### Borrado de productos
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/ab96cef1-258c-40e6-acaa-833f5b47fc1c)
 
 
-
 #### Funcionalidades de usuarios
+
+Podemos ver los productos ofrecidos por el sitio web pudiendo navegar con los botones de siguiente pagina y pagina anterior
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/41ba71e3-56c0-4d88-ac91-293a9013d38a)
 

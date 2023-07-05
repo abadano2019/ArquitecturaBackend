@@ -152,7 +152,7 @@ views: contiene las vistas y layouts de las plantillas de handelbars.
 
 supertest: carpeta con la utlización de supertest para el testeo de modulos.
 
-![image](https://user-images.githubusercontent.com/48340360/227795274-ca088124-6a0d-486a-a4de-fd4999d8a43c.png)
+## Persistencia
 
 Dentro de la carpeta components podemos destacar los siguientes archivos:
 * cart-item.jsx: encargado de desplegar un elemento del carrito con los botones de mas y menos para aumentar o disminuir la cantidad del producto seleccionado, también cuenta con la posibilidad de borrarse del carrito.

@@ -190,7 +190,17 @@ Para acceder al menú de administrador, se debe registar e ingresar con el usuai
 
 ![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/9f9ed93c-9da9-4a7a-8cd3-dd1e34a5e372)
 
-Desde el menú de usuario podemos subir archivos genericos, archivos de documentos, de profiles y de productos, podemos listar todos los productos con actualización en tiempo real (por utilizar web socket) listar los productos sin ser actualizados en tiempo real, borrar los usuaros con 2 o mas dias de inactividad y podemos realizar el alta, modificación y eliminación de productos.
+Desde el menú de usuario podemos subir archivos genericos, archivos de documentos, de profiles y de productos, podemos listar todos los productos con actualización en tiempo real (por utilizar web socket), listar los productos sin ser actualizados en tiempo real, ingresar al chat, borrar los usuarios con 2 o mas dias de inactividad y podemos realizar el alta, modificación y eliminación de productos.
+
+#### CRUD de productos
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/12b438f3-94e8-4080-bf2f-3d1586119c7b)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/e02de3df-458f-462c-9910-cfa3ebb408f6)
+
+![image](https://github.com/abadano2019/ArquitecturaBackend/assets/48340360/ab96cef1-258c-40e6-acaa-833f5b47fc1c)
+
+
 
 #### Funcionalidades de usuarios
 

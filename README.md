@@ -276,6 +276,10 @@ Desde una terminal donde se esté ubicado en la raiz del proyecto se puede inici
 
 Previo a la ejecución de la app se deben instalar las dependencias del proyecto.
 
+### npm run test-app
+
+Desde una terminal donde se esté ubicado en la raiz del proyecto se puede iniciar la aplicación ejecutando el comando npm run test-app el cual ejecuta un servidor de prueba bajo el puerto 3030 a un base de datos de prueba.
+
 Learn More
 
 Si desea aprender sobre Express Js dirijase a los siguientes links: 
